@@ -1,0 +1,24 @@
+name        = AO Portal theme
+core        = 7.x
+
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+
+stylesheets[all][] = assets/css/style.css
+
+scripts[] = assets/js/script.js
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[buttons]        = Buttons
+regions[content]        = Content
+regions[sidebar_first]  = Sidebar
+regions[footer]         = Footer
+regions[bottom]         = Bottom bar
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+features[] = name
+features[] = slogan
+features[] = favicon
