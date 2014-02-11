@@ -103,7 +103,6 @@ module.exports = (grunt) ->
   # Default task.
   grunt.registerTask 'default', [
     'compass:app'
-    'concat_css'
     'coffee'
     'jshint'
   ]
@@ -111,7 +110,7 @@ module.exports = (grunt) ->
   # deploy
   grunt.registerTask 'deploy', [
     'compass:deploy'
-
+    'concat_css'
     'coffee'
     'jshint'
     'concat'
