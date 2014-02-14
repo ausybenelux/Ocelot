@@ -1,6 +1,6 @@
 {
   "author": "Robbie",
-  "name": "Default Smacss theme",
+  "name": "smacsstheme",
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
