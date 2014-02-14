@@ -26,6 +26,7 @@ regions[bottom]         = Bottom bar
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
+
 features[] = name
 features[] = slogan
 features[] = favicon
