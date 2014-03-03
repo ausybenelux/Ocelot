@@ -46,7 +46,7 @@ module.exports = (grunt) ->
       app:
         options:
           sourceMap: true
-          bare: false
+          bare: true
           join: true
         files:
           'assets/js/base.js': ['assets/coffee/**/*.coffee']
@@ -94,10 +94,7 @@ module.exports = (grunt) ->
         files: ['assets/coffee/**/*.coffee']
         tasks: ['coffee']
       sass:
-        files: ['assets/sass/**/*.sass']
-        tasks: ['compass:app']
-      scss:
-        files: ['assets/sass/**/*.scss']
+        files: ['assets/sass/**/*.sass', '!assets/sass/lib/**']
         tasks: ['compass:app']
 
   # Default task.
