@@ -12,7 +12,7 @@ module.exports = (grunt) ->
     compass:
       app:
         options:
-          require: ['compass-h5bp', 'ceaser-easing']
+          require: ['compass-h5bp', 'ceaser-easing', 'susy']
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'

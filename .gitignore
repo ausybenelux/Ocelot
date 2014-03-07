@@ -1,4 +1,4 @@
 .sass-cache
-/vendor
 node_modules
-assets/css
+/vendor
+Gemfile.lock
