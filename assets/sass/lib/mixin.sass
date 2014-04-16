@@ -86,10 +86,22 @@
   input:checked ~ label
     +sprite-position($hover_row, $hover_col, $width, $height)
 
-@mixin typo($font, $size, $color, $weight: normal, $style: normal)
-  font: $size $weight $style
+@mixin typo($font, $size, $lh, $color, $weight: normal, $style: normal)
   font-family: $font
+  +font-size-line-height($size, $lh)
   color: $color
+  font-weight: $weight
+  font-style: $style
+
+@mixin font-size($sizeValue)
+  font-size: $sizeValue + px
+  font-size: ($sizeValue / $rembase) + rem
+
+@mixin font-size-line-height($font-size, $line-height)
+  font-size: $font-size + px
+  font-size: ($font-size / $rembase) + rem
+  line-height: ($line-height / $rembase) + em
+  line-height: ($line-height / $rembase) + rem
 
 @mixin fontsmoothing()
   -webkit-font-smoothing: antialiased
@@ -157,6 +169,16 @@
   @else
     top: 0
     left: 0
+
+@mixin rounded-table($r)
+  thead tr:first-child :first-child
+    -moz-border-radius-topleft: $r
+    -webkit-border-top-left-radius: $r
+    border-top-left-radius: $r
+  thead tr:first-child :last-child
+    -moz-border-radius-topright: $r
+    -webkit-border-top-right-radius: $r
+    border-top-right-radius: $r
 
 %ok
   background-color: #f8fff0
