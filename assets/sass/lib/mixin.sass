@@ -95,12 +95,16 @@
 
 @mixin font-size($sizeValue)
   font-size: $sizeValue + px
-  font-size: ($sizeValue / $rembase) + rem
+  font-size: ($sizeValue / $rembase) + em
+
+@mixin line-height($line-height)
+  line-height: $line-height + px
+  line-height: ($line-height / $rembase) + rem
 
 @mixin font-size-line-height($font-size, $line-height)
   font-size: $font-size + px
-  font-size: ($font-size / $rembase) + rem
-  line-height: ($line-height / $rembase) + em
+  font-size: ($font-size / $rembase) + em
+  line-height: $line-height + px
   line-height: ($line-height / $rembase) + rem
 
 @mixin fontsmoothing()
