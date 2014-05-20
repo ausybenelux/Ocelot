@@ -1,10 +1,14 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
+group :development do
 
-gem "sass", "~> 3.2"
-gem "compass", "~>0.12.x"
-gem "chunky_png", "~> 1.2"
-gem "fssm", ">=  0.2.7"
-gem "ceaser-easing", "~> 0.7"
-gem "compass-h5bp", "~> 0.1"
-gem "susy", "~> 1.x.x"
-gem "compass-rgbapng", "*"
+  gem "sass", "~> 3.3.x"
+  gem 'sass-globbing'
+  gem "compass", "~> 1.0.0.alpha.x"
+  gem "susy", "~> 2.1.1"
+  gem 'breakpoint', '~> 2.4.2'
+  gem "ceaser-easing", "~> 0.7"
+  gem "compass-h5bp", "~> 0.1"
+  gem 'compass-rgbapng'
+  gem 'chunky_png', '~> 1.3.1'
+
+end

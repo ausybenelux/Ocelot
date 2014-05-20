@@ -12,12 +12,14 @@ module.exports = (grunt) ->
     compass:
       app:
         options:
-          require: ['compass-h5bp', 'ceaser-easing', 'susy']
+          require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
+          specify: 'assets/sass/styles.sass',
           httpPath: '/'
+          bundleExec: true
           relativeAssets: true
           debugInfo: false
           outputStyle: 'expanded'
@@ -26,11 +28,12 @@ module.exports = (grunt) ->
 
       deploy:
         options:
-          require: ['compass-h5bp', 'ceaser-easing']
+          require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
+          bundleExec: true
           httpPath: '/'
           relativeAssets: true
           outputStyle: 'compressed'
