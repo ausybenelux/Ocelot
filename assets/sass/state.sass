@@ -5,5 +5,18 @@
 /* ====================================================================================================== */
 /* RESPONSIVENESS
 /* ====================================================================================================== */
-// +min-screen(320px)
+@for $i from 1 through $cols
+  .w#{$i}
+    +span($i of $cols)
 
+.latest
+  +last
+
+.container
+  +container
+
+// .clearfix
+//   +clearfix
+
+.pie-clearfix
+  +pie-clearfix
