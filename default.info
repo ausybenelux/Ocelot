@@ -1,18 +1,11 @@
-name        = boilerplate theme
+name        = smacsstheme theme
 core        = 7.x
 
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 
-stylesheets[all][] = assets/css/base.css
-stylesheets[all][] = assets/css/layout.css
-stylesheets[all][] = assets/css/module.css
-stylesheets[all][] = assets/css/state.css
-stylesheets[all][] = assets/css/print.css
-
-;prod
-;stylesheets[all][] = assets/css/style.css
+stylesheets[all][] = assets/css/styles.css
 
 scripts[] = assets/js/vendor/modernizr.min.js
 scripts[] = assets/js/vendor/underscore.js
