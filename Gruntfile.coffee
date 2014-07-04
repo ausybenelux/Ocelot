@@ -12,38 +12,34 @@ module.exports = (grunt) ->
     compass:
       app:
         options:
+          specify: 'assets/sass/styles.sass',
+          bundleExec: true
           require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
+          httpPath: '/'
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
-          specify: 'assets/sass/styles.sass',
-          httpPath: '/'
-          bundleExec: true
           relativeAssets: true
-          debugInfo: false
+          debugInfo: true
           outputStyle: 'expanded'
           noLineComments: true
           raw: 'preferred_syntax = :sass\n'
 
       deploy:
         options:
+          specify: 'assets/sass/styles.sass',
+          bundleExec: true
           require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
+          httpPath: '/'
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
-          bundleExec: true
-          httpPath: '/'
           relativeAssets: true
           outputStyle: 'compressed'
           noLineComments: true
           raw: 'preferred_syntax = :sass\n'
-
-    concat_css:
-      all:
-        src: ["assets/css/base.css", "assets/css/layout.css", "assets/css/module.css", "assets/css/state.css", "assets/css/print.css"]
-        dest: "assets/css/style.css"
 
     coffee:
       app:
@@ -110,7 +106,6 @@ module.exports = (grunt) ->
   # deploy
   grunt.registerTask 'deploy', [
     'compass:deploy'
-    'concat_css'
     'coffee'
     'jshint'
     'concat'
