@@ -8,7 +8,7 @@ stylesheets[all][] = system.theme.css
 stylesheets[all][] = assets/css/styles.css
 
 scripts[] = assets/js/vendor/modernizr.min.js
-scripts[] = assets/js/vendor/underscore.js
+scripts[] = assets/js/vendor/underscore.min.js
 scripts[] = assets/js/base.js
 
 regions[header]         = Header
