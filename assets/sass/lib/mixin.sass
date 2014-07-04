@@ -184,3 +184,10 @@
 %error
   background-color: $error
   color: $white
+
+@mixin vendor-prefix($name, $argument)
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}
