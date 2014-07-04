@@ -1,5 +1,3 @@
-<?php
-
 <div id="page-wrapper">
   <div id="page">
     <div id="header">
@@ -61,7 +59,7 @@
       <div id="main" class="clearfix">
         <div id="content" class="column">
           <div class="section">
-            <?php if ($page['highlighted']): ?>
+            <?php if (isset($page['highlighted'])): ?>
               <div id="highlighted">
                 <?php print render($page['highlighted']); ?>
               </div>
@@ -104,7 +102,7 @@
           </div>
         <?php endif; ?>
 
-        <?php if ($page['sidebar_second']): ?>
+        <?php if (isset($page['sidebar_second'])): ?>
           <div id="sidebar-second" class="column sidebar">
             <div class="section">
               <?php print render($page['sidebar_second']); ?>
