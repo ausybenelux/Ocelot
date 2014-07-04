@@ -7,7 +7,7 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
 
   * [nodejs](http://nodejs.org) trough: website, nvm or brew
   * npm *comes with node, no installation needed*
-    * brew install node
+    * `brew install node`
     * [pkg](http://nodejs.org/dist/v0.10.29/node-v0.10.29.pkg)
     * [nvm](https://github.com/creationix/nvm)
 
@@ -61,7 +61,7 @@ output:<br>
 
   * This means the gemset is created and is being used.
   The final step is to install all the gems that are specified in the Gemfile so your gemset is complete.
-  When you created the gemset bundle was included inthe gemset. Bundle is a tool to download all gems in a gemfile and put the in a gemset.
+  When you created the gemset bundle was included in the gemset.
 
 run the command<br>
 **bundle install**<br>
@@ -155,7 +155,7 @@ In this project mainly grunt plugins and grunt itself.
 
 * All compiled files and assets sit in the assets/ folder, like that this remains isolated and does not get cluttered between templates and php files.
 
-* All configuration files like (.jshintrc, .ruby-gemset, .ruby-version, config.rb, Gemfile, Gemfile.lock, ut_zen.info) are located in the root of the theme directory, all added config options should be located in the root of the theme.
+* All configuration files like (.jshintrc, .ruby-gemset, .ruby-version, config.rb, Gemfile, Gemfile.lock, crosscheck_theme.info) are located in the root of the theme directory, all added config options should be located in the root of the theme.
 
 * The rest of the files are files that drupal needs to make the theme.
 
@@ -173,11 +173,11 @@ What this means is that a certain structure is followed at directory and files l
     state.sass
     styles.sass
 
-The goal of the theme is to let 1 file compile that does all the work and spits out a single file.
+The goal of the theme is to let the files compile and do all the work and spit out a single file. (styles.css)
 
 ##### summary of the files
 
-  * **style.sass**
+  * **styles.sass**
 
       This file can be used for general imports and structure,
       here you can alter the order of the way your files are compiled.
@@ -285,7 +285,7 @@ General things you should know:
     These classes are there to help you build your grids.
     For example if you want 2 columns you should use 2 divs with the classes w6 on them, and latest on the last column / div.
     Susy will map those classes to the column calculations.
-    classes to your disposal**(w1, w2, w3, w4, w5, w6 ,w7, w8, w9, w10, w11, w12, latest, container, clearfix, pie-clearfix)**.
+    classes to your disposal **(w1, w2, w3, w4, w5, w6 ,w7, w8, w9, w10, w11, w12, latest, container, clearfix, pie-clearfix)**.
 
         <!-- 2 cols -->
         <div class="container (clearfix) (pie-clearfix)">
@@ -318,7 +318,7 @@ General things you should know:
           <div class="w2 latest"></div>
         </div>
 
-## Gems to notice
+## Gems included
   * **susy** for grid calculations [doc](http://susy.oddbird.net/)
 
     susy has a great set of mixins and functions for making and calculating grid columns
