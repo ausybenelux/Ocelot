@@ -6,7 +6,6 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-compass": "*",
-    "grunt-concat-css": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-concat": "*",
