@@ -3,50 +3,43 @@ module.exports = (grunt) ->
 
   # Project configuration.
   grunt.initConfig
-    vendorlibs:[
-      'assets/js/vendor/respond.js'
-      'assets/js/vendor/underscore.js'
-      'assets/js/base.js'
-    ]
-
     compass:
       app:
         options:
-          require: ['compass-h5bp', 'ceaser-easing']
+          specify: 'assets/sass/styles.sass',
+          bundleExec: true
+          require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
+          httpPath: '/'
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
-          httpPath: '/'
           relativeAssets: true
-          debugInfo: false
+          debugInfo: true
           outputStyle: 'expanded'
           noLineComments: true
           raw: 'preferred_syntax = :sass\n'
 
       deploy:
         options:
-          require: ['compass-h5bp', 'ceaser-easing']
+          specify: 'assets/sass/styles.sass',
+          bundleExec: true
+          require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
+          httpPath: '/'
           sassDir: 'assets/sass'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
-          httpPath: '/'
           relativeAssets: true
           outputStyle: 'compressed'
           noLineComments: true
           raw: 'preferred_syntax = :sass\n'
 
-    concat_css:
-      all:
-        src: ["assets/css/base.css", "assets/css/layout.css", "assets/css/module.css", "assets/css/state.css", "assets/css/print.css"]
-        dest: "assets/css/style.css"
-
     coffee:
       app:
         options:
           sourceMap: true
-          bare: false
+          bare: true
           join: true
         files:
           'assets/js/base.js': ['assets/coffee/**/*.coffee']
@@ -60,19 +53,12 @@ module.exports = (grunt) ->
         files:
           src: 'assets/js/*.js'
 
-    concat:
-      options:
-        stripBanners: true
-      dist:
-        src: '<%= vendorlibs %>'
-        dest: 'assets/js/main.js'
-
     uglify:
       app:
         options:
-          sourceMap: 'assets/js/app.js.map'
+          sourceMap: 'assets/js/base.js.map'
         files:
-          'assets/js/app.min.js': ['assets/js/app.js']
+          'assets/js/base.min.js': ['assets/js/base.js']
 
     imagemin:
       dist:
@@ -96,9 +82,6 @@ module.exports = (grunt) ->
       sass:
         files: ['assets/sass/**/*.sass']
         tasks: ['compass:app']
-      scss:
-        files: ['assets/sass/**/*.scss']
-        tasks: ['compass:app']
 
   # Default task.
   grunt.registerTask 'default', [
@@ -110,10 +93,8 @@ module.exports = (grunt) ->
   # deploy
   grunt.registerTask 'deploy', [
     'compass:deploy'
-    'concat_css'
     'coffee'
     'jshint'
-    'concat'
     'uglify'
     'imagemin'
   ]

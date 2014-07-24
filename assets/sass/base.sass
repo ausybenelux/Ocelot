@@ -1,38 +1,51 @@
 /* ====================================================================================================== */
-/* IMPORTS
-/* ====================================================================================================== */
-// gems
-@import "h5bp"
-
-// compass
-@import "compass/css3/"
-@import "compass/typography/"
-@import "compass/utilities/"
-
-// vendors
-@import "vendor/grid"
-@import "vendor/media-queries"
-
-// lib
-@import "lib/var"
-@import "lib/mixin"
-
-/* ====================================================================================================== */
 /* NORMALIZE
 /* ====================================================================================================== */
 +h5bp-normalize
 +h5bp-helpers
 
+// fonts
+// +font-face("NAME", font-files("FILE.woff", "FILE.ttf", "FILE.otf", "FILE.svg"), "FILE.eot")
 /* ====================================================================================================== */
 /* BASE
 /* ====================================================================================================== */
 *:active, *:hover, *:focus
   outline: 0 !important
 
-
 menu, ul, ol, dl
   margin: 0
   padding: 0
 
 body
-  background-color: #FFF
+  background-color: $white
+
+table,
+table td,
+table th
+  border: none
+
+table
+  width: 100%
+  background-color: $white
+
+  td, th
+    padding: 10px 20px
+
+img
+  &.file-full-width
+    width: 100%
+
+  &.file-half-width
+    width: 50%
+
+  &.file-quarter-width
+    width: 25%
+
+.ok
+  @extend %ok
+
+.warning
+  @extend %warning
+
+.overlay
+  +overlay($black_8)

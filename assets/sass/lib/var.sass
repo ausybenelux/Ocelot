@@ -1,19 +1,42 @@
 /* ====================================================================================================== */
-/* IMPORTS
-/* ====================================================================================================== */
-// compass
-@import "compass/css3/"
-@import "compass/typography/"
-@import "compass/utilities/"
-
-/* ====================================================================================================== */
 /* VARS
 /* ====================================================================================================== */
-// color
+// colors
+$white: #FFF
+$white_8: rgba($white, 0.8)
+$white_4: rgba($white, 0.4)
 
-// fontstack
+$black: #000
+$black_8: rgba($black, 0.8)
+$black_4: rgba($black, 0.4)
 
-// f-sizes
+$error: red
 
-// fonts
-// +font-face("ar-b", font-files("archivonarrow-bold-webfont.woff", "archivonarrow-bold-webfont.ttf", "archivonarrow-bold-webfont.otf", "archivonarrow-bold-webfont.svg"), "archivonarrow-bold-webfont.eot")
+// typo
+$rembase: 16
+$base-font-size: 15px
+$base-line-height: 25px
+
+// stacks
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif
+
+//sprites
+$sprites: sprite-map("sprite/*.png")
+
+// shades
+$glow: 0 0 15px rgba(0, 0, 0, .2)
+$smallglow: 0 0 10px rgba(0, 0, 0, .2)
+
+// timings
+$superfast: 250ms
+$fast: 400ms
+$normal: 700ms
+$slow: 1000ms
+
+// legacy
+$legacy-support-for-ie6: false !global
+$legacy-support-for-ie7: true !global
+$legacy-support-for-ie8: true !global
+
+// susy
+$cols: 12

@@ -1,24 +1,54 @@
 /* ====================================================================================================== */
-/* IMPORTS
-/* ====================================================================================================== */
-// gems
-@import "ceaser-easing"
-
-// compass
-@import "compass/css3/"
-@import "compass/typography/"
-@import "compass/utilities/"
-
-// vendors
-@import "vendor/grid"
-@import "vendor/media-queries"
-
-/* ====================================================================================================== */
 /* MIXINS
 /* ====================================================================================================== */
+@mixin circle($size)
+  width: $size
+  height: $size
+  +border-radius($size / 2)
+
+@mixin square($size)
+  width: $size
+  height: $size
+
 @mixin rect($width, $height)
   width: $width
   height: $height
+
+@mixin arrowright($color: #FFF, $size: 15px, $sharpness: 25px)
+  border: solid transparent
+  height: 0
+  width: 0
+  pointer-events: none
+  border-left-color: $color
+  border-width: $size
+  border-left-width: $sharpness // calc: (width*2)*.866
+
+@mixin arrowleft($color: #FFF, $size: 15px, $sharpness: 25px)
+  border: solid transparent
+  height: 0
+  width: 0
+  pointer-events: none
+  border-right-color: $color
+  border-width: $size
+  border-right-width: $sharpness // calc: (width*2)*.866
+
+@mixin arrowtop($color: #FFF, $size: 15px, $sharpness: 25px)
+  border: solid transparent
+  height: 0
+  width: 0
+  pointer-events: none
+  border-bottom-color: $color
+  border-width: $size
+  border-bottom-width: $sharpness // calc: (width*2)*.866
+
+@mixin arrowbottom($color: #FFF, $size: 15px, $sharpness: 25px)
+  border: solid transparent
+  height: 0
+  width: 0
+  pointer-events: none
+  border-top-color: $color
+  border-width: $size
+  border-top-width: $sharpness // calc: (width*2)*.866
 
 @mixin customcheck($width, $height, $path, $hover_row, $hover_col)
   position: relative
@@ -45,53 +75,26 @@
   input:checked ~ label
     +sprite-position($hover_row, $hover_col, $width, $height)
 
-@mixin typo($font, $size, $color, $weight: normal)
-  font-weight: $weight
-  font-family: $font, Arial, Helvetica
-  font-size: $size
+@mixin typo($font, $size, $lh, $color, $weight: normal, $style: normal)
+  font-family: $font
+  +font-size-line-height($size, $lh)
   color: $color
+  font-weight: $weight
+  font-style: $style
 
-@mixin arrowright($color: #FFF, $size: 15px, $sharpness: 25px)
-  left: 100%
-  top: 50%
-  border: solid transparent
-  content: " "
-  height: 0
-  width: 0
-  position: absolute
-  pointer-events: none
-  border-left-color: $color
-  border-width: $size
-  border-left-width: $sharpness // calc: (width*2)*.866
-  margin-top: -$size
+@mixin font-size($sizeValue)
+  font-size: $sizeValue + px
+  font-size: ($sizeValue / $rembase) + em
 
-@mixin arrowleft($color: #FFF, $size: 15px, $sharpness: 25px)
-  right: 100%
-  top: 50%
-  border: solid transparent
-  content: " "
-  height: 0
-  width: 0
-  position: absolute
-  pointer-events: none
-  border-right-color: $color
-  border-width: $size
-  border-right-width: $sharpness // calc: (width*2)*.866
-  margin-top: -$size
+@mixin line-height($line-height)
+  line-height: $line-height + px
+  line-height: ($line-height / $rembase) + rem
 
-@mixin arrowtop($color: #FFF, $size: 15px, $sharpness: 25px)
-  left: 58%
-  bottom: 100%
-  border: solid transparent
-  content: " "
-  height: 0
-  width: 0
-  position: absolute
-  pointer-events: none
-  border-bottom-color: $color
-  border-width: $size
-  border-bottom-width: $sharpness // calc: (width*2)*.866
-  margin-left: -$size
+@mixin font-size-line-height($font-size, $line-height)
+  font-size: $font-size + px
+  font-size: ($font-size / $rembase) + em
+  line-height: $line-height + px
+  line-height: ($line-height / $rembase) + rem
 
 @mixin fontsmoothing()
   -webkit-font-smoothing: antialiased
@@ -106,16 +109,85 @@
   -o-user-select: none
   user-select: none
 
-%overlay
-  width: 100%
-  height: 100%
-  z-index: 1000
+@mixin overlay($color)
   position: fixed
-  background-color: rgba(0, 0, 0, 0.8)
-  +ceaser-transition(all, 1s, $easeOutExpo)
+  top: 0
+  left: 0
+  +square(100%)
+  z-index: 10000
+  background-color: rgba($color, 0.8)
 
   &.out
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba($color, 0)
 
-%no-flick
+@mixin no-flick()
   +translate3d(0, 0, 0)
+
+@mixin sprite-background($image)
+  background-repeat: no-repeat
+  background-image: sprite-url($sprites)
+  background-position: sprite-position($sprites, $image)
+  +rect(image-width(sprite-file($sprites, $image)), image-height(sprite-file($sprites, $image)))
+
+@mixin centerrect($width, $height, $state: absolute)
+  position: $state
+  +rect($width, $height)
+  top: 50%
+  left: 50%
+  margin: -$height/2 0 0 -$width/2
+
+@mixin center()
+  display: table
+  width: 100%
+
+  .child
+    display: table-cell
+    text-align: center
+    vertical-align: middle
+
+@mixin corner($state: absolute, $place : "tl")// tl=>topleft OR tr=>topright OR bl=>bottomleft OR br=>bottomright
+  position: $state
+  @if $place == "tl"
+    top: 0
+    left: 0
+  @else if $side == "tr"
+    top: 0
+    right: 0
+  @else if $side == "bl"
+    bottom: 0
+    left: 0
+  @else if $side == "br"
+    bottom: 0
+    right: 0
+  @else
+    top: 0
+    left: 0
+
+@mixin rounded-table($r)
+  thead tr:first-child :first-child
+    -moz-border-radius-topleft: $r
+    -webkit-border-top-left-radius: $r
+    border-top-left-radius: $r
+  thead tr:first-child :last-child
+    -moz-border-radius-topright: $r
+    -webkit-border-top-right-radius: $r
+    border-top-right-radius: $r
+
+%ok
+  background-color: #f8fff0
+  color: #234600
+
+%warning
+  background-color: #fffce5
+  color: #840
+
+%error
+  background-color: $error
+  color: $white
+
+@mixin vendor-prefix($name, $argument)
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}

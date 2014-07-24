@@ -1,2 +1,4 @@
-/node_modules
-/assets/css
+.sass-cache
+node_modules
+/vendor
+Gemfile.lock
