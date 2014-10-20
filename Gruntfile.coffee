@@ -1,16 +1,16 @@
 module.exports = (grunt) ->
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  # Project configuration.
+  # PROJECT CONFIGURATION.
   grunt.initConfig
     compass:
       app:
         options:
-          specify: 'assets/sass/styles.sass',
+          specify: 'assets/scss/styles.scss',
           bundleExec: true
           require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
           httpPath: '/'
-          sassDir: 'assets/sass'
+          sassDir: 'assets/scss'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
@@ -18,47 +18,42 @@ module.exports = (grunt) ->
           debugInfo: true
           outputStyle: 'expanded'
           noLineComments: true
-          raw: 'preferred_syntax = :sass\n'
+          raw: 'preferred_syntax = :scss\n'
 
       deploy:
         options:
-          specify: 'assets/sass/styles.sass',
+          specify: 'assets/scss/styles.scss',
           bundleExec: true
           require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
           httpPath: '/'
-          sassDir: 'assets/sass'
+          sassDir: 'assets/scss'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
           relativeAssets: true
           outputStyle: 'compressed'
           noLineComments: true
-          raw: 'preferred_syntax = :sass\n'
-
-    coffee:
-      app:
-        options:
-          sourceMap: true
-          bare: true
-          join: true
-        files:
-          'assets/js/base.js': ['assets/coffee/**/*.coffee']
+          raw: 'preferred_syntax = :scss\n'
 
     jshint:
       app:
         options:
-          boss: true
-          expr: true
-          eqnull: true
+          jshintrc: true
         files:
           src: 'assets/js/*.js'
 
     uglify:
-      app:
-        options:
-          sourceMap: 'assets/js/base.js.map'
-        files:
-          'assets/js/base.min.js': ['assets/js/base.js']
+      options:
+        sourceMap: true
+      build:
+        files: [
+          expand: true,
+          cwd: 'assets/js/',
+          src: '**/*.js',
+          dest: 'assets/js/',
+          ext: '.min.js',
+          extDot: 'first'
+        ]
 
     imagemin:
       dist:
@@ -76,24 +71,23 @@ module.exports = (grunt) ->
         atBegin: true
         interrupt: false
         spawn: false
-      app:
-        files: ['assets/coffee/**/*.coffee']
-        tasks: ['coffee']
-      sass:
-        files: ['assets/sass/**/*.sass']
+      js:
+        files: ['assets/js/**/*.js']
+        tasks: ['jshint', 'uglify']
+      scss:
+        files: ['assets/scss/**/*.scss']
         tasks: ['compass:app']
 
-  # Default task.
+  # DEFAULT TASK.
   grunt.registerTask 'default', [
     'compass:app'
-    'coffee'
     'jshint'
+    'uglify'
   ]
 
-  # deploy
+  # DEPLOY
   grunt.registerTask 'deploy', [
     'compass:deploy'
-    'coffee'
     'jshint'
     'uglify'
     'imagemin'
