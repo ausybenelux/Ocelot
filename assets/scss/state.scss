@@ -1,22 +1,27 @@
 /* ====================================================================================================== */
-/* STATE HOVER, FOCUS, VISITED, FOCUS & CLASSES THAT ARE GENERATED WITH JS
+/* STATE HOVER, FOCUS, VISITED, FOCUS & CLASSES THAT ARE GENERATED WITH JS */
 /* ====================================================================================================== */
 
 /* ====================================================================================================== */
-/* RESPONSIVENESS
+/* RESPONSIVENESS */
 /* ====================================================================================================== */
-@for $i from 1 through $cols
-  .w#{$i}
-    +span($i of $cols)
+@for $i from 1 through $cols {
+  .w#{$i} {
+    @include span($i of $cols);
+  }
+}
 
-.latest
-  +last
+.latest {
+  @include last;
+}
 
-.container
-  +container
+.container {
+  @include container;
+}
 
 // .clearfix
 //   +clearfix
 
-.pie-clearfix
-  +pie-clearfix
+.pie-clearfix {
+  @include pie-clearfix;
+}
