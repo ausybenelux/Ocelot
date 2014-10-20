@@ -16,7 +16,7 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
   * clone this repo
     * `git@github.com:rob-bar/drupal-theme-boilerplate.git`
 
-### Instalation procedure:
+### Installation procedure:
 
 When you have never worked on this project before you must go trough some basic installation steps.
 So 4 important files that will keep this project isolated from developer specific configuration,
