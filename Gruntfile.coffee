@@ -78,14 +78,14 @@ module.exports = (grunt) ->
         files: ['assets/sass/**/*.sass']
         tasks: ['compass:app']
 
-  # Default task.
+  # DEFAULT TASK.
   grunt.registerTask 'default', [
     'compass:app'
     'jshint'
     'uglify'
   ]
 
-  # deploy
+  # DEPLOY
   grunt.registerTask 'deploy', [
     'compass:deploy'
     'jshint'
