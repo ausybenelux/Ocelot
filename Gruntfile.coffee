@@ -35,30 +35,25 @@ module.exports = (grunt) ->
           noLineComments: true
           raw: 'preferred_syntax = :sass\n'
 
-    coffee:
-      app:
-        options:
-          sourceMap: true
-          bare: true
-          join: true
-        files:
-          'assets/js/base.js': ['assets/coffee/**/*.coffee']
-
     jshint:
       app:
         options:
-          boss: true
-          expr: true
-          eqnull: true
+          jshintrc: true
         files:
           src: 'assets/js/*.js'
 
     uglify:
-      app:
-        options:
-          sourceMap: 'assets/js/base.js.map'
-        files:
-          'assets/js/base.min.js': ['assets/js/base.js']
+      options:
+        sourceMap: true
+      build:
+        files: [
+          expand: true,
+          cwd: 'assets/js/',
+          src: '**/*.js',
+          dest: 'assets/js/',
+          ext: '.min.js',
+          extDot: 'first'
+        ]
 
     imagemin:
       dist:
@@ -76,9 +71,9 @@ module.exports = (grunt) ->
         atBegin: true
         interrupt: false
         spawn: false
-      app:
-        files: ['assets/coffee/**/*.coffee']
-        tasks: ['coffee']
+      js:
+        files: ['assets/js/**/*.js']
+        tasks: ['jshint', 'uglify']
       sass:
         files: ['assets/sass/**/*.sass']
         tasks: ['compass:app']
@@ -86,14 +81,13 @@ module.exports = (grunt) ->
   # Default task.
   grunt.registerTask 'default', [
     'compass:app'
-    'coffee'
     'jshint'
+    'uglify'
   ]
 
   # deploy
   grunt.registerTask 'deploy', [
     'compass:deploy'
-    'coffee'
     'jshint'
     'uglify'
     'imagemin'
