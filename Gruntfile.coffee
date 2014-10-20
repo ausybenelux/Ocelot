@@ -6,11 +6,11 @@ module.exports = (grunt) ->
     compass:
       app:
         options:
-          specify: 'assets/sass/styles.sass',
+          specify: 'assets/scss/styles.scss',
           bundleExec: true
           require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
           httpPath: '/'
-          sassDir: 'assets/sass'
+          sassDir: 'assets/scss'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
@@ -18,22 +18,22 @@ module.exports = (grunt) ->
           debugInfo: true
           outputStyle: 'expanded'
           noLineComments: true
-          raw: 'preferred_syntax = :sass\n'
+          raw: 'preferred_syntax = :scss\n'
 
       deploy:
         options:
-          specify: 'assets/sass/styles.sass',
+          specify: 'assets/scss/styles.scss',
           bundleExec: true
           require: ['compass-h5bp', 'rgbapng', 'ceaser-easing', 'susy', 'sass-globbing']
           httpPath: '/'
-          sassDir: 'assets/sass'
+          sassDir: 'assets/scss'
           cssDir: 'assets/css'
           imagesDir: 'assets/img'
           fontsDir: 'assets/font'
           relativeAssets: true
           outputStyle: 'compressed'
           noLineComments: true
-          raw: 'preferred_syntax = :sass\n'
+          raw: 'preferred_syntax = :scss\n'
 
     jshint:
       app:
@@ -74,8 +74,8 @@ module.exports = (grunt) ->
       js:
         files: ['assets/js/**/*.js']
         tasks: ['jshint', 'uglify']
-      sass:
-        files: ['assets/sass/**/*.sass']
+      scss:
+        files: ['assets/scss/**/*.scss']
         tasks: ['compass:app']
 
   # DEFAULT TASK.
