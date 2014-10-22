@@ -1,0 +1,34 @@
+/**
+ * @file
+ * Theme styles for the openid module.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.theme\.scss}line{font-family:\000036}}
+.form-item-openid-identifier {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.theme\.scss}line{font-family:\000039}}
+.form-item-openid-identifier input {
+  padding-left: 20px;
+  /* LTR */
+  background-image: url('../../../img/modules/openid/login-bg.png?1401892510');
+  background-position: left 50%;
+  /* LTR */
+  background-repeat: no-repeat;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.theme\.scss}line{font-family:\0000318}}
+.openid-links li {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.theme\.scss}line{font-family:\0000324}}
+.openid-links a {
+  padding: 0 0 0 1.5em;
+  /* LTR */
+  background-image: url('../../../img/modules/openid/login-bg.png?1401892510');
+  background-position: left top;
+  /* LTR */
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Styles for the image module.
+ */
+/**
+ * Image upload widget.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/image\/image\.theme\.scss}line{font-family:\000039}}
+.image-preview {
+  float: left;
+  /* LTR */
+  padding: 0 10px 10px 0;
+  /* LTR */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/image\/image\.theme\.scss}line{font-family:\0000313}}
+.image-widget-data {
+  float: left;
+  /* LTR */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/image\/image\.theme\.scss}line{font-family:\0000316}}
+.image-widget-data .text-field {
+  width: auto;
+}

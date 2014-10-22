@@ -1,0 +1,75 @@
+/**
+ * @file
+ * Right to left system wide base styles.
+ */
+/**
+ * @file
+ * Right to left base styles for autocomplete functionality.
+ *
+ * @see autocomplete.js
+ */
+/* Animated throbber */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/autocomplete\/_autocomplete\.base-rtl\.scss}line{font-family:\000039}}
+html.js .form-autocomplete {
+  background-position: 0% 2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/autocomplete\/_autocomplete\.base-rtl\.scss}line{font-family:\0000312}}
+html.js .throbbing {
+  background-position: 0% -18px;
+}
+
+/**
+ * @file
+ * Right to left base styling for the tabledrag behavior.
+ *
+ * @see tabledrag.js
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/tabledrag\/_tabledrag\.base-rtl\.scss}line{font-family:\000038}}
+.draggable .tabledrag-handle {
+  float: right;
+  margin-left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/tabledrag\/_tabledrag\.base-rtl\.scss}line{font-family:\0000312}}
+.indentation {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/tabledrag\/_tabledrag\.base-rtl\.scss}line{font-family:\0000315}}
+.tree-child,
+.tree-child-last {
+  background-position: -65px center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/tabledrag\/_tabledrag\.base-rtl\.scss}line{font-family:\0000319}}
+.tabledrag-toggle-weight-wrapper {
+  text-align: left;
+}
+
+/**
+ * @file
+ * Right to left base styles for the progress behavior.
+ *
+ * @see progress.js
+ */
+/* Bar */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/progress\/_progress\.base-rtl\.scss}line{font-family:\000039}}
+.progress .percentage {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/progress\/_progress\.base-rtl\.scss}line{font-family:\0000312}}
+.progress-disabled {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/progress\/_progress\.base-rtl\.scss}line{font-family:\0000315}}
+.ajax-progress {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/progress\/_progress\.base-rtl\.scss}line{font-family:\0000318}}
+.ajax-progress .throbber {
+  float: right;
+}

@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Styling for contextual links behaviour and structure.
+ */
+/**
+ * Field display.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/field\/field\.theme-rtl\.scss}line{font-family:\0000310}}
+.field--label-inline .field__label,
+.field--label-inline .field__items {
+  float: right;
+}

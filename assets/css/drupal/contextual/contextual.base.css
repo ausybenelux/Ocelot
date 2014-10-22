@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Styling for contextual links behaviour and structure.
+ */
+/**
+ * Contextual links behaviour.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base\.scss}line{font-family:\000039}}
+.contextual-links-wrapper,
+.contextual-links-trigger,
+.contextual-links {
+  display: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base\.scss}line{font-family:\0000314}}
+html.js .contextual-links-wrapper,
+.contextual-links-region:hover .contextual-links-trigger,
+.contextual-links-active .contextual-links-trigger,
+.contextual-links-active .contextual-links {
+  display: block !important;
+}
+
+/**
+ * Contextual links structure.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base\.scss}line{font-family:\0000324}}
+.contextual-links-region {
+  outline: none;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base\.scss}line{font-family:\0000328}}
+.contextual-links-wrapper {
+  position: absolute;
+  z-index: 999;
+  right: 5px;
+  /* LTR */
+  top: 2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base\.scss}line{font-family:\0000334}}
+.contextual-links-trigger {
+  overflow: hidden;
+  text-align: right;
+  /* LTR */
+}

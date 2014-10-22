@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Right-to-left specific stylesheet for the Field UI module.
+ */
+/**
+ *'Manage fields' and 'Manage display' overviews.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/field_ui\/field_ui\.admin-rtl\.scss}line{font-family:\000039}}
+.field-ui-overview {
+  /* Add New Row */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/field_ui\/field_ui\.admin-rtl\.scss}line{font-family:\0000311}}
+.field-ui-overview .add-new .label-input {
+  float: right;
+  /* LTR */
+}

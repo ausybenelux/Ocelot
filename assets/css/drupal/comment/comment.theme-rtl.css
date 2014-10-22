@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Right-to-left comment module look and feel styling.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/comment\/comment\.theme-rtl\.scss}line{font-family:\000036}}
+.indented {
+  margin-left: 0;
+  margin-right: 25px;
+}

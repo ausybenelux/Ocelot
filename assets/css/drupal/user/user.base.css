@@ -1,0 +1,8 @@
+/**
+ * @file
+ * Base styles for the user module.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/user\/user\.base\.scss}line{font-family:\000035}}
+div.password-confirm {
+  visibility: hidden;
+}
