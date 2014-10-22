@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styling for contextual links behaviour and structure.
+ */
+/**
+ * Contextual links structure.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base-rtl\.scss}line{font-family:\000039}}
+.contextual-links-wrapper {
+  left: 5px;
+  right: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.base-rtl\.scss}line{font-family:\0000313}}
+.contextual-links-trigger {
+  text-align: left;
+}

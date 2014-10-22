@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styles for the block admin page.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/block\/block\.admin\.scss}line{font-family:\000036}}
+.blocks-admin .region-title {
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/block\/block\.admin\.scss}line{font-family:\000039}}
+.blocks-admin .region-message {
+  font-weight: normal;
+  color: #999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/block\/block\.admin\.scss}line{font-family:\0000313}}
+.blocks-admin .region-populated {
+  display: none;
+}

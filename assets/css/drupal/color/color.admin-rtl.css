@@ -1,0 +1,67 @@
+/**
+ * @file
+ * Right-to-left specific stylesheet for the Color module.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\000036}}
+#placeholder {
+  left: 0;
+  right: auto;
+}
+
+/* Palette */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000312}}
+.color-form .form-item {
+  padding-left: 0;
+  padding-right: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000316}}
+.color-form label {
+  float: right;
+  clear: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000320}}
+.color-form .form-text,
+.color-form .form-select {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000324}}
+.color-form .form-text {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000328}}
+#palette .hook {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000331}}
+#palette .down,
+#palette .up,
+#palette .both {
+  background: url('../../../img/modules/color/hook-rtl.png?1401892510') no-repeat 0 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000336}}
+#palette .up {
+  background-position: 0 -27px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000339}}
+#palette .both {
+  background-position: 0 -54px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000342}}
+#palette .lock {
+  float: right;
+  right: -10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/color\/color\.admin-rtl\.scss}line{font-family:\0000346}}
+html.js #preview {
+  float: right;
+}

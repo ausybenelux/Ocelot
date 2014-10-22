@@ -1,0 +1,87 @@
+/**
+ * @file
+ * Theme for for system messages.
+ */
+/* Message */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\000037}}
+.messages {
+  margin: 6px 0;
+  padding: 10px 10px 10px 50px;
+  /* LTR */
+  background-position: 8px 8px;
+  /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000314}}
+.messages ul {
+  margin: 0 0 0 1em;
+  /* LTR */
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000318}}
+.messages li {
+  list-style-image: none;
+}
+
+/* Status Messages */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000324}}
+.messages--status {
+  background-image: url('../../../img/misc/message-24-ok.png?1401892510');
+  border-color: #be7;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000328}}
+.messages--status,
+tr.ok {
+  background-color: #f8fff0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000332}}
+.messages--status,
+.ok {
+  color: #234600;
+}
+
+/* Warning Messages */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000338}}
+.messages--warning {
+  background-image: url('../../../img/misc/message-24-warning.png?1401892510');
+  border-color: #ed5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000342}}
+.messages--warning,
+tr.warning {
+  background-color: #fffce5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000346}}
+.messages--warning,
+.warning {
+  color: #333;
+}
+
+/* Error Messages */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000352}}
+.messages--error {
+  background-image: url('../../../img/misc/message-24-error.png?1401892510');
+  border-color: #ed541d;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000356}}
+.messages--error,
+tr.error {
+  background-color: #fef5f1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000360}}
+.messages--error,
+.error {
+  color: #333;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme\.scss}line{font-family:\0000365}}
+.error .error {
+  color: #8c2e0b;
+}

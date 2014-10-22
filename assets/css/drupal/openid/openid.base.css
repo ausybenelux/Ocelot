@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Base styles for the Open ID module.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.base\.scss}line{font-family:\000036}}
+html.js .user-login-form .openid-link,
+html.js .user-login .openid-link {
+  display: block;
+  margin-left: 0;
+  /* LTR */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.base\.scss}line{font-family:\0000311}}
+html.js .user-login-form .form-item-openid-identifier,
+html.js .user-login .form-item-openid-identifier {
+  display: none;
+}

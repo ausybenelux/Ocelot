@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Styling for the Forum module.
+ */
+/* Forum Status Icons */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme\.scss}line{font-family:\000037}}
+.forum-icon {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.4em;
+  background-image: url('../../../img/modules/forum/forum-icons.png?1401892510');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme\.scss}line{font-family:\0000316}}
+.forum-icon--status-new {
+  background-position: -24px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme\.scss}line{font-family:\0000319}}
+.forum-icon--status-hot {
+  background-position: -48px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme\.scss}line{font-family:\0000322}}
+.forum-icon--status-hot-new {
+  background-position: -72px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme\.scss}line{font-family:\0000325}}
+.forum-icon--status-sticky {
+  background-position: -96px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme\.scss}line{font-family:\0000328}}
+.forum-icon--status-closed {
+  background-position: -120px 0;
+}
