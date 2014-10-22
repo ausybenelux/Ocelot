@@ -1,4 +1,4 @@
-drupal-theme-boilerplate
+Drupal Xcheck Theme boilerplate
 ========================
 
 A base theme implementation for drupal theming that Follows [http://smacss.com/](smacss) specs.<br>
@@ -15,8 +15,8 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
 
 When you have never worked on this project before you must go trough some basic installation steps. 
 
-###### IMPORTANT
-When you are working on the [CrossCheck](https://github.com/Crosscheck/VagrantDrupalDev) Vagrant box you can skip to
+###### IMPORTANT !!!
+When you are working on the [CrossCheck](https://github.com/Crosscheck/VagrantDrupalDev) Vagrant box you can skip to **2.1.1**
 
 * install [rvm](http://rvm.io/) `\curl -sSL https://get.rvm.io | bash -s stable`
 * install [node](http://nodejs.org/) `brew install node`
@@ -27,27 +27,27 @@ When you are working on the [CrossCheck](https://github.com/Crosscheck/VagrantDr
 
   * When you browse to the theme folder, the .ruby-version file checks if you have the proper ruby version installed. If you don't rvm will prompt you with the command(**rvm install ruby-2.0.0-p481**) to run and to install the right ruby version, this can take some time.
 
-output when you browse to the folder:
+Output when you browse to the folder:
 
     `ruby-2.0.0-p481 is not installed.`
     `To install do: 'rvm install ruby-2.0.0-p481'`
 
 ### 2.1.2 Setup the gemset to use
 
-  * When you successfully installed this ruby version, you should create a gemset:
+When you successfully installed this ruby version, you should create a gemset:
     
-    * change the name of `crosscheck_theme` to the real name of the theme 
-    in your `.ruby-gemset` file 
+  * Change the name of `crosscheck_theme` to the real name of the theme 
+  in your `.ruby-gemset` file <br><br>
 
-    * cd out and in the folder again, this will create the gemset with that name specified in `.ruby-gemset` for you, <br>
-    **with this gemset the project it's gems are isolated, this is the same for every developer that works on this project.**
+  * Cd out and in the folder again, this will create the gemset with that name specified in `.ruby-gemset` for you, <br>
+  **with this gemset the project it's gems are isolated, this is the same for every developer that works on this project.**<br><br>
 
-    * you can also create and use the gemset yourself by doing
-    `rvm gemset create crosscheck_theme && rvm gemset use crosscheck_theme`
+  * You can also create and use the gemset yourself by doing
+  `rvm gemset create crosscheck_theme && rvm gemset use crosscheck_theme`
 
 ### 2.1.3 Install gems from Gemfile to gemset
 
-  * The final step is to install all the gems that are specified in the Gemfile so your gemset is complete. When you created the gemset `bundle` was included in the gemset.
+The final step is to install all the gems that are specified in the Gemfile so your gemset is complete. When you created the gemset `bundle` was included in the gemset.
   So you should use it te create your bundle.
 
 run `bundle install` to install all gems
@@ -98,8 +98,8 @@ In this project mainly grunt plugins and grunt itself.
     * sass/
 
 ## 3.0.1 Extra information
-  * The [master]() branch is build so that it does not need a parent theme
-  * The [omega]() branch is build so that it does not need a parent theme
+  * The [master](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/master) branch is build so that it does not need a parent theme
+  * The [omega](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/omega) branch is build so that it does not need a parent theme
   * On omega_scss branch recommended use of **.scss** syntax over **.scss** syntax
   * you can use svg for logo's and icons
   * font folder should contain webfonts `.TTF, .EOT, .WOFF, .SVG`
