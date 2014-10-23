@@ -48,8 +48,8 @@ module.exports = (grunt) ->
           src: "<%= settings.base %>assets/js/*.js"
 
     uglify:
-      options:
-        sourceMap: true
+      # options:
+      #   sourceMap: true
       all:
         files: [
           expand: true,
