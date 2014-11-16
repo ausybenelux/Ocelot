@@ -9,7 +9,7 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
   * [grunt](http://gruntjs.com/)
   
   * This repository
-    * `git clone git@github.com:rob-bar/drupal-theme-boilerplate.git`
+    * `git clone git@github.com:Crosscheck/drupal-theme-boilerplate.git`
 
 ## 2.0.1 Installation:
 
@@ -37,7 +37,7 @@ Output when you browse to the folder:
 When you successfully installed this ruby version, you should create a gemset:
     
   * Change the name of `crosscheck_theme` to the real name of the theme 
-  in your `.ruby-gemset` file <br><br>
+  in your `.ruby-gemset` file, also in the `.ruby-version` file change it to ruby-2.0.0-p481@**yourthemename** <br><br>
 
   * Cd out and in the folder again, this will create the gemset with that name specified in `.ruby-gemset` for you, <br>
   **with this gemset the project it's gems are isolated, this is the same for every developer that works on this project.**<br><br>
