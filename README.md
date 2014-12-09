@@ -190,7 +190,10 @@ General things you should know:
 
   * **css sourcemaps**
     The grunt configuration file sets sourcemapping on the styles.css files, that way you can inspect the project in chrome devtools or firefox debugger and find the actual source (scss) files.
-    These `.css.map` files are ignored bythe gitignore
+    These `.css.map` files are ignored bythe gitignore. <br>
+    How to set it up in [Chrome devtools](https://developer.chrome.com/devtools/docs/css-preprocessors). <br>
+    How to set it up in [Firefox debugger](https://hacks.mozilla.org/2014/02/live-editing-sass-and-less-in-the-firefox-developer-tools/)
+    
 
   * **importance of order**
 
