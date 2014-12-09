@@ -9,7 +9,7 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
   * [grunt](http://gruntjs.com/)
   
   * This repository
-    * `git clone git@github.com:rob-bar/drupal-theme-boilerplate.git`
+    * `git clone git@github.com:Crosscheck/drupal-theme-boilerplate.git`
 
 ## 2.0.1 Installation:
 
