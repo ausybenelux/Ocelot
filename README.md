@@ -9,7 +9,7 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
   * [grunt](http://gruntjs.com/)
   
   * This repository
-    * `git clone git@github.com:rob-bar/drupal-theme-boilerplate.git`
+    * `git clone git@github.com:Crosscheck/drupal-theme-boilerplate.git`
 
 ## 2.0.1 Installation:
 
@@ -99,10 +99,9 @@ In this project mainly grunt plugins and grunt itself.
 
 ## 3.0.1 Extra information
   * The [master](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/master) branch is build so that it does not need a parent theme
-  * The [omega](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/omega) branch is build so that it does not need a parent theme
-  * On omega_scss branch recommended use of **.scss** syntax over **.scss** syntax
-  * you can use svg for logo's and icons
-  * font folder should contain webfonts `.TTF, .EOT, .WOFF, .SVG`
+  * The [omega](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/omega) branch is a mixture of the [omega4 project](https://www.drupal.org/project/omega) and this boilerplate
+  * You should use svg for logo's and icons
+  * The font folder in assets should contain webfonts `.TTF, .EOT, .WOFF, .SVG`
 
 ## 4.0.1 Structure
 
