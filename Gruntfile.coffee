@@ -1,43 +1,56 @@
 module.exports = (grunt) ->
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
+  # get the theme from the command
+  if grunt.option('theme')
+    theme = "#{grunt.option('theme')}/" || ""
+
   # PROJECT CONFIGURATION.
   grunt.initConfig
     settings:
       base: ""
+      theme: theme
+      # BASE
       # can be node's __dirname, or reference to deeper directory (when this gruntfile sits on the root of the projects)
       # EMPTY STRING when gruntfile sits in the THEME folder
+
+      # THEME
+      # This is a parrameter that lets you compile multiple themes grunt --theme="subtheme/theme" or grunt --theme="subtheme/othertheme"
+      # EMPTY STRING when gruntfile sits in the THEME folder
+      # of course the theme must be based upon the boilerplate
 
     compass:
       app:
         options:
-          specify: ["<%= settings.base %>assets/scss/styles.scss", "<%= settings.base %>assets/scss/drupal/**/*.scss"],
-          bundleExec: true
+          specify: "<%= settings.base %><%= settings.theme %>assets/scss/styles.scss",
+          sassDir: "<%= settings.base %><%= settings.theme %>assets/scss"
+          cssDir: "<%= settings.base %><%= settings.theme %>assets/css"
+          imagesDir: "<%= settings.base %><%= settings.theme %>assets/img"
+          fontsDir: "<%= settings.base %><%= settings.theme %>assets/font"
           require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing"]
           httpPath: "/"
-          sassDir: "<%= settings.base %>assets/scss"
-          cssDir: "<%= settings.base %>assets/css"
-          imagesDir: "<%= settings.base %>assets/img"
-          fontsDir: "<%= settings.base %>assets/font"
+          bundleExec: true
           relativeAssets: true
-          debugInfo: true
-          outputStyle: "expanded"
+          sourcemap: true
           noLineComments: true
+          outputStyle: "expanded"
           raw: "preferred_syntax = :scss\n"
 
       deploy:
         options:
-          specify: ["<%= settings.base %>assets/scss/styles.scss", "<%= settings.base %>assets/scss/drupal/**/*.scss"],
-          bundleExec: true
+          specify: "<%= settings.base %><%= settings.theme %>assets/scss/styles.scss",
+          sassDir: "<%= settings.base %><%= settings.theme %>assets/scss"
+          cssDir: "<%= settings.base %><%= settings.theme %>assets/css"
+          imagesDir: "<%= settings.base %><%= settings.theme %>assets/img"
+          fontsDir: "<%= settings.base %><%= settings.theme %>assets/font"
           require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing"]
           httpPath: "/"
-          sassDir: "<%= settings.base %>assets/scss"
-          cssDir: "<%= settings.base %>assets/css"
-          imagesDir: "<%= settings.base %>assets/img"
-          fontsDir: "<%= settings.base %>assets/font"
+          bundleExec: true
+          sourcemap: true
+          force: true
           relativeAssets: true
-          outputStyle: "compressed"
           noLineComments: true
+          outputStyle: "compressed"
           raw: "preferred_syntax = :scss\n"
 
     jshint:
@@ -45,7 +58,7 @@ module.exports = (grunt) ->
         options:
           jshintrc: true
         files:
-          src: "<%= settings.base %>assets/js/*.js"
+          src: "<%= settings.base %><%= settings.theme %>assets/js/*.js"
 
     uglify:
       # options:
@@ -53,18 +66,18 @@ module.exports = (grunt) ->
       all:
         files: [
           expand: true,
-          cwd: "<%= settings.base %>assets/js/",
+          cwd: "<%= settings.base %><%= settings.theme %>assets/js/",
           src: "**/*.js",
-          dest: "<%= settings.base %>assets/js/",
+          dest: "<%= settings.base %><%= settings.theme %>assets/js/",
           ext: ".min.js",
           extDot: "first"
         ]
       own:
         files: [
           expand: true,
-          cwd: "<%= settings.base %>assets/js/",
+          cwd: "<%= settings.base %><%= settings.theme %>assets/js/",
           src: "*.js",
-          dest: "<%= settings.base %>assets/js/",
+          dest: "<%= settings.base %><%= settings.theme %>assets/js/",
           ext: ".min.js",
           extDot: "first"
         ]
@@ -75,9 +88,9 @@ module.exports = (grunt) ->
           optimizationLevel: 3
         files: [
             expand: true,
-            cwd: "<%= settings.base %>assets/img/"
+            cwd: "<%= settings.base %><%= settings.theme %>assets/img/"
             src: "**/*.{png,jpg,jpeg}"
-            dest: "<%= settings.base %>assets/img/"
+            dest: "<%= settings.base %><%= settings.theme %>assets/img/"
         ]
 
     watch:
@@ -86,10 +99,10 @@ module.exports = (grunt) ->
         interrupt: false
         spawn: false
       js:
-        files: ["<%= settings.base %>assets/js/**/*.js"]
+        files: ["<%= settings.base %><%= settings.theme %>assets/js/*.js"]
         tasks: ["jshint", "uglify:own"]
       scss:
-        files: ["<%= settings.base %>assets/scss/**/*.scss"]
+        files: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
         tasks: ["compass:app"]
 
   # DEFAULT TASK.
