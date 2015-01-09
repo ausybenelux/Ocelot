@@ -37,28 +37,3 @@ table {
   }
 }
 
-img {
-  &.file-full-width {
-    width: 100%;
-  }
-
-  &.file-half-width {
-    width: 50%;
-  }
-
-  &.file-quarter-width {
-    width: 25%;
-  }
-}
-
-.ok {
-  @extend %ok;
-}
-
-.warning {
-  @extend %warning;
-}
-
-.overlay {
-  @include overlay($black_8);
-}
