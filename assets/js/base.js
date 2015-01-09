@@ -1,4 +1,4 @@
-(function($, Drupal) {
+(function () {
   var helper, site;
 
   helper = {
@@ -20,19 +20,7 @@
   };
 
   site = {
-    myCode: {
-      attach: function() {
-        return console.log("myCode");
-      }
-    },
-    myCode2: {
-      attach: function() {
-        return console.log("myCode2");
-      }
-    }
   };
-
-  _.extend(Drupal.behaviors, site);
 
   $(function() {
     return console.log("Document is ready");
@@ -42,4 +30,4 @@
     return console.log("Window is loaded" + e);
   });
 
-})(jQuery, Drupal);
+})();

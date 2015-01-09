@@ -19,8 +19,9 @@
   @include container;
 }
 
-// .clearfix
-//   +clearfix
+.clearfix {
+  @include clearfix;
+}
 
 .pie-clearfix {
   @include pie-clearfix;
