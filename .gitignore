@@ -2,3 +2,4 @@
 node_modules
 /vendor
 Gemfile.lock
+*.css.map

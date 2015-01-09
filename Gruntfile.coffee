@@ -12,32 +12,34 @@ module.exports = (grunt) ->
       app:
         options:
           specify: "<%= settings.base %>assets/scss/styles.scss",
-          bundleExec: true
-          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing"]
-          httpPath: "/"
           sassDir: "<%= settings.base %>assets/scss"
           cssDir: "<%= settings.base %>assets/css"
           imagesDir: "<%= settings.base %>assets/img"
           fontsDir: "<%= settings.base %>assets/font"
+          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing"]
+          httpPath: "/"
+          bundleExec: true
           relativeAssets: true
-          debugInfo: true
-          outputStyle: "expanded"
+          sourcemap: true
           noLineComments: true
+          outputStyle: "expanded"
           raw: "preferred_syntax = :scss\n"
 
       deploy:
         options:
           specify: "<%= settings.base %>assets/scss/styles.scss",
-          bundleExec: true
-          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing"]
-          httpPath: "/"
           sassDir: "<%= settings.base %>assets/scss"
           cssDir: "<%= settings.base %>assets/css"
           imagesDir: "<%= settings.base %>assets/img"
           fontsDir: "<%= settings.base %>assets/font"
+          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing"]
+          httpPath: "/"
+          bundleExec: true
+          sourcemap: true
+          force: true
           relativeAssets: true
-          outputStyle: "compressed"
           noLineComments: true
+          outputStyle: "compressed"
           raw: "preferred_syntax = :scss\n"
 
     jshint:
@@ -86,7 +88,7 @@ module.exports = (grunt) ->
         interrupt: false
         spawn: false
       js:
-        files: ["<%= settings.base %>assets/js/**/*.js"]
+        files: ["<%= settings.base %>assets/js/*.js"]
         tasks: ["jshint", "uglify:own"]
       scss:
         files: ["<%= settings.base %>assets/scss/**/*.scss"]
