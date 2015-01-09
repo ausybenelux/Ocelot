@@ -7,7 +7,6 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
   * [rvm](http://rvm.io/)
   * [nodejs](http://nodejs.org)
   * [grunt](http://gruntjs.com/)
-  
   * This repository
     * `git clone git@github.com:Crosscheck/drupal-theme-boilerplate.git`
 
@@ -78,31 +77,30 @@ In this project mainly grunt plugins and grunt itself.
   * `grunt deploy` *(executes deploy grunt task compass:deploy, coffee, jshint, concat, uglify, imagemin)*
 
 ### 2.2.3 General theme Structure:
-  * templates/
-  * crosscheck_theme.info
-  * Gemfile
-  * Gemfile.lock
-  * Gruntfile.coffee
-  * package.json
-  * template.php
-  * .gitignore
-  * .jshintrc
-  * .ruby-gemset
-  * .ruby-version
-  * assets/
-    * coffee/
-    * css/
-    * font/
-    * img/
-    * js/
-    * sass/
+  
+    crosscheck_theme.info
+    Gemfile
+    Gemfile.lock
+    Gruntfile.coffee
+    package.json
+    template.php
+    .gitignore
+    .jshintrc
+    .ruby-gemset
+    .ruby-version
+    templates/
+    assets/
+      css/
+      font/
+      img/
+      js/
+      scss/
 
 ## 3.0.1 Extra information
   * The [master](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/master) branch is build so that it does not need a parent theme
-  * The [omega](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/omega) branch is build so that it does not need a parent theme
-  * On omega_scss branch recommended use of **.scss** syntax over **.scss** syntax
-  * you can use svg for logo's and icons
-  * font folder should contain webfonts `.TTF, .EOT, .WOFF, .SVG`
+  * The [omega](https://github.com/Crosscheck/drupal-theme-boilerplate/tree/omega) branch is a mixture of the [omega4 project](https://www.drupal.org/project/omega) and this boilerplate
+  * You should use svg for logo's and icons
+  * The font folder in assets should contain webfonts `.TTF, .EOT, .WOFF, .SVG`
 
 ## 4.0.1 Structure
 
@@ -177,26 +175,25 @@ The goal of the theme is to let the files compile and do all the work and spit o
   * **state.scss**
 
     Here you can find the mediaqueries and responsive styling,
-    anything that is styled for specific screen sizes must go in this file
+    anything that is styled for specific screen sizes can go in this file.
+    This does not apply to components, these files can have their own mediaqueries or own fallback rules
 
   * **fallback.scss**
 
-    This file is the crossbrowser file, all the fixes/styles made for specific browsers
-    must go in this file
+    This file is the crossbrowser file, all the fixes/styles made for specific browsers can go in this file
+    This does not apply to components, these files can have their own mediaqueries or own fallback rules
 
 
 ### 4.1.4 Things to notice
 
 General things you should know:
 
-  * **Compilation debug lines**
-
-    Because we compile to one css file it is handy to know when you are debugging in a browser inspector
-    where that css line came from.
-
-        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/USERNAME\/Documents\/REPO\/drupal_grunt\/assets\/sass\/lib\/mixin\.scss}line{font-family:\00003176}}
-
-    These lines are added in the css files so when you inspect in the browser you can go to the css file and check where the broken rule commes from. Handy!
+  * **css sourcemaps**
+    The grunt configuration file sets sourcemapping on the styles.css files, that way you can inspect the project in chrome devtools or firefox debugger and find the actual source (scss) files.
+    These `.css.map` files are ignored bythe gitignore. <br>
+    How to set it up in [Chrome devtools](https://developer.chrome.com/devtools/docs/css-preprocessors). <br>
+    How to set it up in [Firefox debugger](https://hacks.mozilla.org/2014/02/live-editing-sass-and-less-in-the-firefox-developer-tools/)
+    
 
   * **importance of order**
 

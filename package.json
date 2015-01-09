@@ -1,6 +1,6 @@
 {
-  "author": "Robbie",
-  "name": "smacsstheme",
+  "author": "Crosscheck",
+  "name": "Crosscheck - drupal theme boilerplate",
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
@@ -16,5 +16,8 @@
   },
   "engines": {
     "node": ">=0.8.0"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
   }
 }
