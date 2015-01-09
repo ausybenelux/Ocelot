@@ -1,16 +1,17 @@
-/* ====================================================================================================== */
-/* VARS */
-/* ====================================================================================================== */
+// ====================================================================================================== //
+// VARS //
+// ====================================================================================================== //
+
 // colors
-$white: white;
-$white_8: rgba($white, 0.8);
-$white_4: rgba($white, 0.4);
+$white: #FFF;
+$white-8: rgba($white, .8);
+$white-4: rgba($white, .4);
 
-$black: black;
-$black_8: rgba($black, 0.8);
-$black_4: rgba($black, 0.4);
+$black: #000;
+$black-8: rgba($black, .8);
+$black-4: rgba($black, .4);
 
-$error: red;
+$error: #F00;
 
 // typo
 $rembase: 16;
@@ -24,8 +25,8 @@ $arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
 // $sprites: sprite-map("sprite/*.png")
 
 // shades
-$glow: 0 0 15px rgba(0, 0, 0, 0.2);
-$smallglow: 0 0 10px rgba(0, 0, 0, 0.2);
+$glow: 0 0 15px rgba(0, 0, 0, .2);
+$smallglow: 0 0 10px rgba(0, 0, 0, .2);
 
 // timings
 $superfast: 250ms;
