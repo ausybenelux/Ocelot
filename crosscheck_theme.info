@@ -1,7 +1,5 @@
-name        = kotk omega theme
-description = "Subtheme from the boilerplate theme"
+name        = smacsstheme theme
 core        = 7.x
-base theme = boilerplate
 
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
