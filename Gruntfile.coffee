@@ -60,6 +60,7 @@ module.exports = (grunt) ->
         colorizeOutput: true
       allFiles: [
         "<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"
+        "!<%= settings.base %><%= settings.theme %>assets/scss/drupal/**/*.scss"
       ]
 
     jshint:
