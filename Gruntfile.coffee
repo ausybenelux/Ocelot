@@ -53,6 +53,15 @@ module.exports = (grunt) ->
           outputStyle: "compressed"
           raw: "preferred_syntax = :scss\n"
 
+    scsslint:
+      options:
+        bundleExec: true
+        config: "scsslint.yml"
+        colorizeOutput: true
+      allFiles: [
+        "<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"
+      ]
+
     jshint:
       app:
         options:
@@ -103,11 +112,12 @@ module.exports = (grunt) ->
         tasks: ["jshint", "uglify:own"]
       scss:
         files: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
-        tasks: ["compass:app"]
+        tasks: ["compass:app", "scsslint"]
 
   # DEFAULT TASK.
   grunt.registerTask "default", [
     "compass:app"
+    "scsslint"
     "jshint"
     "uglify:own"
   ]
@@ -115,6 +125,7 @@ module.exports = (grunt) ->
   # DEPLOY
   grunt.registerTask "deploy", [
     "compass:deploy"
+    "scsslint"
     "jshint"
     "uglify:all"
     "imagemin"
