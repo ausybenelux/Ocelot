@@ -12,6 +12,7 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-imagemin": "*",
+    "grunt-scss-lint": "*",
     "matchdep": "*"
   },
   "engines": {
