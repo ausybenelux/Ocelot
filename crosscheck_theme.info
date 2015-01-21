@@ -1,5 +1,6 @@
 name        = smacsstheme theme
 core        = 7.x
+base theme = omega
 
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
