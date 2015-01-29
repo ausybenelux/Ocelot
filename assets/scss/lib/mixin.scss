@@ -111,11 +111,11 @@
   line-height: $line-height / $rembase + rem;
 }
 
-@mixin fontsmoothing {
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+@mixin fontsmoothing ($smooting: antialiased) {
+  -webkit-font-smoothing: $smooting;
+  -moz-font-smoothing: $smooting;
+  -ms-font-smoothing: $smooting;
+  font-smoothing: $smooting;
 }
 
 @mixin unselectable {
