@@ -76,7 +76,10 @@ module.exports = (grunt) ->
         files: [
           expand: true,
           cwd: "<%= settings.base %><%= settings.theme %>assets/js/",
-          src: "**/*.js",
+          src: [
+            "**/*.js"
+            "!**/*.min.js"
+          ]
           dest: "<%= settings.base %><%= settings.theme %>assets/js/",
           ext: ".min.js",
           extDot: "first"
