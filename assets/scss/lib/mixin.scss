@@ -86,36 +86,44 @@
   }
 }
 
-@mixin typo($font, $size, $lh, $color, $weight: normal, $style: normal) {
+@mixin typo($font, $size, $lh, $color, $weight: normal, $style: normal, $unit: rem) {
+  @include font-size-line-height($size, $lh, $unit);
   font-family: $font;
-  @include font-size-line-height($size, $lh);
   color: $color;
   font-weight: $weight;
   font-style: $style;
 }
 
-@mixin font-size($size-value) {
-  font-size: $size-value + px;
-  font-size: $size-value / $rembase + em;
+@function font-family-stack($name: "Arial", $kind: "regular", $stack: Helvetica, Arial, Sans-Serif) {
+  @return "#{$name}-#{$kind}", $stack;
 }
 
-@mixin line-height($line-height) {
-  line-height: $line-height + px;
-  line-height: $line-height / $rembase + rem;
+@mixin font-size($sizeValue, $unit: rem) {
+  @if $rem-with-px-fallback == true {
+    font-size: $sizeValue + px;
+  }
+
+  font-size: $sizeValue / $rembase + $unit;
 }
 
-@mixin font-size-line-height($font-size, $line-height) {
-  font-size: $font-size + px;
-  font-size: $font-size / $rembase + em;
-  line-height: $line-height + px;
-  line-height: $line-height / $rembase + rem;
+@mixin line-height($line-height, $unit: rem) {
+  @if $rem-with-px-fallback == true {
+    line-height: $line-height + px;
+  }
+
+  line-height: $line-height / $rembase + $unit;
 }
 
-@mixin fontsmoothing {
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+@mixin font-size-line-height($font-size, $line-height, $unit: rem) {
+  @include font-size($font-size, $unit);
+  @include line-height($line-height, $unit);
+}
+
+@mixin fontsmoothing ($smooting: antialiased) {
+  -webkit-font-smoothing: $smooting;
+  -moz-font-smoothing: $smooting;
+  -ms-font-smoothing: $smooting;
+  font-smoothing: $smooting;
 }
 
 @mixin unselectable {
