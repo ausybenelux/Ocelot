@@ -76,7 +76,10 @@ module.exports = (grunt) ->
         files: [
           expand: true,
           cwd: "<%= settings.base %><%= settings.theme %>assets/js/",
-          src: "**/*.js",
+          src: [
+            "**/*.js"
+            "!**/*.min.js"
+          ]
           dest: "<%= settings.base %><%= settings.theme %>assets/js/",
           ext: ".min.js",
           extDot: "first"
@@ -107,6 +110,9 @@ module.exports = (grunt) ->
         atBegin: true
         interrupt: false
         spawn: false
+        # Set to `true` or set `livereload: 1337` to a port number to enable live reloading.
+        # Default and recommended port is 35729.
+        livereload: false
       js:
         files: ["<%= settings.base %><%= settings.theme %>assets/js/*.js"]
         tasks: ["jshint", "uglify:own"]
