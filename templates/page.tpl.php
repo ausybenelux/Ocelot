@@ -75,7 +75,7 @@
             <?php endif; ?>
             <?php print render($title_suffix); ?>
 
-            <?php if ($tabs): ?>
+            <?php if (render($tabs)): ?>
               <div class="tabs">
                 <?php print render($tabs); ?>
               </div>
