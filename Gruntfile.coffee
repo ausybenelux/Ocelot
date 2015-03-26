@@ -56,7 +56,7 @@ module.exports = (grunt) ->
     scsslint:
       options:
         bundleExec: true
-        config: "scsslint.yml"
+        config: ".scss-lint.yml"
         colorizeOutput: true
       allFiles: [
         "<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"
