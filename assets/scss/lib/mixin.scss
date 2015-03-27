@@ -94,7 +94,7 @@
   font-style: $style;
 }
 
-@function font-family-stack($name: "Arial", $kind: "regular", $stack: Helvetica, Arial, Sans-Serif) {
+@function font-family-stack($name: "Arial", $kind: "regular", $stack: "Helvetica, Arial, Sans-Serif") {
   @return "#{$name}-#{$kind}", $stack;
 }
 
