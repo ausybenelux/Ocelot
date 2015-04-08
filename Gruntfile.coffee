@@ -5,11 +5,14 @@ module.exports = (grunt) ->
   if grunt.option('theme')
     theme = "#{grunt.option('theme')}/" || ""
 
+  compile = grunt.option('force') || false
+
   # PROJECT CONFIGURATION.
   grunt.initConfig
     settings:
       base: ""
       theme: theme
+      compile: compile
       # BASE
       # can be node's __dirname, or reference to deeper directory (when this gruntfile sits on the root of the projects)
       # EMPTY STRING when gruntfile sits in the THEME folder
@@ -18,6 +21,10 @@ module.exports = (grunt) ->
       # This is a parrameter that lets you compile multiple themes grunt --theme="subtheme/theme" or grunt --theme="subtheme/othertheme"
       # EMPTY STRING when gruntfile sits in the THEME folder
       # of course the theme must be based upon the boilerplate
+
+      # COMPILE
+      # This is a parrameter that lets you force compile all the scss files in the theme
+      # grunt --force=true
 
     compass:
       app:
@@ -35,6 +42,7 @@ module.exports = (grunt) ->
           noLineComments: true
           outputStyle: "expanded"
           raw: "preferred_syntax = :scss\n"
+          force: "<%= settings.compile %>"
 
       deploy:
         options:
@@ -88,7 +96,10 @@ module.exports = (grunt) ->
         files: [
           expand: true,
           cwd: "<%= settings.base %><%= settings.theme %>assets/js/",
-          src: "*.js",
+          src: [
+            "*.js"
+            "!*.min.js"
+          ]
           dest: "<%= settings.base %><%= settings.theme %>assets/js/",
           ext: ".min.js",
           extDot: "first"
@@ -115,10 +126,10 @@ module.exports = (grunt) ->
         livereload: false
       js:
         files: ["<%= settings.base %><%= settings.theme %>assets/js/*.js"]
-        tasks: ["jshint", "uglify:own"]
+        tasks: ["jshint"]
       scss:
         files: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
-        tasks: ["compass:app", "scsslint"]
+        tasks: ["compass:app"]
 
   # DEFAULT TASK.
   grunt.registerTask "default", [
