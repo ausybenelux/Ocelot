@@ -3,6 +3,10 @@
   "name": "drupal-theme-boilerplate",
   "version": "0.0.1",
   "dependencies": {},
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/Crosscheck/drupal-theme-boilerplate"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-compass": "*",
