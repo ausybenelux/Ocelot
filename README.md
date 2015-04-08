@@ -8,7 +8,7 @@ A base theme implementation for drupal theming that Follows [http://smacss.com/]
   * [nodejs](http://nodejs.org)
   * [grunt](http://gruntjs.com/)
   * This repository
-    * `git clone git@github.com:Crosscheck/drupal-theme-boilerplate.git`
+    * `git clone git@github.com:Crosscheck/Ocelot.git`
 
 ## 2.0.1 Installation:
 
