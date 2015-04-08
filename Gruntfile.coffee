@@ -96,7 +96,10 @@ module.exports = (grunt) ->
         files: [
           expand: true,
           cwd: "<%= settings.base %><%= settings.theme %>assets/js/",
-          src: "*.js",
+          src: [
+            "*.js"
+            "!*.min.js"
+          ]
           dest: "<%= settings.base %><%= settings.theme %>assets/js/",
           ext: ".min.js",
           extDot: "first"
@@ -123,10 +126,10 @@ module.exports = (grunt) ->
         livereload: false
       js:
         files: ["<%= settings.base %><%= settings.theme %>assets/js/*.js"]
-        tasks: ["jshint", "uglify:own"]
+        tasks: ["jshint"]
       scss:
         files: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
-        tasks: ["compass:app", "scsslint"]
+        tasks: ["compass:app"]
 
   # DEFAULT TASK.
   grunt.registerTask "default", [
