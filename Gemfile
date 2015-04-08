@@ -11,5 +11,5 @@ group :development do
   gem "compass-h5bp", "~> 0.1.x"
   gem 'compass-rgbapng', '~> 0.2.x'
   gem 'chunky_png', '~> 1.3.x'
-
+  gem 'font-awesome-sass', '~> 4.3.0'
 end
