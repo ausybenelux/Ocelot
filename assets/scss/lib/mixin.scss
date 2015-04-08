@@ -98,12 +98,12 @@
   @return "#{$name}-#{$kind}", $stack;
 }
 
-@mixin font-size($sizeValue, $unit: rem) {
+@mixin font-size($size, $unit: rem) {
   @if $rem-with-px-fallback == true {
-    font-size: $sizeValue + px;
+    font-size: $size + px;
   }
 
-  font-size: $sizeValue / $rembase + $unit;
+  font-size: $size / $rembase + $unit;
 }
 
 @mixin line-height($line-height, $unit: rem) {
