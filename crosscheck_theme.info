@@ -10,7 +10,7 @@ stylesheets[all][] = assets/css/styles.css
 
 scripts[] = assets/js/vendor/modernizr.min.js
 scripts[] = assets/js/vendor/underscore.min.js
-scripts[] = assets/js/base.min.js
+scripts[] = assets/js/base.js
 
 regions[header]         = Header
 regions[navigation]     = Navigation bar
