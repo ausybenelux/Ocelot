@@ -7,5 +7,5 @@
 }
 
 .overlay {
-  @include overlay($c-black-8);
+  @include overlay(black(.8));
 }
