@@ -1,7 +1,7 @@
 <?php
 
 //ALTER HEAD TAG
-function ao_portal_default_html_head_alter( &$head_elements ) {
+function ocelot_default_html_head_alter( &$head_elements ) {
   if(array_key_exists( "system_meta_content_type", $head_elements )) {
     unset($head_elements["system_meta_content_type"]["#attributes"]["http-equiv"]);
     unset($head_elements["system_meta_content_type"]["#attributes"]["content"]);
