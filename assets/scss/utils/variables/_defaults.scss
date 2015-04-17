@@ -1,5 +1,8 @@
-// The box-sizing can be set to 'content-box' or 'border-box'.
-$default-box-sizing: border-box;
+// Set true to set the global box-sizing to border-box.
+$default-border-box: true;
+
+// Set true to use font smoothing
+$default-font-smoothing: true;
 
 // Default values
 $default-border-radius: 10px;

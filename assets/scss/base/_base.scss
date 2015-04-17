@@ -1,3 +1,26 @@
+// Use the border-box hack.
+
+@if $default-border-box {
+  *,
+  *:after,
+  *:before {
+    box-sizing: inherit;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+}
+
+// Use font smoothing
+
+@if $default-font-smoothing {
+  html,
+  html a {
+    @include fontsmoothing();
+  }
+}
+
 *:active,
 *:hover,
 *:focus {
