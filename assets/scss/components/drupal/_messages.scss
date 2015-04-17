@@ -1,0 +1,11 @@
+.ok {
+  @extend %ok;
+}
+
+.warning {
+  @extend %warning;
+}
+
+.overlay {
+  @include overlay($c-black-8);
+}

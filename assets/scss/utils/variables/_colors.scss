@@ -1,0 +1,11 @@
+// All color variables should be prefix with 'c-'!
+
+$c-white: #FFF;
+$c-white-8: rgba($c-white, .8);
+$c-white-4: rgba($c-white, .4);
+
+$c-black: #000;
+$c-black-8: rgba($c-black, .8);
+$c-black-4: rgba($c-black, .4);
+
+$c-error: #F00;

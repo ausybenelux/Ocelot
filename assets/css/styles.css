@@ -6,8 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(../font/font-awesome/fontawesome-webfont.eot?1428499350);
-  src: url(../font/font-awesome/fontawesome-webfont.eot?&1428499350#iefix) format("embedded-opentype"), url(../font/font-awesome/fontawesome-webfont.woff2?1428499350) format("woff2"), url(../font/font-awesome/fontawesome-webfont.woff?1428499350) format("woff"), url(../font/font-awesome/fontawesome-webfont.ttf?1428499350) format("truetype"), url(../font/font-awesome/fontawesome-webfont.svg?1428499350#fontawesomeregular) format("svg");
+  src: url(../font/font-awesome/fontawesome-webfont.eot?1429263476);
+  src: url(../font/font-awesome/fontawesome-webfont.eot?&1429263476#iefix) format("embedded-opentype"), url(../font/font-awesome/fontawesome-webfont.woff2?1429263476) format("woff2"), url(../font/font-awesome/fontawesome-webfont.woff?1429263476) format("woff"), url(../font/font-awesome/fontawesome-webfont.ttf?1429263476) format("truetype"), url(../font/font-awesome/fontawesome-webfont.svg?1429263476#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2717,6 +2717,16 @@ body {
   background-color: white;
 }
 
+img.file-full-width {
+  width: 100%;
+}
+img.file-half-width {
+  width: 50%;
+}
+img.file-quarter-width {
+  width: 25%;
+}
+
 table,
 table td,
 table th {
@@ -2732,22 +2742,12 @@ table th {
   padding: 10px 20px;
 }
 
-img.file-full-width {
-  width: 100%;
-}
-img.file-half-width {
-  width: 50%;
-}
-img.file-quarter-width {
-  width: 25%;
-}
-
 .overlay {
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 10000;
   background-color: rgba(0, 0, 0, 0.8);
 }

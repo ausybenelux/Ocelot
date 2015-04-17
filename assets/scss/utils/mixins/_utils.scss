@@ -1,0 +1,19 @@
+@mixin unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@mixin no-flick {
+  @include translate3d(0, 0, 0);
+}
+
+@mixin sprite-background($image) {
+  @include rect(image-width(sprite-file($sprites, $image)), image-height(sprite-file($sprites, $image)));
+  background-repeat: no-repeat;
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $image);
+}
+
