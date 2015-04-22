@@ -1,0 +1,23 @@
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  @include border-radius($size / 2);
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin rect($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin centerrect($width, $height, $state: absolute) {
+  @include rect($width, $height);
+  position: $state;
+  top: 50%;
+  left: 50%;
+  margin: -$height / 2 0 0 - $width / 2;
+}

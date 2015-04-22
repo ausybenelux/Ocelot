@@ -1,0 +1,20 @@
+@mixin corner($state: absolute, $place: "tl") {
+  position: $state;
+
+  @if $place == "tl" {
+    top: 0;
+    left: 0;
+  } @else if $place == "tr" {
+    top: 0;
+    right: 0;
+  } @else if $place == "bl" {
+    bottom: 0;
+    left: 0;
+  } @else if $place == "br" {
+    bottom: 0;
+    right: 0;
+  } @else {
+    top: 0;
+    left: 0;
+  }
+}

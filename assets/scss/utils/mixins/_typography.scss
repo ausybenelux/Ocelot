@@ -1,0 +1,38 @@
+@mixin typo($font, $size, $lh, $color, $weight: normal, $style: normal, $unit: rem) {
+  @include font-size-line-height($size, $lh, $unit);
+  font-family: $font;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@function font-family-stack($name: "Arial", $kind: "regular", $stack: "Helvetica, Arial, Sans-Serif") {
+  @return "#{$name}-#{$kind}", $stack;
+}
+
+@mixin font-size($size, $unit: rem) {
+  @if $rem-with-px-fallback == true {
+    font-size: $size + px;
+  }
+
+  font-size: $size / $rembase + $unit;
+}
+
+@mixin line-height($line-height, $unit: rem) {
+  @if $rem-with-px-fallback == true {
+    line-height: $line-height + px;
+  }
+
+  line-height: $line-height / $rembase + $unit;
+}
+
+@mixin font-size-line-height($font-size, $line-height, $unit: rem) {
+  @include font-size($font-size, $unit);
+  @include line-height($line-height, $unit);
+}
+
+@mixin fontsmoothing() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+}
