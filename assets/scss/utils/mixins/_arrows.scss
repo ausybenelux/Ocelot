@@ -1,0 +1,39 @@
+@mixin arrowright($color: #FFF, $size: 15px, $sharpness: 25px) {
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-left-color: $color;
+  border-width: $size;
+  border-left-width: $sharpness;
+}
+
+@mixin arrowleft($color: #FFF, $size: 15px, $sharpness: 25px) {
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-right-color: $color;
+  border-width: $size;
+  border-right-width: $sharpness;
+}
+
+@mixin arrowtop($color: #FFF, $size: 15px, $sharpness: 25px) {
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-bottom-color: $color;
+  border-width: $size;
+  border-bottom-width: $sharpness;
+}
+
+@mixin arrowbottom($color: #FFF, $size: 15px, $sharpness: 25px) {
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-top-color: $color;
+  border-width: $size;
+  border-top-width: $sharpness;
+}
