@@ -1,0 +1,15 @@
+table,
+table td,
+table th {
+  border: 0;
+}
+
+table {
+  width: 100%;
+  background-color: $c-white;
+
+  td,
+  th {
+    padding: 10px 20px;
+  }
+}
