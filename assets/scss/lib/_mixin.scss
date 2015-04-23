@@ -94,16 +94,16 @@
   font-style: $style;
 }
 
-@function font-family-stack($name: "Arial", $kind: "regular", $stack: Helvetica, Arial, Sans-Serif) {
+@function font-family-stack($name: "Arial", $kind: "regular", $stack: "Helvetica, Arial, Sans-Serif") {
   @return "#{$name}-#{$kind}", $stack;
 }
 
-@mixin font-size($sizeValue, $unit: rem) {
+@mixin font-size($size, $unit: rem) {
   @if $rem-with-px-fallback == true {
-    font-size: $sizeValue + px;
+    font-size: $size + px;
   }
 
-  font-size: $sizeValue / $rembase + $unit;
+  font-size: $size / $rembase + $unit;
 }
 
 @mixin line-height($line-height, $unit: rem) {
@@ -232,4 +232,18 @@
   -moz-#{$name}: #{$argument};
   -o-#{$name}: #{$argument};
   #{$name}: #{$argument};
+}
+
+// Font Awesome
+@mixin fa-icon ($code) {
+  @include fontsmoothing();
+  color: inherit;
+  content: $code;
+  line-height: inherit;
+  speak: none;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  transform: translate(0, 0);
 }

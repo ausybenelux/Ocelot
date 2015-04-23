@@ -17,7 +17,6 @@
     "unused": true,
     "trailing": true,
     "smarttabs": true,
-    "quotmark": "double",
     "maxdepth": 4,
     "camelcase": true,
     "nonbsp": true,
