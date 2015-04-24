@@ -1,4 +1,4 @@
-name        = smacsstheme theme
+name        = Ocelot
 core        = 7.x
 
 stylesheets[all][] = system.menus.css
