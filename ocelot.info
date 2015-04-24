@@ -5,7 +5,11 @@ stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 
-stylesheets[all][] = assets/css/styles.css
+stylesheets[all][] = assets/css/base-styles.css
+stylesheets[all][] = assets/css/helper-styles.css
+stylesheets[all][] = assets/css/component-styles.css
+stylesheets[all][] = assets/css/layout-styles.css
+stylesheets[all][] = assets/css/print-styles.css
 
 scripts[] = assets/js/vendor/modernizr.min.js
 scripts[] = assets/js/vendor/underscore.min.js
