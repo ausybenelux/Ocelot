@@ -1,4 +1,10 @@
 // ====================================================================================================== //
-// LAYOUT.SCSS //
-// This file contains global page layout rules, layout rules that return on every page
+// LAYOUT-STYLES.SCSS //
+// Uses the imports file and imports layout files with globbing technique
 // ====================================================================================================== //
+
+// Imports
+@import "imports";
+
+// Components styles
+@import "layout/**/*";
