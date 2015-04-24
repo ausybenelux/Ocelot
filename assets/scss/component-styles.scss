@@ -1,0 +1,10 @@
+// ====================================================================================================== //
+// COMPONENTS-STYLES.SCSS //
+// Uses the imports file and imports component files with globbing technique
+// ====================================================================================================== //
+
+// Imports
+@import "imports";
+
+// Components styles
+@import "components/**/*";
