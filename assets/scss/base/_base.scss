@@ -1,5 +1,9 @@
-// Use the border-box hack.
+// ====================================================================================================== //
+// BASE.SCSS //
+// This file contains all general html tag styling
+// ====================================================================================================== //
 
+// Set all dom nodes to border-box
 @if $default-border-box {
   *,
   *:after,
@@ -12,8 +16,7 @@
   }
 }
 
-// Use font smoothing
-
+// Use font-smoothing
 @if $default-font-smoothing {
   html,
   html a {
@@ -21,34 +24,27 @@
   }
 }
 
-*:active,
-*:hover,
-*:focus {
-  outline: 0 !important;
+// Disable outlining
+@if $default-disable-outline {
+  *:active,
+  *:hover,
+  *:focus {
+    outline: 0 !important;
+  }
 }
 
-menu,
-ul,
-ol,
-dl {
-  margin: 0;
-  padding: 0;
+// clean menu items
+@if $default-clean-menus {
+  menu,
+  ul,
+  ol,
+  dl {
+    margin: 0;
+    padding: 0;
+  }
 }
 
+// Set a body background-color
 body {
   background-color: $c-white;
-}
-
-img {
-  &.file-full-width {
-    width: 100%;
-  }
-
-  &.file-half-width {
-    width: 50%;
-  }
-
-  &.file-quarter-width {
-    width: 25%;
-  }
 }
