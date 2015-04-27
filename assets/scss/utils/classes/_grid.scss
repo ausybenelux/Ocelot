@@ -1,0 +1,20 @@
+@for $i from 1 through $cols {
+  .w#{$i} {
+    @include span($i of $cols);
+  }
+}
+
+$grids: (1, 2, 3, 4, 6);
+@each $i in $grids {
+  .grid-#{$i} {
+    @include grid($i);
+  }
+}
+
+.latest {
+  @include last;
+}
+
+.container {
+  @include container;
+}

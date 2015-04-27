@@ -31,8 +31,14 @@
   @include line-height($line-height, $unit);
 }
 
-@mixin fontsmoothing() {
+@mixin fontsmoothing ($smooting: antialiased, $uses-text-shadow: false) {
+  -webkit-font-smoothing: $smooting;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+  -moz-font-smoothing: $smooting;
+  -ms-font-smoothing: $smooting;
+  font-smoothing: $smooting;
+
+  @if $uses-text-shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+  }
 }

@@ -1,0 +1,14 @@
+// ====================================================================================================== //
+// BASE-STYLES.SCSS //
+// Uses the imports file and imports the base styles in the right order
+// ====================================================================================================== //
+
+// Imports
+@import "imports";
+
+
+// Base styles
+@import "base/normalize";
+@import "base/typography";
+@import "base/base";
+@import "base/tables";

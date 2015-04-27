@@ -1,0 +1,15 @@
+@mixin grid($i, $container: true, $last: true) {
+  @if $container {
+    @include container;
+  }
+
+  > * {
+    @include span($cols / $i of $cols);
+
+    @if $last {
+      &:last-child {
+        @include last;
+      }
+    }
+  }
+}

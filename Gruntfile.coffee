@@ -29,7 +29,6 @@ module.exports = (grunt) ->
     compass:
       app:
         options:
-          #specify: "<%= settings.base %><%= settings.theme %>assets/scss/styles.scss",
           specify: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
           sassDir: "<%= settings.base %><%= settings.theme %>assets/scss"
           cssDir: "<%= settings.base %><%= settings.theme %>assets/css"
@@ -47,7 +46,6 @@ module.exports = (grunt) ->
 
       deploy:
         options:
-          #specify: "<%= settings.base %><%= settings.theme %>assets/scss/styles.scss",
           specify: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
           sassDir: "<%= settings.base %><%= settings.theme %>assets/scss"
           cssDir: "<%= settings.base %><%= settings.theme %>assets/css"

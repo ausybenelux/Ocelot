@@ -1,15 +1,21 @@
-// charset
+// ====================================================================================================== //
+// IMPORTS.SCSS //
+// Sets the charset, imports the dependencies and imports the utils
+// ====================================================================================================== //
+
+// Charset
 @charset "UTF-8";
 
-// gems
+// Gems
 @import "compass";
 @import "h5bp";
 @import "susy";
 @import "breakpoint";
-@import "font-awesome-compass";
-@import "font-awesome";
 
-// utils
+
+
+// Utils
 @import "utils/variables/**/*";
 @import "utils/mixins/**/*";
+@import "utils/functions/**/*";
 @import "utils/placeholders/**/*";
