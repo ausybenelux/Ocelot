@@ -1,21 +1,4 @@
-@for $i from 1 through $cols {
-  .w#{$i} {
-    @include span($i of $cols);
-  }
-}
-
-.latest {
-  @include last;
-}
-
-.container {
-  @include container;
-}
-
-.clearfix {
-  @include clearfix;
-}
-
-.pie-clearfix {
-  @include pie-clearfix;
-}
+// ====================================================================================================== //
+// LAYOUT.SCSS //
+// This file contains global page layout rules, layout rules that return on every page
+// ====================================================================================================== //

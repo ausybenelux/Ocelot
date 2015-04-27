@@ -29,13 +29,12 @@ module.exports = (grunt) ->
     compass:
       app:
         options:
-          #specify: "<%= settings.base %><%= settings.theme %>assets/scss/styles.scss",
           specify: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
           sassDir: "<%= settings.base %><%= settings.theme %>assets/scss"
           cssDir: "<%= settings.base %><%= settings.theme %>assets/css"
           imagesDir: "<%= settings.base %><%= settings.theme %>assets/img"
           fontsDir: "<%= settings.base %><%= settings.theme %>assets/font"
-          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing", "font-awesome-sass"]
+          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing", "font-awesome-sass", "breakpoint"]
           httpPath: "/"
           bundleExec: true
           relativeAssets: true
@@ -47,13 +46,12 @@ module.exports = (grunt) ->
 
       deploy:
         options:
-          #specify: "<%= settings.base %><%= settings.theme %>assets/scss/styles.scss",
           specify: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
           sassDir: "<%= settings.base %><%= settings.theme %>assets/scss"
           cssDir: "<%= settings.base %><%= settings.theme %>assets/css"
           imagesDir: "<%= settings.base %><%= settings.theme %>assets/img"
           fontsDir: "<%= settings.base %><%= settings.theme %>assets/font"
-          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing", "font-awesome-sass"]
+          require: ["compass-h5bp", "rgbapng", "ceaser-easing", "susy", "sass-globbing", "font-awesome-sass", "breakpoint"]
           httpPath: "/"
           bundleExec: true
           sourcemap: true

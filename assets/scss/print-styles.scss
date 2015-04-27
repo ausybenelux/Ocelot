@@ -1,20 +1,10 @@
 // ====================================================================================================== //
-// TABLES.SCSS //
-// This file contains base styling of table tags
+// PRINT-STYLES.SCSS //
+// Uses the imports file and imports the print styles
 // ====================================================================================================== //
 
-table,
-table td,
-table th {
-  border: 0;
-}
+// Imports
+@import "imports";
 
-table {
-  width: 100%;
-  background-color: $c-white;
-
-  td,
-  th {
-    padding: 10px 20px;
-  }
-}
+// Print styles
+@import "print/print";

@@ -1,0 +1,10 @@
+// ====================================================================================================== //
+// HELPER-STYLES.SCSS //
+// Uses the imports file and imports classes files with globbing technique
+// ====================================================================================================== //
+
+// Imports
+@import "imports";
+
+// Classes styles (these are helper classes you can use in html)
+@import "utils/classes/**/*";
