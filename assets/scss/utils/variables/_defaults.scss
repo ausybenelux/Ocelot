@@ -4,6 +4,12 @@ $default-border-box: true;
 // Set true to use font smoothing
 $default-font-smoothing: true;
 
+// Set true to disable the outlines
+$default-disable-outline: false;
+
+// Set true to clean menu's of margins and paddings
+$default-clean-menus: true;
+
 // Default values
 $default-border-radius: 10px;
 $default-border-width: 3px;

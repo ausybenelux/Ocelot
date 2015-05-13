@@ -1,20 +1,10 @@
 // ====================================================================================================== //
-// TABLES.SCSS //
-// This file contains base styling of table tags
+// LAYOUT-STYLES.SCSS //
+// Uses the imports file and imports layout files with globbing technique
 // ====================================================================================================== //
 
-table,
-table td,
-table th {
-  border: 0;
-}
+// Imports
+@import "imports";
 
-table {
-  width: 100%;
-  background-color: $c-white;
-
-  td,
-  th {
-    padding: 10px 20px;
-  }
-}
+// Components styles
+@import "layout/**/*";
