@@ -16,29 +16,29 @@ $grids: (1, 2, 3, 4, 6);
 }
 
 .container {
- @include container;
- padding: 0 rhythm(1);
+  @include container;
+  padding: 0 rhythm(1);
 }
 
 .tablet-container {
- @include breakpoint($b-tablet) {
-   @include container;
-   padding: 0 rhythm(1);
- }
+  @include breakpoint($b-tablet) {
+    @include container;
+    padding: 0 rhythm(1);
+  }
 }
 
 .desktop-container {
- @include breakpoint($b-desktop) {
-   @include container;
-   padding: 0 rhythm(1);
- }
+  @include breakpoint($b-desktop) {
+    @include container;
+    padding: 0 rhythm(1);
+  }
 }
 
 .max-container {
- @include pie-clearfix;
+  @include pie-clearfix;
 
- @include breakpoint($b-max) {
-   @include container;
-   padding: 0 rhythm(1);
- }
+  @include breakpoint($b-max) {
+    @include container;
+    padding: 0 rhythm(1);
+  }
 }

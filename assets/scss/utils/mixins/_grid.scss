@@ -1,10 +1,10 @@
-@mixin grid($i, $container: false) {
+@mixin grid($i, $container: false, $gutters: mg($susy, "gutters")) {
   @if $container {
     @include container;
   }
 
   > * {
-    @include span($cols / $i of $cols);
+    @include span($cols / $i of $cols $gutters);
 
     &:nth-child(#{$i}n) {
       @include last;
