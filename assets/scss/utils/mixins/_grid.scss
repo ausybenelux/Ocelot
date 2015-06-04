@@ -15,3 +15,8 @@
     }
   }
 }
+
+@mixin padded-container($padding: rhythm(1)) {
+  @include container;
+  padding: 0 $padding;
+}
