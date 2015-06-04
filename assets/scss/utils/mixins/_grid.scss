@@ -1,4 +1,4 @@
-@mixin grid($i, $container: true, $last: true) {
+@mixin grid($i, $container: false) {
   @if $container {
     @include container;
   }
@@ -6,10 +6,12 @@
   > * {
     @include span($cols / $i of $cols);
 
-    @if $last {
-      &:last-child {
-        @include last;
-      }
+    &:nth-child(#{$i}n) {
+      @include last;
+    }
+
+    &:nth-child(#{$i}n+1) {
+      clear: both;
     }
   }
 }
