@@ -30,8 +30,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(../font/font-awesome/fontawesome-webfont.eot?1431003621);
-  src: url(../font/font-awesome/fontawesome-webfont.eot?&1431003621#iefix) format("embedded-opentype"), url(../font/font-awesome/fontawesome-webfont.woff2?1431003621) format("woff2"), url(../font/font-awesome/fontawesome-webfont.woff?1431003621) format("woff"), url(../font/font-awesome/fontawesome-webfont.ttf?1431003621) format("truetype"), url(../font/font-awesome/fontawesome-webfont.svg?1431003621#fontawesomeregular) format("svg");
+  src: url(../font/font-awesome/fontawesome-webfont.eot?1428499350);
+  src: url(../font/font-awesome/fontawesome-webfont.eot?&1428499350#iefix) format("embedded-opentype"), url(../font/font-awesome/fontawesome-webfont.woff2?1428499350) format("woff2"), url(../font/font-awesome/fontawesome-webfont.woff?1428499350) format("woff"), url(../font/font-awesome/fontawesome-webfont.ttf?1428499350) format("truetype"), url(../font/font-awesome/fontawesome-webfont.svg?1428499350#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
