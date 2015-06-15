@@ -18,6 +18,6 @@
  * @see template_preprocess_menu_block_wrapper()
  */
 ?>
-<nav>
+<nav class="<?php print $classes; ?>">
   <?php print render($content); ?>
 </nav>
