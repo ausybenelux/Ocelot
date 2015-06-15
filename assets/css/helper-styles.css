@@ -2568,21 +2568,21 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   background-position: left top;
 }
 @media (min-width: 768px) {
-  .container--tablet {
+  .container-tablet {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.66667em;
   }
-  .container--tablet:after {
+  .container-tablet:after {
     content: " ";
     display: block;
     clear: both;
   }
-  head:hover ~ .container--tablet, head:hover ~ body .container--tablet {
+  head:hover ~ .container-tablet, head:hover ~ body .container-tablet {
     position: relative;
   }
-  head:hover ~ .container--tablet:before, head:hover ~ body .container--tablet:before {
+  head:hover ~ .container-tablet:before, head:hover ~ body .container-tablet:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -2603,21 +2603,21 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   }
 }
 @media (min-width: 960px) {
-  .container--desktop {
+  .container-desktop {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.66667em;
   }
-  .container--desktop:after {
+  .container-desktop:after {
     content: " ";
     display: block;
     clear: both;
   }
-  head:hover ~ .container--desktop, head:hover ~ body .container--desktop {
+  head:hover ~ .container-desktop, head:hover ~ body .container-desktop {
     position: relative;
   }
-  head:hover ~ .container--desktop:before, head:hover ~ body .container--desktop:before {
+  head:hover ~ .container-desktop:before, head:hover ~ body .container-desktop:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -2638,21 +2638,21 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   }
 }
 @media (min-width: 1200px) {
-  .container--max {
+  .container-max {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.66667em;
   }
-  .container--max:after {
+  .container-max:after {
     content: " ";
     display: block;
     clear: both;
   }
-  head:hover ~ .container--max, head:hover ~ body .container--max {
+  head:hover ~ .container-max, head:hover ~ body .container-max {
     position: relative;
   }
-  head:hover ~ .container--max:before, head:hover ~ body .container--max:before {
+  head:hover ~ .container-max:before, head:hover ~ body .container-max:before {
     position: absolute;
     top: 0;
     left: 0;
