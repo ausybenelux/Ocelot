@@ -16,5 +16,23 @@ $grids: (1, 2, 3, 4, 6);
 }
 
 .container {
-  @include container;
+  @include padded-container;
+
+  &-tablet {
+    @include breakpoint($b-tablet) {
+      @include padded-container;
+    }
+  }
+
+  &-desktop {
+    @include breakpoint($b-desktop) {
+      @include padded-container;
+    }
+  }
+
+  &-max {
+    @include breakpoint($b-max) {
+      @include padded-container;
+    }
+  }
 }

@@ -1,15 +1,22 @@
-@mixin grid($i, $container: true, $last: true) {
+@mixin grid($i, $container: false, $gutters: mg($susy, "gutters")) {
   @if $container {
     @include container;
   }
 
   > * {
-    @include span($cols / $i of $cols);
+    @include span($cols / $i of $cols $gutters);
 
-    @if $last {
-      &:last-child {
-        @include last;
-      }
+    &:nth-child(#{$i}n) {
+      @include last;
+    }
+
+    &:nth-child(#{$i}n+1) {
+      clear: both;
     }
   }
+}
+
+@mixin padded-container($padding: rhythm(1)) {
+  @include container;
+  padding: 0 $padding;
 }

@@ -1,1 +1,34 @@
+$b-zero:  0;
+$b-mobile-landscape: 480px;
+$b-tablet:  768px;
+$b-desktop: 960px;
+$b-max: 1200px;
+
 $cols: 12;
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: $b-max,
+  container-position: center,
+  columns: $cols,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: show,
+    color: rgba(#66F, .25),
+    output: overlay,
+    toggle: bottom right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
