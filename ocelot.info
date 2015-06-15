@@ -6,10 +6,6 @@ core        = 7.x
 ; Stylesheets
 ; ========================================
 
-stylesheets[all][] = system.menus.css
-stylesheets[all][] = system.messages.css
-stylesheets[all][] = system.theme.css
-
 stylesheets[all][] = assets/css/base-styles.css
 stylesheets[all][] = assets/css/helper-styles.css
 stylesheets[all][] = assets/css/component-styles.css
