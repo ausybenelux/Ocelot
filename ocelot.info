@@ -2,9 +2,9 @@ name        = Ocelot
 core        = 7.x
 base theme = omega
 
-stylesheets[all][] = system.menus.css
-stylesheets[all][] = system.messages.css
-stylesheets[all][] = system.theme.css
+stylesheets[all][] = assets/css/drupal/system/system.menus.theme.css
+stylesheets[all][] = assets/css/drupal/system/system.messages.theme.css
+stylesheets[all][] = assets/css/drupal/system/system.theme.css
 
 stylesheets[all][] = assets/css/base-styles.css
 stylesheets[all][] = assets/css/helper-styles.css
