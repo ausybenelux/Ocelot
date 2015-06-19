@@ -3,19 +3,20 @@
   "name": "Ocelot",
   "version": "0.1.3",
   "dependencies": {},
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/Crosscheck/Ocelot"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crosscheck/Ocelot"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "matchdep": "~0.3",
+    "grunt": "^0.4.5",
     "grunt-contrib-compass": "1.0.1",
-    "grunt-scss-lint": "~0.3.6",
+    "grunt-contrib-imagemin": "~0.9.4",
     "grunt-contrib-jshint": "~0.11.1",
     "grunt-contrib-uglify": "~0.9.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-imagemin": "~0.9.4"
+    "grunt-sassdoc": "^2.0.1",
+    "grunt-scss-lint": "~0.3.6",
+    "matchdep": "~0.3"
   },
   "engines": {
     "node": ">=0.8.0"

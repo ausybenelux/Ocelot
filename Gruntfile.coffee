@@ -116,6 +116,10 @@ module.exports = (grunt) ->
             dest: "<%= settings.base %><%= settings.theme %>assets/img/"
         ]
 
+    sassdoc:
+      default:
+        src: "assets/scss"
+
     watch:
       options:
         atBegin: true

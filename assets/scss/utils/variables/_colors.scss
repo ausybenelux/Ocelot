@@ -1,5 +1,14 @@
-// All color variables should be prefix with 'c-'!
-
+/// White
+//// @group Colors
+/// @type Color
 $c-white: #FFF;
+
+/// Black
+//// @group Colors
+/// @type Color
 $c-black: #000;
+
+/// Error
+//// @group Colors
+/// @type Color
 $c-error: #F00;
