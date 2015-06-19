@@ -1,0 +1,26 @@
+@import "imports";
+
+// Better code styling (for markdown)
+.kss-style {
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #C7254E;
+    background-color: #F9F2F4;
+    border-radius: 4px;
+  }
+}
+
+// Improve the styling of the sidebar
+.kss-sidebar {
+  position: fixed;
+  height: 100%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+}
+
+//
+#kss-node {
+  .kss-section {
+    max-width: 100vw;
+  }
+}

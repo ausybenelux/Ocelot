@@ -116,6 +116,10 @@ module.exports = (grunt) ->
             dest: "<%= settings.base %><%= settings.theme %>assets/img/"
         ]
 
+    shell:
+      styleguide:
+        command: 'kss-node --config kss-config.json'
+
     watch:
       options:
         atBegin: true
@@ -131,9 +135,17 @@ module.exports = (grunt) ->
         files: ["<%= settings.base %><%= settings.theme %>assets/scss/**/*.scss"]
         tasks: ["compass:app"]
 
+  # CSS TASK.
+  grunt.registerTask "css", [
+    "compass:app"
+    "shell:styleguide"
+    "scsslint"
+  ]
+
   # DEFAULT TASK.
   grunt.registerTask "default", [
     "compass:app"
+    "shell:styleguide"
     "scsslint"
     "jshint"
     "uglify:own"
@@ -142,6 +154,7 @@ module.exports = (grunt) ->
   # DEPLOY
   grunt.registerTask "deploy", [
     "compass:deploy"
+    "shell:styleguide"
     "scsslint"
     "jshint"
     "uglify:all"

@@ -1,7 +1,10 @@
-// ====================================================================================================== //
-// PRINT-STYLES.SCSS //
-// Uses the imports file and imports the print styles
-// ====================================================================================================== //
+// Print
+//
+// Contains styling for the printed version of the webpage.
+//
+// The selectors are wrapped inside a media query, `@media print`.
+//
+// Style guide: print
 
 // Imports
 @import "imports";

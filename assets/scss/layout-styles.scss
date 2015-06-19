@@ -1,10 +1,13 @@
-// ====================================================================================================== //
-// LAYOUT-STYLES.SCSS //
-// Uses the imports file and imports layout files with globbing technique
-// ====================================================================================================== //
+// Layout
+//
+// These divide the page into major sections.
+//
+// To define layout rules, the `l-` prefix is used, eg. `.l-main`, `.l-sidebar`, etc.
+//
+// Style guide: layout
 
 // Imports
 @import "imports";
 
-// Components styles
+// Layout styles
 @import "layout/**/*";

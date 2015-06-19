@@ -1,7 +1,9 @@
-// ====================================================================================================== //
-// COMPONENTS-STYLES.SCSS //
-// Uses the imports file and imports component files with globbing technique
-// ====================================================================================================== //
+// Components
+//
+// They are the reusable modular components of a design. When defining the rule set for a module, avoid using IDs and
+// element selectors, sticking only to class names (eg. `.component`).
+//
+// Style guide: components
 
 // Imports
 @import "imports";

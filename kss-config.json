@@ -1,0 +1,29 @@
+{
+  "//": "The source and destination paths are relative to this file.",
+  "source": [
+    "assets/scss"
+  ],
+  "destination":  "styleguide/",
+
+  "//": "The css and js paths are URLs relative to the generated style guide.",
+  "css": [
+    "../assets/css/base-styles.css",
+    "../assets/css/helper-styles.css",
+    "../assets/css/component-styles.css",
+    "../assets/css/layout-styles.css",
+    "../assets/css/print-styles.css",
+    "../assets/css/styleguide-styles.css"
+  ],
+  "js": [
+    "../assets/js/vendor/jquery.min.js",
+    "../assets/js/vendor/modernizr.min.js",
+    "../assets/js/vendor/underscore.min.js",
+
+    "../../../../../../misc/drupal.js",
+
+    "../assets/js/base.min.js"
+  ],
+
+  "homepage": "homepage.md",
+  "title": "Ocelot 0.1.3 Style guide"
+}
