@@ -46,10 +46,10 @@ function ocelot_library() {
   // Check if we need to include the minified files.
   $minifed = theme_get_setting('minified');
   if ($minifed) {
-    $min_extension = '.min';
+    $min_extension = '.min.js';
   }
   else {
-    $min_extension = '';
+    $min_extension = '.js';
   }
 
   $libraries['modernizr'] = array(
@@ -57,7 +57,7 @@ function ocelot_library() {
     'website' => 'http://modernizr.com/',
     'version' => '2.7.1',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/modernizr$min_extension.js" => array(),
+      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/modernizr$min_extension" => array(),
     ),
   );
 
@@ -66,7 +66,7 @@ function ocelot_library() {
     'website' => 'http://underscorejs.org/',
     'version' => '1.5.2',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/underscore$min_extension.js" => array(),
+      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/underscore$min_extension" => array(),
     ),
   );
 
@@ -75,7 +75,7 @@ function ocelot_library() {
     'website' => 'https://github.com/scottjehl/Respond',
     'version' => '1.4.2',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/respond$min_extension.js" => array(),
+      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/respond$min_extension" => array(),
     ),
   );
 
@@ -84,7 +84,7 @@ function ocelot_library() {
     'website' => 'https://github.com/Crosscheck/Ocelot',
     'version' => '0.1.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/base$min_extension.js" => array(),
+      drupal_get_path('theme', 'ocelot') . "/assets/js/base$min_extension" => array(),
     ),
     'dependencies' => array(
       array('system', 'jquery'),
