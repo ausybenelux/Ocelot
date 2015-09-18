@@ -19,6 +19,7 @@ var sass = require("gulp-sass");
 var prefix = require("gulp-autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var mincss = require("gulp-minify-css");
+var scsslint = require('gulp-scss-lint');
 
 // JS
 var jshint = require("gulp-jshint");
@@ -63,6 +64,11 @@ gulp.task("sass", "Compiling the shit out of it!", function () {
     .pipe(mincss())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.path.css));
+});
+
+gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
+  gulp.src(config.path.scss)
+    .pipe(scsslint());
 });
 
 // -----------------------------------------------------------------------------
