@@ -11,7 +11,7 @@ table th {
 
 table {
   width: 100%;
-  background-color: $c-white;
+  background-color: mg($colors, white);
 
   td,
   th {

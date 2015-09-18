@@ -10,26 +10,38 @@
 //
 
 // Gulp and some tools
-
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var chalk = require('chalk');
-var tasks = require('gulp-task-listing');
+var gulp = require("gulp-help")(require("gulp"));
+var gutil = require("gulp-util");
+var chalk = require("chalk");
 
 // Sass
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var mincss = require('gulp-minify-css');
+var sass = require("gulp-sass");
+var prefix = require("gulp-autoprefixer");
+var sourcemaps = require("gulp-sourcemaps");
+var mincss = require("gulp-minify-css");
+var scsslint = require('gulp-scss-lint');
+
+// JS
+var jshint = require("gulp-jshint");
 
 // Load Ocelot configuration file
-var config = require('./ocelot.config.json');
+var config = require("./ocelot.config.json");
+
+// -----------------------------------------------------------------------------
+// JS HINT
+// -----------------------------------------------------------------------------
+
+gulp.task("jshint", "Scans your JS files for errors", function() {
+  return gulp.src(config.path.js)
+    .pipe(jshint())
+    .pipe(jshint.reporter("jshint-stylish"));
+});
 
 // -----------------------------------------------------------------------------
 // SASS
 // -----------------------------------------------------------------------------
 
-gulp.task("sass", function () {
+gulp.task("sass", "Compiling the shit out of it!", function () {
   return gulp.src(config.path.scss)
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -54,17 +66,21 @@ gulp.task("sass", function () {
     .pipe(gulp.dest(config.path.css));
 });
 
+gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
+  gulp.src(config.path.scss)
+    .pipe(scsslint());
+});
+
 // -----------------------------------------------------------------------------
 // WATCH
 // -----------------------------------------------------------------------------
 
-gulp.task('watch', function() {
-  gulp.watch(config.path.scss, ['sass']);
+gulp.task("watch", "I'm watchng you're sass files!", function() {
+  gulp.watch(config.path.scss, ["sass"]);
 });
 
 // -----------------------------------------------------------------------------
 // DEFAULT TASK
 // -----------------------------------------------------------------------------
 
-gulp.task('help', tasks);
-gulp.task('default', ['help']);
+gulp.task("default", ["help"]);

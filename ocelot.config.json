@@ -11,7 +11,8 @@
     "bower": "components/",
     "fontAwesome": "font-awesome/scss",
     "scss": "assets/scss/**/*.scss",
-    "css": "./assets/css"
+    "css": "./assets/css",
+    "js": "./assets/js/*.js"
   },
   "sass": {
     "style": "expanded"
