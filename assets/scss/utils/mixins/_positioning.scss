@@ -13,8 +13,20 @@
   } @else if $place == "br" {
     bottom: 0;
     right: 0;
-  } @else {
+  } @else if $place == "t" {
     top: 0;
+    left: 50%;
+  } @else if $place == "r" {
+    top: 50%;
+    right: 0;
+  } @else if $place == "b" {
+    bottom: 0;
+    left: 50%;
+  } @else if $place == "l" {
+    top: 50%;
     left: 0;
+  } @else if $place == "c" {
+    top: 50%;
+    left: 50%;
   }
 }
