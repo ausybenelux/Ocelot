@@ -8,12 +8,10 @@
   "bugs": {
     "url": "https://github.com/Crosscheck/Ocelot/issues"
   },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Crosscheck/Ocelot"
-  },
-  "devDependencies": {
+  "dependencies": {
+    "gulp-help": "^1.6.1",
+    "gulp-jshint": "^1.11.2",
+    "jshint-stylish": "^2.0.1",
     "chalk": "^1.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
@@ -25,6 +23,12 @@
     "node-bourbon": "^4.2.3",
     "node-neat": "^1.7.2",
     "node-normalize-scss": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crosscheck/Ocelot"
+  },
+  "devDependencies": {
   },
   "engines": {
     "node": ">=0.8.0"
