@@ -1,0 +1,19 @@
+{
+  "autoprefixer": [
+    "last 10 version",
+    "ie > 8",
+    "chrome > 8",
+    "firefox > 20",
+    "safari > 5",
+    "opera > 22"
+  ],
+  "path" : {
+    "bower": "components/",
+    "fontAwesome": "font-awesome/scss",
+    "scss": "assets/scss/**/*.scss",
+    "css": "./assets/css"
+  },
+  "sass": {
+    "style": "expanded"
+  }
+}

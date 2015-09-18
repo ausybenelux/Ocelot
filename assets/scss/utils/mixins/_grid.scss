@@ -1,14 +1,11 @@
-@mixin grid($i, $container: false, $gutters: mg($susy, "gutters")) {
+@mixin grid($i, $container: true) {
   @if $container {
-    @include container;
+    @include outer-container();
   }
 
   > * {
-    @include span($cols / $i of $cols $gutters);
-
-    &:nth-child(#{$i}n) {
-      @include last;
-    }
+    @include span-columns($grid-columns / $i);
+    @include omega(#{$i}n);
 
     &:nth-child(#{$i}n+1) {
       clear: both;
@@ -16,7 +13,7 @@
   }
 }
 
-@mixin padded-container($padding: rhythm(1)) {
-  @include container;
+@mixin padded-container($padding: rh(1)) {
+  @include outer-container();
   padding: 0 $padding;
 }
