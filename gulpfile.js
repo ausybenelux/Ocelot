@@ -41,7 +41,7 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
 // SASS
 // -----------------------------------------------------------------------------
 
-gulp.task("sass", "Compiling the shit out of it!", function () {
+gulp.task("sass", "Compiles your SCSS files to CSS", function () {
   return gulp.src(config.path.scss)
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -75,7 +75,7 @@ gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
 // WATCH
 // -----------------------------------------------------------------------------
 
-gulp.task("watch", "I'm watchng you're sass files!", function() {
+gulp.task("watch", "Watches your SASS files", function() {
   gulp.watch(config.path.scss, ["sass"]);
 });
 
@@ -83,4 +83,10 @@ gulp.task("watch", "I'm watchng you're sass files!", function() {
 // DEFAULT TASK
 // -----------------------------------------------------------------------------
 
-gulp.task("default", ["help"]);
+gulp.task("default", [
+  "help",
+  "sass",
+  "scss-lint",
+  "jshint",
+  "watch"
+]);
