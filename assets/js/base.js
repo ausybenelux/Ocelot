@@ -16,17 +16,29 @@
         });
       }
       return false;
+    },
+
+    contextCheck: function(context) {
+      return (context !== document) ? true: false;
     }
   };
 
   site = {
     myCode: {
-      attach: function() {
+      attach: function(context) {
+        if (helper.contextCheck(context)) {
+          return;
+        }
+
         return console.log("myCode");
       }
     },
     myCode2: {
-      attach: function() {
+      attach: function(context) {
+        if (helper.contextCheck(context)) {
+          return;
+        }
+
         return console.log("myCode2");
       }
     }
