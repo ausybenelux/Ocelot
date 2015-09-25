@@ -8,7 +8,7 @@
       normal: 600,
       slow: 800
     },
-      breakpoints: {
+    breakpoints: {
       mobile-landscape: 480,
       tablet-portrait: 768,
       desktop: 960,
