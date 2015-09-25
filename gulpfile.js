@@ -29,7 +29,7 @@ var jshint = require("gulp-jshint");
 var config = require("./ocelot.config.json");
 
 // -----------------------------------------------------------------------------
-// JS HINT
+// JS HINT -- https://www.npmjs.com/package/gulp-jshint
 // -----------------------------------------------------------------------------
 
 gulp.task("jshint", "Scans your JS files for errors", function() {
@@ -39,7 +39,7 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
 });
 
 // -----------------------------------------------------------------------------
-// SASS
+// SASS -- https://www.npmjs.com/package/gulp-sass
 // -----------------------------------------------------------------------------
 
 gulp.task("sass", "Compiling the shit out of it!", function () {
@@ -67,6 +67,10 @@ gulp.task("sass", "Compiling the shit out of it!", function () {
     .pipe(gulp.dest(config.path.css))
     .pipe(browserSync.stream());
 });
+
+// -----------------------------------------------------------------------------
+// SCSS LINT -- https://www.npmjs.com/package/gulp-scss-lint
+// -----------------------------------------------------------------------------
 
 gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
   gulp.src(config.path.scss)
