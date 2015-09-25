@@ -13,6 +13,7 @@
 var gulp = require("gulp-help")(require("gulp"));
 var gutil = require("gulp-util");
 var chalk = require("chalk");
+var browserSync = require('browser-sync').create();
 
 // Sass
 var sass = require("gulp-sass");
@@ -63,12 +64,23 @@ gulp.task("sass", "Compiling the shit out of it!", function () {
     .pipe(prefix(config.autoprefixer))
     .pipe(mincss())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.path.css));
+    .pipe(gulp.dest(config.path.css))
+    .pipe(browserSync.stream());
 });
 
 gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
   gulp.src(config.path.scss)
     .pipe(scsslint());
+});
+
+// -----------------------------------------------------------------------------
+// BROWSERSYNC -- http://www.browsersync.io/docs/gulp/
+// -----------------------------------------------------------------------------
+
+gulp.task("browser-sync", "Set up a server with BrowserSync and test across devices", function() {
+  browserSync.init({
+    proxy: "project.local"
+  });
 });
 
 // -----------------------------------------------------------------------------
