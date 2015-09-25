@@ -34,12 +34,4 @@
 
   _.extend(Drupal.behaviors, site);
 
-  $(function() {
-    return console.log("Document is ready");
-  });
-
-  $(window).load(function(e) {
-    return console.log("Window is loaded" + e);
-  });
-
 })(jQuery, Drupal);
