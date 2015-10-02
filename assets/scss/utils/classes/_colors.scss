@@ -1,0 +1,37 @@
+@each $name, $color in $colors {
+  .bgc-#{$name} {
+    background-color: $color;
+
+    &.darken {
+      background-color: darken($color, $default-lighten-ratio);
+    }
+
+    &.lighten {
+      background-color: lighten($color, $default-lighten-ratio);
+    }
+  }
+
+  .c-#{$name} {
+    color: $color;
+
+    &.darken {
+      color: darken($color, $default-lighten-ratio);
+    }
+
+    &.lighten {
+      color: lighten($color, $default-lighten-ratio);
+    }
+  }
+
+  .b-#{$name} {
+    border: 1px solid $color;
+
+    &.darken {
+      border: 1px solid darken($color, $default-lighten-ratio);
+    }
+
+    &.lighten {
+      border: 1px solid lighten($color, $default-lighten-ratio);
+    }
+  }
+}
