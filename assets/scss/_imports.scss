@@ -1,21 +1,35 @@
-// ====================================================================================================== //
-// IMPORTS.SCSS //
-// Sets the charset, imports the dependencies and imports the utils
-// ====================================================================================================== //
-
-// Charset
 @charset "UTF-8";
 
-// Gems
-@import "compass";
-@import "h5bp";
-@import "susy";
-@import "breakpoint";
+@import "bourbon";
 
+// Variables
+@import "utils/variables/colors";
+@import "utils/variables/defaults";
+@import "utils/variables/fa";
+@import "utils/variables/legacy";
+@import "utils/variables/shades";
+@import "utils/variables/sprites";
+@import "utils/variables/neat";
+@import "utils/variables/timings";
+@import "utils/variables/typography";
 
+// Mixins
+@import "utils/mixins/customcheck";
+@import "utils/mixins/fa";
+@import "utils/mixins/grid";
+@import "utils/mixins/overlay";
+@import "utils/mixins/pie-clearfix";
+@import "utils/mixins/positioning";
+@import "utils/mixins/rounded-table";
+@import "utils/mixins/shapes";
+@import "utils/mixins/typography";
+@import "utils/mixins/utils";
+@import "utils/mixins/vendor-prefix";
 
-// Utils
-@import "utils/variables/**/*";
-@import "utils/mixins/**/*";
-@import "utils/functions/**/*";
-@import "utils/placeholders/**/*";
+// Functions
+@import "utils/functions/color";
+@import "utils/functions/shortcuts";
+
+// Placeholders
+
+@import "neat";

@@ -1,0 +1,27 @@
+{
+  "name": "Ocelot",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Crosscheck/Ocelot",
+  "description": "Ocelot is a Drupal theming starter kit that has some sensible defaults. See the Wiki for more information.",
+  "main": "gulpfile.js",
+  "keywords": [
+    "drupal",
+    "gulp",
+    "bower",
+    "responsive"
+  ],
+  "authors": [
+    "ONE Agency"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "font-awesome": "~4.4.0"
+  }
+}

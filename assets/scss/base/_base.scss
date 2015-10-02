@@ -46,5 +46,5 @@
 
 // Set a body background-color
 body {
-  background-color: $c-white;
+  background-color: mg($colors, white);
 }

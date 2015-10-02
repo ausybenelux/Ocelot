@@ -1,4 +1,4 @@
-@mixin fa-icon ($code) {
+@mixin fa-icon($code) {
   @include fontsmoothing();
   color: inherit;
   content: $code;
