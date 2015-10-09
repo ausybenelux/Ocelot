@@ -1,0 +1,10 @@
+{
+  "breakpoints": {
+    "zero": "0px",
+    "mobile": "480px",
+    "tablet": "768px",
+    "ninesixty": "960px",
+    "desktop": "1170px",
+    "max": "1220px"
+  }
+}

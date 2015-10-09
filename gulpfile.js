@@ -17,6 +17,7 @@ var browserSync = require('browser-sync').create();
 
 // Sass
 var sass = require("gulp-sass");
+var jsonImporter = require('node-sass-json-importer');
 var prefix = require("gulp-autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var mincss = require("gulp-minify-css");
@@ -52,6 +53,7 @@ gulp.task("sass", "Compiles your SCSS files to CSS", function () {
         require("node-normalize-scss").includePaths,
         config.path.bower + config.path.fontAwesome
       ],
+      importer: jsonImporter,
       outputStyle: config.sass.style
     }))
     .on("error", function (err) {

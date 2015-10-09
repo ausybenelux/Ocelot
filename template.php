@@ -35,6 +35,10 @@ function ocelot_html_head_alter(&$head_elements) {
 function ocelot_preprocess_page(&$variables) {
   // Add Ocelot base library.
   drupal_add_library('ocelot', 'ocelot_base');
+  // Add the path to the theme to Drupal.settings
+  $json_data = file_get_contents(drupal_get_path('theme', 'ocelot') . '/ocelot.breakpoints.json');
+  drupal_add_js('jQuery.extend(Drupal.settings, ' . $json_data .  ');', 'inline');
+
 }
 
 /**

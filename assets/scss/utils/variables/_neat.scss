@@ -1,20 +1,14 @@
 // BREAKPOINTS
+@import "../../../../ocelot.breakpoints.json";
 @import "neat-helpers";
 
-$zero: 0;
-$mobile: 480px;
-$tablet: 768px;
-$ninesixty: 960px;
-$desktop: 1170px;
-$max: 1200px;
-
-$breakpoints: (
-  zero:  new-breakpoint($zero, 4),
-  mobile: new-breakpoint($mobile, 8),
-  tablet:  new-breakpoint($tablet, 8),
-  ninesixty: new-breakpoint($ninesixty, 12),
-  desktop: new-breakpoint($desktop, 12),
-  max: new-breakpoint($max, 12)
+$breakpoint: (
+  zero:  new-breakpoint(map-get($breakpoints, zero), 4),
+  mobile: new-breakpoint(map-get($breakpoints, mobile), 8),
+  tablet:  new-breakpoint(map-get($breakpoints, tablet), 8),
+  ninesixty: new-breakpoint(map-get($breakpoints, ninesixty), 12),
+  desktop: new-breakpoint(map-get($breakpoints, desktop), 12),
+  max: new-breakpoint(map-get($breakpoints, max), 12),
 );
 
 $breakpoint-ratios: (

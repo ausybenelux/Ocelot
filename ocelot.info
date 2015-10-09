@@ -17,6 +17,8 @@ stylesheets[all][] = assets/css/print-styles.css
 
 ; Scripts are included as libraries.
 
+scripts[] = assets/js/breakpoints.example.js
+
 ; ========================================
 ; Regions
 ; ========================================
