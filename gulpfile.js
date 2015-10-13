@@ -55,7 +55,7 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
 // FAVICONS -- https://github.com/haydenbleasel/favicons
 // -----------------------------------------------------------------------------
 
-gulp.task("favicons", "Generates cross-device favicons from favicon.png", function() {
+gulp.task("favicons", "Generates cross-device favicons from assets/img/logo/favicon.png", function() {
   return favicons(config.favicons, errorCallBack);
 });
 
