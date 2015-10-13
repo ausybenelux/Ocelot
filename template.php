@@ -29,6 +29,29 @@ function ocelot_html_head_alter(&$head_elements) {
   );
 }
 
+function ocelot_preprocess_html(&$variables) {
+  $variables['favicons'] = '';
+
+  $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
+  if (file_exists($theme_path . '/templates/misc/favicons.tpl.php')) {
+    $variables['favicons'] .= "<!-- Favicons -->";
+    $favicon_url_prefix = url($theme_path, array("absolute" => true));
+
+    ob_start();
+    include_once($theme_path . '/templates/misc/favicons.tpl.php');
+    $favicons = ob_get_clean();
+
+    $new_favicons = str_replace('./', $favicon_url_prefix . '/', $favicons);
+    $variables['favicons'] .= $new_favicons;
+
+    $variables['favicons'] .= "<!-- /Favicons -->";
+  }
+  else {
+   $variables['favicons'] .= "<!-- Favicons file missing -->";
+  }
+}
+
+
 /**
  * Implements hook_preprocess_page().
  */

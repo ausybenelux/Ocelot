@@ -7,7 +7,7 @@
     "safari > 5",
     "opera > 22"
   ],
-  "path" : {
+  "path": {
     "bower": "components/",
     "fontAwesome": "font-awesome/scss",
     "scss": "assets/scss/**/*.scss",
@@ -16,5 +16,41 @@
   },
   "sass": {
     "style": "expanded"
+  },
+  "favicons": {
+    "files": {
+      "src": "./assets/img/logo/favicon.png",
+      "dest": "./assets/img/favicons/",
+      "html": "./templates/misc/favicons.tpl.php",
+      "iconsPath": "./assets/img/favicons/",
+      "androidManifest": null,
+      "browserConfig": null,
+      "firefoxManifest": null,
+      "yandexManifest": null
+    },
+    "icons": {
+      "android": true,
+      "appleIcon": true,
+      "appleStartup": true,
+      "coast": true,
+      "favicons": true,
+      "firefox": true,
+      "opengraph": true,
+      "windows": true,
+      "yandex": true
+    },
+    "settings": {
+      "appName": "Ocelot",
+      "appDescription": "This is the app description",
+      "developer": null,
+      "developerURL": null,
+      "version": 1.0,
+      "background": null,
+      "index": null,
+      "url": null,
+      "silhouette": false,
+      "logging": true
+    },
+    "favicon_generation": null
   }
 }
