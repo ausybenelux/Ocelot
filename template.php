@@ -47,7 +47,7 @@ function ocelot_preprocess_html(&$variables) {
     $variables['favicons'] .= "<!-- /Favicons -->";
   }
   else {
-   $variables['favicons'] .= "<!-- Favicons file missing -->";
+   $variables['favicons'] .= "<!-- Favicons file missing, run 'gulp favicons' to auto generate it -->";
   }
 }
 
