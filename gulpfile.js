@@ -28,6 +28,19 @@ var jshint = require("gulp-jshint");
 // Load Ocelot configuration file
 var config = require("./ocelot.config.json");
 
+// Favicons
+var favicons = require('favicons');
+
+// Error Callback
+var errorCallBack = function (error, metadata) {
+  if (error) {
+    // throw error;
+    console.log(error);
+  }
+
+  console.log(metadata, 'Metadata produced during the build process');
+}
+
 // -----------------------------------------------------------------------------
 // JS HINT -- https://www.npmjs.com/package/gulp-jshint
 // -----------------------------------------------------------------------------
@@ -36,6 +49,14 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
   return gulp.src(config.path.js)
     .pipe(jshint())
     .pipe(jshint.reporter("jshint-stylish"));
+});
+
+// -----------------------------------------------------------------------------
+// FAVICONS -- https://github.com/haydenbleasel/favicons
+// -----------------------------------------------------------------------------
+
+gulp.task("favicons", "Generates cross-device favicons from assets/img/logo/favicon.png", function() {
+  return favicons(config.favicons, errorCallBack);
 });
 
 // -----------------------------------------------------------------------------
