@@ -78,7 +78,7 @@ function ocelot_library() {
   $libraries['modernizr'] = array(
     'title' => 'Modernizr',
     'website' => 'http://modernizr.com/',
-    'version' => '2.7.1',
+    'version' => 'v3.0.0-alpha.4',
     'js' => array(
       drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/modernizr$min_extension" => array(),
     ),
