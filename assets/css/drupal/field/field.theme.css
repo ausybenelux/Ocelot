@@ -1,18 +1,2 @@
-/**
- * @file
- * Styling for contextual links behaviour and structure.
- */
-/**
- * Field display.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/field\/field\.theme\.scss}line{font-family:\000039}}
-.field__label {
-  font-weight: bold;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/field\/field\.theme\.scss}line{font-family:\0000313}}
-.field--label-inline .field__label,
-.field--label-inline .field__items {
-  float: left;
-  /* LTR */
-}
+.field__label{font-weight:700}.field--label-inline .field__items,.field--label-inline .field__label{float:left}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9maWVsZC9maWVsZC50aGVtZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBT0EsY0FDRSxZQUFhLElBSWYsbUNBREEsbUNBRUUsTUFBTyIsImZpbGUiOiJkcnVwYWwvZmllbGQvZmllbGQudGhlbWUuY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

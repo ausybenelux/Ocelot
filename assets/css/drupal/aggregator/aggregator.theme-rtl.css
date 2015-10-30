@@ -1,8 +1,2 @@
-/**
- * @file
- * Aggregator theme CSS for right to left languages.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/aggregator\/aggregator\.theme-rtl\.scss}line{font-family:\000036}}
-.feed-source .feed-icon {
-  float: left;
-}
+.feed-source .feed-icon{float:left}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9hZ2dyZWdhdG9yL2FnZ3JlZ2F0b3IudGhlbWUtcnRsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQSx3QkFDRSxNQUFPIiwiZmlsZSI6ImRydXBhbC9hZ2dyZWdhdG9yL2FnZ3JlZ2F0b3IudGhlbWUtcnRsLmNzcyIsInNvdXJjZXNDb250ZW50IjpbbnVsbF0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

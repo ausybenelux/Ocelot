@@ -1,10 +1,2 @@
-/**
- * @file
- * Right-to-left styling for the Forum module.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/forum\/forum\.theme-rtl\.scss}line{font-family:\000036}}
-.forum-icon {
-  float: right;
-  margin-left: 0;
-  margin-right: 0.4em;
-}
+.forum-icon{float:right;margin-left:0;margin-right:.4em}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9mb3J1bS9mb3J1bS50aGVtZS1ydGwuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBLFlBQ0UsTUFBTyxNQUNQLFlBQWEsRUFDYixhQUFjIiwiZmlsZSI6ImRydXBhbC9mb3J1bS9mb3J1bS50aGVtZS1ydGwuY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

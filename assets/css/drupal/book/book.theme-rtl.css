@@ -1,20 +1,2 @@
-/**
- * @file
- * Basic default book structural CSS for right to left languages.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/book\/book\.theme-rtl\.scss}line{font-family:\000035}}
-.book-navigation__previous {
-  float: right;
-  text-align: right;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/book\/book\.theme-rtl\.scss}line{font-family:\000039}}
-.book-navigation__up {
-  float: right;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/book\/book\.theme-rtl\.scss}line{font-family:\0000312}}
-.book-navigation__next {
-  float: left;
-  text-align: left;
-}
+.book-navigation__previous{float:right;text-align:right}.book-navigation__up{float:right}.book-navigation__next{float:left;text-align:left}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9ib29rL2Jvb2sudGhlbWUtcnRsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQSwyQkFDRSxNQUFPLE1BQ1AsV0FBWSxNQUdkLHFCQUNFLE1BQU8sTUFHVCx1QkFDRSxNQUFPLEtBQ1AsV0FBWSIsImZpbGUiOiJkcnVwYWwvYm9vay9ib29rLnRoZW1lLXJ0bC5jc3MiLCJzb3VyY2VzQ29udGVudCI6W251bGxdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ== */

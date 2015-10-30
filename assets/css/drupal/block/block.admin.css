@@ -1,17 +1,2 @@
-/**
- * @file
- * Styles for the block admin page.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/block\/block\.admin\.scss}line{font-family:\000036}}
-.blocks-admin .region-title {
-  font-weight: bold;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/block\/block\.admin\.scss}line{font-family:\000039}}
-.blocks-admin .region-message {
-  font-weight: normal;
-  color: #999;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/block\/block\.admin\.scss}line{font-family:\0000313}}
-.blocks-admin .region-populated {
-  display: none;
-}
+.blocks-admin .region-title{font-weight:700}.blocks-admin .region-message{font-weight:400;color:#999}.blocks-admin .region-populated{display:none}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9ibG9jay9ibG9jay5hZG1pbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUEsNEJBQ0UsWUFBYSxJQUdmLDhCQUNFLFlBQWEsSUFDYixNQUFPLEtBR1QsZ0NBQ0UsUUFBUyIsImZpbGUiOiJkcnVwYWwvYmxvY2svYmxvY2suYWRtaW4uY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

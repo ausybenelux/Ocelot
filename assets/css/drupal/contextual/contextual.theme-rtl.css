@@ -1,15 +1,2 @@
-/**
- * @file
- * Styling for contextual links look and feel.
- */
-/**
- * Contextual links.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/contextual\/contextual\.theme-rtl\.scss}line{font-family:\0000311}}
-.contextual-links {
-  left: 0;
-  right: auto;
-  -moz-border-radius: 0 4px 4px 4px;
-  -webkit-border-radius: 0;
-  border-radius: 0 4px 4px 4px;
-}
+.contextual-links{left:0;right:auto;border-radius:0 4px 4px}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9jb250ZXh0dWFsL2NvbnRleHR1YWwudGhlbWUtcnRsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPQSxrQkFDRSxLQUFNLEVBQ04sTUFBTyxLQUNQLGNBQWUsRUFBRSxJQUFJIiwiZmlsZSI6ImRydXBhbC9jb250ZXh0dWFsL2NvbnRleHR1YWwudGhlbWUtcnRsLmNzcyIsInNvdXJjZXNDb250ZW50IjpbbnVsbF0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

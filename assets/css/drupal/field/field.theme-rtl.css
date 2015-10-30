@@ -1,12 +1,2 @@
-/**
- * @file
- * Styling for contextual links behaviour and structure.
- */
-/**
- * Field display.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/field\/field\.theme-rtl\.scss}line{font-family:\0000310}}
-.field--label-inline .field__label,
-.field--label-inline .field__items {
-  float: right;
-}
+.field--label-inline .field__items,.field--label-inline .field__label{float:right}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9maWVsZC9maWVsZC50aGVtZS1ydGwuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVFBLG1DQURBLG1DQUVFLE1BQU8iLCJmaWxlIjoiZHJ1cGFsL2ZpZWxkL2ZpZWxkLnRoZW1lLXJ0bC5jc3MiLCJzb3VyY2VzQ29udGVudCI6W251bGxdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ== */

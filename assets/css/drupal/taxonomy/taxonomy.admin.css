@@ -1,13 +1,2 @@
-/**
- * @file
- * Administrative styling for the taxonomy module.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/taxonomy\/taxonomy\.admin\.scss}line{font-family:\000036}}
-.taxonomy-term-divider-top {
-  border-bottom: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/taxonomy\/taxonomy\.admin\.scss}line{font-family:\000039}}
-.taxonomy-term-divider-bottom {
-  border-top: 1px dotted #ccc;
-}
+.taxonomy-term-divider-top{border-bottom:none}.taxonomy-term-divider-bottom{border-top:1px dotted #ccc}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC90YXhvbm9teS90YXhvbm9teS5hZG1pbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUEsMkJBQ0UsY0FBZSxLQUdqQiw4QkFDRSxXQUFZLElBQUksT0FBTyIsImZpbGUiOiJkcnVwYWwvdGF4b25vbXkvdGF4b25vbXkuYWRtaW4uY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */
