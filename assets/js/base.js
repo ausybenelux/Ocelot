@@ -16,30 +16,34 @@
         });
       }
       return false;
+    },
+
+    contextCheck: function(context) {
+      return (context !== document) ? true: false;
     }
   };
 
   site = {
     myCode: {
-      attach: function() {
+      attach: function(context) {
+        if (helper.contextCheck(context)) {
+          return;
+        }
+
         return console.log("myCode");
       }
     },
     myCode2: {
-      attach: function() {
+      attach: function(context) {
+        if (helper.contextCheck(context)) {
+          return;
+        }
+
         return console.log("myCode2");
       }
     }
   };
 
   _.extend(Drupal.behaviors, site);
-
-  $(function() {
-    return console.log("Document is ready");
-  });
-
-  $(window).load(function(e) {
-    return console.log("Window is loaded" + e);
-  });
 
 })(jQuery, Drupal);
