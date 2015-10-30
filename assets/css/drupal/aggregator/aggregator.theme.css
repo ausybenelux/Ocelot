@@ -1,10 +1,2 @@
-/**
- * @file
- * Aggregator theme CSS.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/aggregator\/aggregator\.theme\.scss}line{font-family:\000036}}
-.feed-source .feed-icon {
-  float: right;
-  /* LTR */
-  display: block;
-}
+.feed-source .feed-icon{float:right;display:block}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9hZ2dyZWdhdG9yL2FnZ3JlZ2F0b3IudGhlbWUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBLHdCQUNFLE1BQU8sTUFFUCxRQUFzQiIsImZpbGUiOiJkcnVwYWwvYWdncmVnYXRvci9hZ2dyZWdhdG9yLnRoZW1lLmNzcyIsInNvdXJjZXNDb250ZW50IjpbbnVsbF0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

@@ -1,19 +1,2 @@
-/**
- * @file
- * Right to left theme for the poll voting form and results display.
- */
-/* Poll Bars */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/poll\/poll\.theme-rtl\.scss}line{font-family:\000037}}
-.poll-bars__bar .foreground {
-  float: right;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/poll\/poll\.theme-rtl\.scss}line{font-family:\0000310}}
-.poll-bars__text {
-  text-align: right;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/poll\/poll\.theme-rtl\.scss}line{font-family:\0000313}}
-.poll-bars__percent {
-  text-align: left;
-}
+.poll-bars__bar .foreground{float:right}.poll-bars__text{text-align:right}.poll-bars__percent{text-align:left}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9wb2xsL3BvbGwudGhlbWUtcnRsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFLQSw0QkFDRSxNQUFPLE1BR1QsaUJBQ0UsV0FBWSxNQUdkLG9CQUNFLFdBQVkiLCJmaWxlIjoiZHJ1cGFsL3BvbGwvcG9sbC50aGVtZS1ydGwuY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

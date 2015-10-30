@@ -1,25 +1,2 @@
-/**
- * @file
- * Right to left administrative styling for the user module.
- */
-/**
- * User Permissions Page
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/user\/user\.admin-rtl\.scss}line{font-family:\000039}}
-.user-admin-permissions .permission {
-  padding-left: 0;
-  padding-right: 1.5em;
-}
-
-/**
- * User Roles Page
- *
- * Override default textfield float to put the "Add role" button next to
- * the input textfield.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/user\/user\.admin-rtl\.scss}line{font-family:\0000322}}
-.user-admin-roles .form-item-name {
-  float: right;
-  margin-left: 1em;
-  margin-right: 0;
-}
+.user-admin-permissions .permission{padding-left:0;padding-right:1.5em}.user-admin-roles .form-item-name{float:right;margin-left:1em;margin-right:0}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC91c2VyL3VzZXIuYWRtaW4tcnRsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPQSxvQ0FDRSxhQUFjLEVBQ2QsY0FBZSxNQVNqQixrQ0FDRSxNQUFPLE1BQ1AsWUFBYSxJQUNiLGFBQWMiLCJmaWxlIjoiZHJ1cGFsL3VzZXIvdXNlci5hZG1pbi1ydGwuY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

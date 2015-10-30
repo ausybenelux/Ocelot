@@ -8,8 +8,6 @@
  * your subtheme.
  */
 
-@import "compass";
-
 /**
  * Contextual link wrappers
  */
@@ -37,7 +35,7 @@
   /* Other Declarations */
   background: transparent image-url('modules/contextual/gear-select.png') no-repeat 2px 0 !important;
   border: 1px solid transparent !important;
-  @include border-radius(4px);
+  border-radius: 4px;
   outline: none;
   text-indent: 9999px; /* LTR */
 }
@@ -53,7 +51,8 @@
   background-color: #fff !important;
   border-color: #ccc !important;
   border-bottom: none !important;
-  @include border-bottom-radius(0);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /**
@@ -70,7 +69,7 @@
   /* Other Declarations */
   background-color: #fff !important;
   border: 1px solid #ccc !important;
-  @include border-radius(4px 0 4px 4px); /* LTR */
+  border-radius: 4px 0 4px 4px; /* LTR */
   text-align: left;
   white-space: nowrap;
 

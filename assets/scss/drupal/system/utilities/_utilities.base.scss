@@ -3,8 +3,6 @@
  * System utility classes.
  */
 
-@import "compass/utilities/general/clearfix";
-
 /**
  * Inline items.
  */
@@ -76,5 +74,13 @@ html.js .js-hide {
  * Use the clearfix from Compass.
  */
 .clearfix {
-  @include pie-clearfix;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }

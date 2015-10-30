@@ -1,17 +1,2 @@
-/**
- * @file
- * Right-to-left styling for the Forum module.
- */
-/**
- * Image upload widget.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/image\/image\.theme-rtl\.scss}line{font-family:\000039}}
-.image-preview {
-  float: right;
-  padding: 0 0 10px 10px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/image\/image\.theme-rtl\.scss}line{font-family:\0000313}}
-.image-widget-data {
-  float: right;
-}
+.image-preview{float:right;padding:0 0 10px 10px}.image-widget-data{float:right}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9pbWFnZS9pbWFnZS50aGVtZS1ydGwuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU9BLGVBQ0UsTUFBTyxNQUNQLFFBQVMsRUFBRSxFQUFFLEtBQUssS0FHcEIsbUJBQ0UsTUFBTyIsImZpbGUiOiJkcnVwYWwvaW1hZ2UvaW1hZ2UudGhlbWUtcnRsLmNzcyIsInNvdXJjZXNDb250ZW50IjpbbnVsbF0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

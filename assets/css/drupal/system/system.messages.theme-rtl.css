@@ -1,14 +1,2 @@
-/**
- * @file
- * Right to left theme for for system messages.
- */
-/* Message */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme-rtl\.scss}line{font-family:\000037}}
-.messages {
-  padding: 10px 50px 10px 10px;
-  background-position: 99% 8px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/system\/system\.messages\.theme-rtl\.scss}line{font-family:\0000311}}
-.messages ul {
-  margin: 0 1em 0 0;
-}
+.messages{padding:10px 50px 10px 10px;background-position:99% 8px}.messages ul{margin:0 1em 0 0}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9zeXN0ZW0vc3lzdGVtLm1lc3NhZ2VzLnRoZW1lLXJ0bC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBS0EsVUFDRSxRQUFTLEtBQUssS0FBSyxLQUFLLEtBQ3hCLG9CQUFxQixJQUFJLElBRzNCLGFBQ0UsT0FBUSxFQUFFLElBQUksRUFBRSIsImZpbGUiOiJkcnVwYWwvc3lzdGVtL3N5c3RlbS5tZXNzYWdlcy50aGVtZS1ydGwuY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

@@ -1,9 +1,2 @@
-/**
- * @file
- * Right to left base styles for the Open ID module.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/robbiebardijn\/Documents\/REPO\/drupal_grunt\/assets\/scss\/drupal\/openid\/openid\.base-rtl\.scss}line{font-family:\000036}}
-html.js .user-login-form .openid-link,
-html.js .user-login .openid-link {
-  margin-right: 0;
-}
+html.js .user-login .openid-link,html.js .user-login-form .openid-link{margin-right:0}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRydXBhbC9vcGVuaWQvb3BlbmlkLmJhc2UtcnRsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFLQSxpQ0FEQSxzQ0FFRSxhQUFjIiwiZmlsZSI6ImRydXBhbC9vcGVuaWQvb3BlbmlkLmJhc2UtcnRsLmNzcyIsInNvdXJjZXNDb250ZW50IjpbbnVsbF0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
