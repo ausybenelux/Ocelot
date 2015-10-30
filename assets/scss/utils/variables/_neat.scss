@@ -2,21 +2,9 @@
 @import "../../../../ocelot.breakpoints.json";
 @import "neat-helpers";
 
-$breakpoint: (
-  zero:  new-breakpoint(map-get($breakpoints, zero), 4),
-  mobile: new-breakpoint(map-get($breakpoints, mobile), 8),
-  tablet:  new-breakpoint(map-get($breakpoints, tablet), 8),
-  ninesixty: new-breakpoint(map-get($breakpoints, ninesixty), 12),
-  desktop: new-breakpoint(map-get($breakpoints, desktop), 12),
-  max: new-breakpoint(map-get($breakpoints, max), 12),
-);
-
-$breakpoint-ratios: (
-  mobile: .6,
-  tablet:  .75,
-  desktop: 1,
-  max: 1.25
-);
+@each $key, $val in $breakpoints {
+  $breakpoints: map-merge($breakpoints, ($key: map-merge($val, (media: new-breakpoint(map-get($val, width), map-get($val, "cols"))))));
+}
 
 // NEAT SETTINGS
 $disable-warnings: false;
