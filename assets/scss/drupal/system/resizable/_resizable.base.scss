@@ -5,11 +5,9 @@
  * @see textarea.js
  */
 
-@import "compass";
-
 .form-textarea-wrapper textarea {
   display: block;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   width: 100%;
   margin: 0;
 }
