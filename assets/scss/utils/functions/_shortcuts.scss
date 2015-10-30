@@ -1,3 +1,15 @@
 @function mg($arr, $key) {
   @return map-get($arr, $key);
 }
+
+@function mdg($map, $keys...) {
+  @return map-deep-get($map, $keys...);
+}
+
+@function mds($map, $keys...) {
+  @return map-deep-set($map, $keys...);
+}
+
+@function med($breakpoint, $breakpoints: $breakpoints) {
+  @return mdg($breakpoints, $breakpoint, "media");
+}
