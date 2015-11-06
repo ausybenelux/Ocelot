@@ -3,5 +3,10 @@ $rembase: 16;
 $base-font-size: 15px;
 $base-line-height: 25px;
 
+// Rythm
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;
+
 // stacks
 $arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
