@@ -60,7 +60,7 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
 // -----------------------------------------------------------------------------
 
 gulp.task("uglify", "Compress your base.js code to a minified version", function() {
-  return gulp.src(config.path.js + "/base.js")
+  return gulp.src([config.path.js + "/*.js","!" + config.path.js + "/*.min.js"])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.path.js));
