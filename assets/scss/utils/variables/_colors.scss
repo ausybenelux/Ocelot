@@ -1,7 +1,6 @@
-/// White
+/// base colors
 //// @group Colors
 /// @type Color
-
 $colors: (
   white: #FFF,
   black: #000,
@@ -10,4 +9,7 @@ $colors: (
   success: #4DB51F,
 );
 
+/// base text-color
+//// @group Colors
+/// @type Color
 $text-color: map-get($colors, "gray");

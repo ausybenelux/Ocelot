@@ -1,7 +1,19 @@
-// typo
+/// Rembase variable
+//// @group Typography
+//// @type Value
 $rembase: 16;
+
+/// Base font size in px
+//// @group Typography
+//// @type Value
 $base-font-size: 15px;
+
+/// Base line height in px
+//// @group Typography
+//// @type Value
 $base-line-height: 25px;
 
-// stacks
+/// Font stack: Arial
+//// @group Font Stacks
+//// @type String
 $arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
