@@ -1,8 +1,15 @@
+/// Create a square: set the height & width to the same size
+//// @group Shapes
+/// @param {value} $size [none] - height & width size
 @mixin square($size) {
   width: $size;
   height: $size;
 }
 
+/// Create a rectangle: set the height & width in one mixin
+//// @group Shapes
+/// @param {value} $width [none] - width size
+/// @param {value} $height [none] - height size
 @mixin rect($width, $height) {
   width: $width;
   height: $height;
