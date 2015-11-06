@@ -30,6 +30,9 @@
   @return mdg($breakpoints, $breakpoint, "media");
 }
 
+/// Shortcut for the rhythm mixin
+//// @group Shortcuts
+/// @param {value} $value [none] - value
 @function rh($value) {
   @return rhythm($value);
 }
