@@ -42,3 +42,47 @@
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
   }
 }
+
+@mixin h1($font-size: 50, $text-color: $text-color) {
+  @include typo(font-family-stack($source, mg($source-type, semibold), $source-stack-tail), $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  text-transform: uppercase;
+  @include heading($font-size);
+}
+
+@mixin h2($font-size: 40, $text-color: $text-color) {
+  @include typo(font-family-stack($source, mg($source-type, regular), $source-stack-tail), $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size);
+}
+
+@mixin h3($font-size: 28, $text-color: $text-color) {
+  @include typo(font-family-stack($source, mg($source-type, semibold), $source-stack-tail), $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size);
+}
+
+@mixin h4($font-size: 24, $text-color: $text-color) {
+  @include typo(font-family-stack($source, mg($source-type, bold), $source-stack-tail), $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size, mg($breakpoint-ratios, tablet));
+}
+
+@mixin h5($font-size: 20, $text-color: $text-color) {
+  @include typo(font-family-stack($source, mg($source-type, bold), $source-stack-tail), $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size, mg($breakpoint-ratios, tablet));
+}
+
+@mixin h6($font-size: 18, $text-color: $text-color) {
+  @include typo(font-family-stack($source, mg($source-type, bold), $source-stack-tail), $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size, mg($breakpoint-ratios, tablet));
+}
+
+@mixin heading($font-size, $mobileratio: mg($breakpoint-ratios, mobile)) {
+  margin: 0 0 #{modular-scale(-2, $font-size)}px 0;
+  @include font-size-line-height($font-size * $mobileratio, strip-units(modular-scale(1, $font-size * $mobileratio)));
+
+  @include media (mg($breakpoints, tablet)) {
+    @include font-size-line-height($font-size * mg($breakpoint-ratios, tablet), strip-units(modular-scale(1, $font-size * mg($breakpoint-ratios, tablet))));
+  }
+
+  @include media (mg($breakpoints, desktop)) {
+    @include font-size-line-height($font-size, strip-units(modular-scale(1, $font-size)));
+  }
+}
