@@ -13,6 +13,9 @@
   }
 }
 
+/// Add outer-container mixin to your container with left & right padding
+//// @group Grid
+/// @param {value} $padding [rh(1)] - padding left & right
 @mixin padded-container($padding: rh(1)) {
   @include outer-container();
   padding: 0 $padding;
