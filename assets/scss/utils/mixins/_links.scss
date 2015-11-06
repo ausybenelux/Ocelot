@@ -1,0 +1,21 @@
+@mixin link-behavior($inverse: false) {
+  @if $inverse {
+    text-decoration: underline;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  } @else {
+    text-decoration: none;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
