@@ -12,7 +12,7 @@
     "fontAwesome": "font-awesome/scss",
     "scss": "assets/scss/**/*.scss",
     "css": "./assets/css",
-    "js": "./assets/js/*.js"
+    "js": "./assets/js"
   },
   "sass": {
     "style": "expanded"

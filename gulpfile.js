@@ -14,6 +14,8 @@ var gulp = require("gulp-help")(require("gulp"));
 var gutil = require("gulp-util");
 var chalk = require("chalk");
 var browserSync = require('browser-sync').create();
+var modernizr = require('gulp-modernizr');
+var rename = require("gulp-rename");
 
 // Sass
 var sass = require("gulp-sass");
@@ -25,6 +27,7 @@ var scsslint = require('gulp-scss-lint');
 
 // JS
 var jshint = require("gulp-jshint");
+var uglify = require('gulp-uglify');
 
 // Load Ocelot configuration file
 var config = require("./ocelot.config.json");
@@ -47,9 +50,20 @@ var errorCallBack = function (error, metadata) {
 // -----------------------------------------------------------------------------
 
 gulp.task("jshint", "Scans your JS files for errors", function() {
-  return gulp.src(config.path.js)
+  return gulp.src(config.path.js + "/*.js")
     .pipe(jshint())
     .pipe(jshint.reporter("jshint-stylish"));
+});
+
+// -----------------------------------------------------------------------------
+// JS UGLIFY -- https://www.npmjs.com/package/gulp-uglify
+// -----------------------------------------------------------------------------
+
+gulp.task("uglify", "Compress your base.js code to a minified version", function() {
+  return gulp.src(config.path.js + "/base.js")
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(config.path.js));
 });
 
 // -----------------------------------------------------------------------------
@@ -98,6 +112,19 @@ gulp.task("sass", "Compiles your SCSS files to CSS", function () {
 gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
   gulp.src(config.path.scss)
     .pipe(scsslint());
+});
+
+// -----------------------------------------------------------------------------
+// MODERNIZR -- https://www.npmjs.com/package/gulp-modernizr
+// -----------------------------------------------------------------------------
+
+gulp.task("modernizr", "Build custom Modernizr file", function() {
+  gulp.src(config.path.js + "/*.js")
+    .pipe(modernizr())
+    .pipe(gulp.dest(config.path.js + "/vendor/"))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(config.path.js + "/vendor/"))
 });
 
 // -----------------------------------------------------------------------------
