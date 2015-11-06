@@ -1,3 +1,5 @@
+/// Make an item unselectable
+//// @group Utils
 @mixin unselectable {
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -6,6 +8,8 @@
   user-select: none;
 }
 
+/// Fix for flickering carousels
+//// @group Utils
 @mixin no-flick {
   @include translate3d(0, 0, 0);
 }
