@@ -15,14 +15,6 @@
   height: $height;
 }
 
-@mixin centerrect($width, $height, $state: absolute) {
-  @include rect($width, $height);
-  position: $state;
-  top: 50%;
-  left: 50%;
-  margin: -$height / 2 0 0 - $width / 2;
-}
-
 @mixin circle($size) {
   width: $size;
   height: $size;
