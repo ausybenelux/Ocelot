@@ -17,3 +17,8 @@ $base-line-height: 25px;
 //// @group Font Stacks
 //// @type String
 $arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+// Rythm
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;

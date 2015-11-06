@@ -29,3 +29,7 @@
 @function med($breakpoint, $breakpoints: $breakpoints) {
   @return mdg($breakpoints, $breakpoint, "media");
 }
+
+@function rh($value) {
+  @return rhythm($value);
+}
