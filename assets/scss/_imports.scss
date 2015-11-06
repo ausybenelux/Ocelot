@@ -7,6 +7,7 @@
 @import "utils/variables/defaults";
 @import "utils/variables/fa";
 @import "utils/variables/legacy";
+@import "utils/variables/prefixer";
 @import "utils/variables/shades";
 @import "utils/variables/sprites";
 @import "utils/variables/neat";
@@ -15,8 +16,9 @@
 
 // Mixins
 @import "utils/mixins/customcheck";
-@import "utils/mixins/fa";
+@import "utils/mixins/icons";
 @import "utils/mixins/grid";
+@import "utils/mixins/links";
 @import "utils/mixins/overlay";
 @import "utils/mixins/pie-clearfix";
 @import "utils/mixins/positioning";
@@ -24,13 +26,15 @@
 @import "utils/mixins/shapes";
 @import "utils/mixins/typography";
 @import "utils/mixins/utils";
-@import "utils/mixins/vendor-prefix";
 
 // Functions
 @import "utils/functions/color";
+@import "utils/functions/convert";
 @import "utils/functions/map";
+@import "utils/functions/rhythm";
 @import "utils/functions/shortcuts";
 
 // Placeholders
 
 @import "neat";
+
