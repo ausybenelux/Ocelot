@@ -120,7 +120,7 @@ gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
 
 gulp.task("modernizr", "Build custom Modernizr file", function() {
   gulp.src(config.path.js + "/*.js")
-    .pipe(modernizr())
+    .pipe(modernizr(config.modernizr))
     .pipe(gulp.dest(config.path.js + "/vendor/"))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
