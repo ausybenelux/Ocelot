@@ -1,0 +1,24 @@
+@mixin fontawesome-icon ($code) {
+  @include fontsmoothing();
+  color: inherit;
+  content: $code;
+  line-height: inherit;
+  speak: none;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  transform: translate(0, 0);
+}
+
+@mixin fontello-icon ($code) {
+  @include fontsmoothing();
+  color: inherit;
+  content: $code;
+  line-height: 1;
+  speak: none;
+  display: inline-block;
+  font-family: Fontello;
+  text-rendering: auto;
+  transform: translate(0, 0);
+}
