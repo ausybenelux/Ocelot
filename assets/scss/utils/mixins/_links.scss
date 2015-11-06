@@ -1,0 +1,26 @@
+@mixin link-behavior($inverse: false) {
+  @if $inverse {
+    text-decoration: underline;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  } @else {
+    text-decoration: none;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin link-more {
+  @include link-behavior;
+  // Insert your own "Read more"-link styles
+}
