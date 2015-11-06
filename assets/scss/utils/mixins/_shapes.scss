@@ -1,25 +1,7 @@
-/// Create a square: set the height & width to the same size
-//// @group Shapes
-/// @param {value} $size [none] - height & width size
-@mixin square($size) {
-  width: $size;
-  height: $size;
-}
-
-/// Create a rectangle: set the height & width in one mixin
-//// @group Shapes
-/// @param {value} $width [none] - width size
-/// @param {value} $height [none] - height size
-@mixin rect($width, $height) {
-  width: $width;
-  height: $height;
-}
-
 /// Create a circle: set the height & width to the same size and calculate the border-radius
 //// @group Shapes
 /// @param {value} $size [none] - height & width size and border-radius size/2
 @mixin circle($size) {
-  width: $size;
-  height: $size;
+  @include size($size);
   @include border-radius($size / 2);
 }
