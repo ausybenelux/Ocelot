@@ -19,8 +19,3 @@
     }
   }
 }
-
-@mixin link-more {
-  @include link-behavior;
-  // Insert your own "Read more"-link styles
-}
