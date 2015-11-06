@@ -1,0 +1,34 @@
+{
+  "breakpoints": {
+    "zero": {
+      "width": "0px",
+      "cols": 4,
+      "ratio": 0.6
+    },
+    "mobile": {
+      "width": "480px",
+      "cols": 8,
+      "ratio": 0.6
+    },
+    "tablet": {
+      "width": "768px",
+      "cols": 8,
+      "ratio": 0.75
+    },
+    "ninesixty": {
+      "width": "960px",
+      "cols": 12,
+      "ratio": 1
+    },
+    "desktop": {
+      "width": "1170px",
+      "cols": 12,
+      "ratio": 1
+    },
+    "max": {
+      "width": "1220px",
+      "cols": 12,
+      "ratio": 1
+    }
+  }
+}

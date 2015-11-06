@@ -1,0 +1,41 @@
+$positions: (
+  "top-left": "tl",
+  "top": "t",
+  "top-right": "tr",
+  "left": "l",
+  "center": "c",
+  "right": "r",
+  "bottom-left": "bl",
+  "bottom": "b",
+  "bottom-right": "br"
+);
+
+.abs {
+  position: absolute;
+
+  @each $position, $short in $positions {
+    &.#{$position} {
+      @include corner(absolute, $short);
+    }
+  }
+}
+
+.rel {
+  position: relative;
+
+  @each $position, $short in $positions {
+    &.#{$position} {
+      @include corner(relative, $short);
+    }
+  }
+}
+
+.fix {
+  position: fixed;
+
+  @each $position, $short in $positions {
+    &.#{$position} {
+      @include corner(fixed, $short);
+    }
+  }
+}

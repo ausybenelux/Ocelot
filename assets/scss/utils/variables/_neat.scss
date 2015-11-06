@@ -1,0 +1,24 @@
+// BREAKPOINTS
+@import "../../../../ocelot.breakpoints.json";
+@import "neat-helpers";
+
+@each $key, $val in $breakpoints {
+  $breakpoints: map-merge($breakpoints, ($key: map-merge($val, (media: new-breakpoint(map-get($val, width), map-get($val, "cols"))))));
+}
+
+// NEAT SETTINGS
+$disable-warnings: false;
+$grid-columns: 12;
+
+$column: modular-scale(3, 1em, $golden);
+$gutter: modular-scale(1, .5em, $golden);
+
+$max-width: em(1170);
+$border-box-sizing: false;
+$default-feature: min-width;
+$default-layout-direction: LTR;
+
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: .1;

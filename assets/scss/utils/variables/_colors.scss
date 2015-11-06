@@ -1,14 +1,13 @@
 /// White
 //// @group Colors
 /// @type Color
-$c-white: #FFF;
 
-/// Black
-//// @group Colors
-/// @type Color
-$c-black: #000;
+$colors: (
+  white: #FFF,
+  black: #000,
+  gray: #D2D2D2,
+  error: #F0062C,
+  success: #4DB51F,
+);
 
-/// Error
-//// @group Colors
-/// @type Color
-$c-error: #F00;
+$text-color: map-get($colors, "gray");

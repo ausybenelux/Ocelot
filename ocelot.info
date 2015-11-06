@@ -1,7 +1,6 @@
 name        = Ocelot
 core        = 7.x
 
-
 ; ========================================
 ; Stylesheets
 ; ========================================
@@ -12,15 +11,13 @@ stylesheets[all][] = assets/css/component-styles.css
 stylesheets[all][] = assets/css/layout-styles.css
 stylesheets[all][] = assets/css/print-styles.css
 
-
 ; ========================================
 ; Scripts
 ; ========================================
 
-scripts[] = assets/js/vendor/modernizr.min.js
-scripts[] = assets/js/vendor/underscore.min.js
-scripts[] = assets/js/base.js
+; Scripts are included as libraries.
 
+scripts[] = assets/js/breakpoints.example.js
 
 ; ========================================
 ; Regions
@@ -36,7 +33,6 @@ regions[bottom]         = Bottom bar
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
-
 ; ========================================
 ; Features
 ; ========================================
@@ -44,7 +40,6 @@ regions[page_bottom]    = Page bottom
 features[] = name
 features[] = slogan
 features[] = logo
-
 
 ; ========================================
 ; Settings
@@ -54,3 +49,9 @@ settings[toggle_favicon] = 0
 settings[favicon_path] = ""
 settings[favicon_upload] = ""
 settings[default_favicon] = 0
+
+; ========================================
+; Ocelot Settings
+; ========================================
+
+settings[minified] = 1

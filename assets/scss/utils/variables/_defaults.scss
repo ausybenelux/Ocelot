@@ -1,23 +1,16 @@
-/// Set true to set the global box-sizing to border-box.
-/// @group Defaults
-$default-border-box: true;
+// Set true to set the global box-sizing to border-box.
+$default-border-box: true !default;
+$default-lighten-ratio: 10%;
 
-/// Set true to use font smoothing.
-/// @group Defaults
-$default-font-smoothing: true;
+// Set true to use font smoothing
+$default-font-smoothing: true !default;
 
-/// Set true to disable the outlines.
-/// @group Defaults
-$default-disable-outline: false;
+// Set true to disable the outlines
+$default-disable-outline: false !default;
 
-/// Set true to clean menu's of margins and paddings.
-/// @group Defaults
-$default-clean-menus: true;
+// Set true to clean menu's of margins and paddings
+$default-clean-menus: true !default;
 
-/// Default `border-radius`.
-/// @group Defaults
-$default-border-radius: 10px;
-
-/// Default `border-width`.
-/// @group Defaults
-$default-border-width: 3px;
+// Default values
+$default-border-radius: 10px !default;
+$default-border-width: 3px !default;
