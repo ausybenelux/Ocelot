@@ -91,9 +91,9 @@ function ocelot_library() {
   $libraries['underscore'] = array(
     'title' => 'Underscore',
     'website' => 'http://underscorejs.org/',
-    'version' => '1.5.2',
+    'version' => '1.8.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/underscore$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "bower_components/underscore/underscore-$min_extension" => array(),
     ),
   );
 
