@@ -19,6 +19,7 @@ var rename = require("gulp-rename");
 
 // Sass
 var sass = require("gulp-sass");
+var sassGlob = require('gulp-sass-glob');
 var jsonImporter = require('node-sass-json-importer');
 var prefix = require("gulp-autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
@@ -76,11 +77,13 @@ gulp.task("favicons", "Generates cross-device favicons from assets/img/logo/favi
 
 // -----------------------------------------------------------------------------
 // SASS -- https://www.npmjs.com/package/gulp-sass
+// SASS GLOBBING -- https://www.npmjs.com/package/gulp-sass-glob
 // -----------------------------------------------------------------------------
 
 gulp.task("sass", "Compiles your SCSS files to CSS", function () {
   return gulp.src(config.path.scss)
     .pipe(sourcemaps.init())
+    .pipe(sassGlob())
     .pipe(sass({
       includePaths: [
         require("node-bourbon").includePaths,

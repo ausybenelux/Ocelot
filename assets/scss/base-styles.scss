@@ -3,12 +3,16 @@
 // Uses the imports file and imports the base styles in the right order
 // ====================================================================================================== //
 
+@charset "UTF-8";
+
 // Imports
-@import "imports";
+@import "bourbon";
+@import "utils/variables/*";
+@import "utils/mixins/*";
+@import "utils/functions/*";
+@import "neat";
 
 // Base styles
 @import "normalize";
-@import "base/typography";
-@import "base/base";
-@import "base/tables";
+@import "base/*";
 

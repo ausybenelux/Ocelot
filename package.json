@@ -20,6 +20,7 @@
     "gulp-modernizr": "0.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
+    "gulp-sass-glob": "0.0.2",
     "gulp-scss-lint": "^0.3.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-task-listing": "^1.0.1",
