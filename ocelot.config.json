@@ -7,16 +7,19 @@
     "safari > 5",
     "opera > 22"
   ],
+
   "path": {
-    "bower": "components/",
+    "bower": "bower_components/",
     "fontAwesome": "font-awesome/scss",
     "scss": "assets/scss/**/*.scss",
     "css": "./assets/css",
     "js": "./assets/js/*.js"
   },
+
   "sass": {
     "style": "expanded"
   },
+
   "favicons": {
     "files": {
       "src": "./assets/img/logo/favicon.png",
