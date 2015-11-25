@@ -8,4 +8,4 @@ node_modules
 *.css.map
 
 # Ignore generated documentation.
-sassdoc
+;sassdoc
