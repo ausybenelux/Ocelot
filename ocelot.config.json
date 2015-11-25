@@ -7,16 +7,19 @@
     "safari > 5",
     "opera > 22"
   ],
+
   "path": {
-    "bower": "components/",
+    "bower": "bower_components/",
     "fontAwesome": "font-awesome/scss",
     "scss": "assets/scss/**/*.scss",
     "css": "./assets/css",
-    "js": "./assets/js/*.js"
+    "js": "./assets/js"
   },
+
   "sass": {
     "style": "expanded"
   },
+
   "favicons": {
     "files": {
       "src": "./assets/img/logo/favicon.png",
@@ -52,5 +55,33 @@
       "logging": true
     },
     "favicon_generation": null
+  },
+
+  "modernizr":{
+    "cache" : true,
+    "devFile" : false,
+    "dest" : false,
+    "options" : [
+        "setClasses",
+        "addTest",
+        "html5printshiv",
+        "testProp",
+        "fnBind"
+    ],
+    "uglify" : true,
+    "tests" : [
+      "touchevents"
+    ],
+    "excludeTests": [],
+    "crawl" : true,
+    "useBuffers" : false,
+    "files" : {
+        "src": [
+            "*[^(g|G)runt(file)?].{js,css,scss}",
+            "**[^node_modules]/**/*.{js,css,scss}",
+            "!lib/**/*"
+        ]
+    },
+    "customTests" : []
   }
 }
