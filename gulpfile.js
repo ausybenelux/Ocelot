@@ -26,6 +26,8 @@ var sourcemaps = require("gulp-sourcemaps");
 var mincss = require("gulp-minify-css");
 var scsslint = require('gulp-scss-lint');
 
+var sassdoc = require("sassdoc");
+
 // JS
 var jshint = require("gulp-jshint");
 var uglify = require('gulp-uglify');
@@ -147,6 +149,19 @@ gulp.task("browser-sync", "Set up a server with BrowserSync and test across devi
 gulp.task("watch", "Watches your SASS files", function() {
   gulp.watch(config.path.scss, ["sass"]);
 });
+
+// -----------------------------------------------------------------------------
+// SASSDOC
+// -----------------------------------------------------------------------------
+
+gulp.task("sassdoc", "Create the documentation for your project", function() {
+  var options = {
+    dest: "docs"
+  };
+  return gulp.src("assets/scss/utils/**/*.scss")
+    .pipe(sassdoc(options));
+});
+
 
 // -----------------------------------------------------------------------------
 // DEFAULT TASK

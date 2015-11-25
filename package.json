@@ -36,7 +36,10 @@
     "type": "git",
     "url": "https://github.com/Crosscheck/Ocelot"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "sassdoc": "^2.1.15"
+  },
   "engines": {
     "node": ">=0.8.0"
   },
