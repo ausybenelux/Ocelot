@@ -135,7 +135,7 @@
   @include heading($font-size, mdg($breakpoints, tablet, ratio));
 }
 
-/// Genral responsive heading styling
+/// General responsive heading styling
 //// @group Typography
 /// @param {value} $font-size [none] - font-size
 /// @param {function} $mobileratio [mdg($breakpoints, mobile, ratio)] - mobile ratio used to increase font-size per breakpoint
