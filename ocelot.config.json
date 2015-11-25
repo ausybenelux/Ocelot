@@ -57,6 +57,10 @@
     "favicon_generation": null
   },
 
+  "sassdoc": {
+    "theme": "./ocelot-doc"
+  },
+
   "modernizr":{
     "cache" : true,
     "devFile" : false,
