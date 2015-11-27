@@ -16,7 +16,7 @@ var chalk = require("chalk");
 var browserSync = require('browser-sync').create();
 var modernizr = require('gulp-modernizr');
 var rename = require("gulp-rename");
-
+var gulpSequence = require('gulp-sequence');
 // Sass
 var sass = require("gulp-sass");
 var sassGlob = require('gulp-sass-glob');
@@ -67,7 +67,7 @@ gulp.task("browserify", "Browserify lets you require('modules') in the browser b
 // -----------------------------------------------------------------------------
 
 gulp.task("jshint", "Scans your JS files for errors", function() {
-  return gulp.src(config.path.js + "/*.js")
+  return gulp.src([config.path.js + "/nehaviors/*.js", config.path.js + "/modules/*.js", config.path.js + "/base.js"])
     .pipe(jshint())
     .pipe(jshint.reporter("jshint-stylish"));
 });
@@ -76,8 +76,8 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
 // JS UGLIFY -- https://www.npmjs.com/package/gulp-uglify
 // -----------------------------------------------------------------------------
 
-gulp.task("uglify", "Compress your base.js code to a minified version", function() {
-  return gulp.src([config.path.js + "/*.js","!" + config.path.js + "/*.min.js"])
+gulp.task("uglify", "Compress your app.js code to a minified version", function() {
+  return gulp.src(config.path.js + "/app.js")
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.path.js));
@@ -168,10 +168,35 @@ gulp.task("watch", "Watches your SASS files", function() {
 // DEFAULT TASK
 // -----------------------------------------------------------------------------
 
-gulp.task("default", [
-  "help",
+gulp.task("default", gulpSequence(
+    "install",
+    "compile",
+    "lint",
+    "improve",
+    "serve"
+  )
+);
+
+gulp.task("install", [
+  "help"
+  //here should be an install task
+]);
+
+gulp.task("compile", [
   "sass",
+  "browserify"
+]);
+
+gulp.task("lint", [
   "scss-lint",
-  "jshint",
-  "watch"
+  "jshint"
+]);
+
+gulp.task("improve", [
+  "uglify"
+]);
+
+gulp.task("serve", [
+  "watch",
+  "browser-sync"
 ]);
