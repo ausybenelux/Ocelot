@@ -1,2 +1,2 @@
-var site = require('./behaviours/*.js', {mode: 'hash'});
+var site = require('./behaviors/*.js', {mode: 'hash'});
 _.extend(Drupal.behaviors, site);

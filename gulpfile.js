@@ -67,7 +67,7 @@ gulp.task("browserify", "Browserify lets you require('modules') in the browser b
 // -----------------------------------------------------------------------------
 
 gulp.task("jshint", "Scans your JS files for errors", function() {
-  return gulp.src([config.path.js + "/nehaviors/*.js", config.path.js + "/modules/*.js", config.path.js + "/base.js"])
+  return gulp.src([config.path.js + "/behaviors/*.js", config.path.js + "/modules/*.js", config.path.js + "/base.js"])
     .pipe(jshint())
     .pipe(jshint.reporter("jshint-stylish"));
 });
