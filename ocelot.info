@@ -18,7 +18,6 @@ stylesheets[all][] = assets/css/print-styles.css
 ; Scripts are included as libraries.
 
 scripts[] = assets/js/vendor/modernizr.min.js
-scripts[] = assets/js/breakpoints.example.js
 
 ; ========================================
 ; Regions
