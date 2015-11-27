@@ -27,6 +27,7 @@ var mincss = require("gulp-minify-css");
 var scsslint = require('gulp-scss-lint');
 
 // JS
+var browserify = require('gulp-browserify');
 var jshint = require("gulp-jshint");
 var uglify = require('gulp-uglify');
 
@@ -45,6 +46,21 @@ var errorCallBack = function (error, metadata) {
 
   console.log(metadata, 'Metadata produced during the build process');
 }
+
+// -----------------------------------------------------------------------------
+// BROWSERIFY -- https://www.npmjs.com/package/gulp-browserify
+// -----------------------------------------------------------------------------
+
+gulp.task("browserify", "Browserify lets you require('modules') in the browser by bundling up all of your dependencies.", function() {
+  // Single entry point to browserify
+  return gulp.src(config.path.js + "/base.js", {read: false})
+      .pipe(browserify({
+        insertGlobals : true,
+        transform: ['require-globify']
+      }))
+      .pipe(rename("app.js"))
+      .pipe(gulp.dest(config.path.js))
+});
 
 // -----------------------------------------------------------------------------
 // JS HINT -- https://www.npmjs.com/package/gulp-jshint
