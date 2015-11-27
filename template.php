@@ -93,7 +93,7 @@ function ocelot_library() {
     'website' => 'http://underscorejs.org/',
     'version' => '1.8.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "bower_components/underscore/underscore-min.js" => array(),
+      drupal_get_path('theme', 'ocelot') . "/bower_components/underscore/underscore-min.js" => array(),
     ),
   );
 
@@ -102,7 +102,7 @@ function ocelot_library() {
     'website' => 'https://github.com/scottjehl/Respond',
     'version' => '1.4.2',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "bower_components/respond/respond$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/bower_components/respond/respond$min_extension" => array(),
     ),
   );
 
@@ -111,7 +111,7 @@ function ocelot_library() {
     'website' => 'https://github.com/Crosscheck/Ocelot',
     'version' => '0.1.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/base$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/assets/js/app$min_extension" => array(),
     ),
 
     'dependencies' => array(
