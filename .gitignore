@@ -9,3 +9,4 @@ node_modules
 
 # Ignore generated documentation.
 sassdoc
+ocelot-doc
