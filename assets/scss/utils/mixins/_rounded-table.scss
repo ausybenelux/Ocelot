@@ -3,14 +3,10 @@
 /// @param {value} $r [none] - border-radius top-left & top-right corner
 @mixin rounded-table($r) {
   thead tr:first-child :first-child {
-    -moz-border-radius-topleft: $r;
-    -webkit-border-top-left-radius: $r;
     border-top-left-radius: $r;
   }
 
   thead tr:first-child :last-child {
-    -moz-border-radius-topright: $r;
-    -webkit-border-top-right-radius: $r;
     border-top-right-radius: $r;
   }
 }

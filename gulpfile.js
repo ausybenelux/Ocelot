@@ -16,7 +16,7 @@ var chalk = require("chalk");
 var browserSync = require('browser-sync').create();
 var modernizr = require('gulp-modernizr');
 var rename = require("gulp-rename");
-
+var gulpSequence = require('gulp-sequence');
 // Sass
 var sass = require("gulp-sass");
 var sassGlob = require('gulp-sass-glob');
@@ -29,6 +29,7 @@ var scsslint = require('gulp-scss-lint');
 var sassdoc = require("sassdoc");
 
 // JS
+var browserify = require('gulp-browserify');
 var jshint = require("gulp-jshint");
 var uglify = require('gulp-uglify');
 
@@ -49,11 +50,26 @@ var errorCallBack = function (error, metadata) {
 }
 
 // -----------------------------------------------------------------------------
+// BROWSERIFY -- https://www.npmjs.com/package/gulp-browserify
+// -----------------------------------------------------------------------------
+
+gulp.task("browserify", "Browserify lets you require('modules') in the browser by bundling up all of your dependencies.", function() {
+  // Single entry point to browserify
+  return gulp.src(config.path.js + "/base.js", {read: false})
+      .pipe(browserify({
+        insertGlobals : true,
+        transform: ['require-globify']
+      }))
+      .pipe(rename("app.js"))
+      .pipe(gulp.dest(config.path.js))
+});
+
+// -----------------------------------------------------------------------------
 // JS HINT -- https://www.npmjs.com/package/gulp-jshint
 // -----------------------------------------------------------------------------
 
 gulp.task("jshint", "Scans your JS files for errors", function() {
-  return gulp.src(config.path.js + "/*.js")
+  return gulp.src([config.path.js + "/behaviors/*.js", config.path.js + "/modules/*.js", config.path.js + "/base.js"])
     .pipe(jshint())
     .pipe(jshint.reporter("jshint-stylish"));
 });
@@ -62,8 +78,8 @@ gulp.task("jshint", "Scans your JS files for errors", function() {
 // JS UGLIFY -- https://www.npmjs.com/package/gulp-uglify
 // -----------------------------------------------------------------------------
 
-gulp.task("uglify", "Compress your base.js code to a minified version", function() {
-  return gulp.src([config.path.js + "/*.js","!" + config.path.js + "/*.min.js"])
+gulp.task("uglify", "Compress your app.js code to a minified version", function() {
+  return gulp.src(config.path.js + "/app.js")
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.path.js));
@@ -167,10 +183,35 @@ gulp.task("sassdoc", "Create the documentation for your project", function() {
 // DEFAULT TASK
 // -----------------------------------------------------------------------------
 
-gulp.task("default", [
-  "help",
+gulp.task("default", gulpSequence(
+    "install",
+    "compile",
+    "lint",
+    "improve",
+    "serve"
+  )
+);
+
+gulp.task("install", [
+  "help"
+  //here should be an install task
+]);
+
+gulp.task("compile", [
   "sass",
+  "browserify"
+]);
+
+gulp.task("lint", [
   "scss-lint",
-  "jshint",
-  "watch"
+  "jshint"
+]);
+
+gulp.task("improve", [
+  "uglify"
+]);
+
+gulp.task("serve", [
+  "watch",
+  "browser-sync"
 ]);
