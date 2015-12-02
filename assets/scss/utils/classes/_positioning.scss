@@ -1,21 +1,21 @@
 $positions: (
-  "top-left": "tl",
-  "top": "t",
-  "top-right": "tr",
-  "left": "l",
+  "top-left": "0 null null 0",
+  "top": "0 null null null",
+  "top-right": "0 0 null null",
+  "left": "null null null 0",
   "center": "c",
-  "right": "r",
-  "bottom-left": "bl",
-  "bottom": "b",
-  "bottom-right": "br"
+  "right": "null 0 null null",
+  "bottom-left": "null null 0 0",
+  "bottom": "null null 0 null",
+  "bottom-right": "null 0 0 null"
 );
 
 .abs {
   position: absolute;
 
-  @each $position, $short in $positions {
+  @each $position, $value in $positions {
     &.#{$position} {
-      @include corner(absolute, $short);
+      @include position(absolute, $value);
     }
   }
 }
@@ -23,9 +23,9 @@ $positions: (
 .rel {
   position: relative;
 
-  @each $position, $short in $positions {
+  @each $position, $value in $positions {
     &.#{$position} {
-      @include corner(relative, $short);
+      @include position(relative, $value);
     }
   }
 }
@@ -33,9 +33,9 @@ $positions: (
 .fix {
   position: fixed;
 
-  @each $position, $short in $positions {
+  @each $position, $value in $positions {
     &.#{$position} {
-      @include corner(fixed, $short);
+      @include position(fixed, $value);
     }
   }
 }
