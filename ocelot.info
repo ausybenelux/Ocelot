@@ -5,11 +5,11 @@ core        = 7.x
 ; Stylesheets
 ; ========================================
 
-stylesheets[all][] = assets/css/base-styles.css
-stylesheets[all][] = assets/css/helper-styles.css
-stylesheets[all][] = assets/css/component-styles.css
-stylesheets[all][] = assets/css/layout-styles.css
-stylesheets[all][] = assets/css/print-styles.css
+stylesheets[all][] = dist/css/base-styles.css
+stylesheets[all][] = dist/css/helper-styles.css
+stylesheets[all][] = dist/css/component-styles.css
+stylesheets[all][] = dist/css/layout-styles.css
+stylesheets[all][] = dist/css/print-styles.css
 
 ; ========================================
 ; Scripts
@@ -17,7 +17,7 @@ stylesheets[all][] = assets/css/print-styles.css
 
 ; Scripts are included as libraries.
 
-scripts[] = assets/js/vendor/modernizr.min.js
+scripts[] = dist/js/vendor/modernizr.min.js
 
 ; ========================================
 ; Regions
