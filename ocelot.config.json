@@ -11,9 +11,9 @@
   "path": {
     "bower": "bower_components/",
     "fontAwesome": "font-awesome/scss",
-    "scss": "assets/scss/**/*.scss",
-    "css": "./assets/css",
-    "js": "./assets/js"
+    "scss": "src/scss/**/*.scss",
+    "css": "./dist/css",
+    "js": "./dist/js"
   },
 
   "sass": {
@@ -22,10 +22,10 @@
 
   "favicons": {
     "files": {
-      "src": "./assets/img/logo/favicon.png",
-      "dest": "./assets/img/favicons/",
+      "src": "./dist/img/logo/favicon.png",
+      "dest": "./dist/img/favicons/",
       "html": "./templates/misc/favicons.tpl.php",
-      "iconsPath": "./assets/img/favicons/",
+      "iconsPath": "./dist/img/favicons/",
       "androidManifest": null,
       "browserConfig": null,
       "firefoxManifest": null,
