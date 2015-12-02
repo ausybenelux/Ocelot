@@ -1,11 +1,7 @@
 {
   "autoprefixer": [
-    "last 10 version",
-    "ie > 8",
-    "chrome > 8",
-    "firefox > 20",
-    "safari > 5",
-    "opera > 22"
+    "last 3 version",
+    "> 2%"
   ],
 
   "path": {
