@@ -84,7 +84,7 @@ function ocelot_library() {
     'website' => 'http://modernizr.com/',
     'version' => 'v3.0.0-alpha.4',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/modernizr$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/src/js/vendor/modernizr$min_extension" => array(),
     ),
   );
 
@@ -111,7 +111,7 @@ function ocelot_library() {
     'website' => 'https://github.com/Crosscheck/Ocelot',
     'version' => '0.1.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/app$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/src/js/app$min_extension" => array(),
     ),
 
     'dependencies' => array(
