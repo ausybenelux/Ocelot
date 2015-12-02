@@ -51,7 +51,7 @@ $grids: (1, 2, 3, 4, 5, 6);
 }
 
 .max-container {
-  @include pie-clearfix;
+  @include clearfix;
 
   @include media(med(max)) {
     @include outer-container();
