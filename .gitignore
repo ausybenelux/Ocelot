@@ -1,3 +1,12 @@
+# Ignore cache from compass.
 .sass-cache
+
+# Ignore node packages.
 node_modules
+
+# Ignore generated css maps.
 *.css.map
+
+# Ignore generated documentation.
+sassdoc
+ocelot-doc

@@ -1,0 +1,38 @@
+/// Shortcut for the map-get function
+//// @group Shortcuts
+/// @param {variable} $map [none] - map
+/// @param {key} $key [none] - key from the map
+@function mg($map, $key) {
+  @return map-get($map, $key);
+}
+
+/// Shortcut for the map-deep-get function
+//// @group Shortcuts
+/// @param {variable} $map [none] - map
+/// @param {key} $keys [none] - key(s) from the map
+@function mdg($map, $keys...) {
+  @return map-deep-get($map, $keys...);
+}
+
+/// Shortcut for the map-deep-set function
+//// @group Shortcuts
+/// @param {variable} $map [none] - map
+/// @param {key} $keys [none] - key(s) from the map
+@function mds($map, $keys...) {
+  @return map-deep-set($map, $keys...);
+}
+
+/// Shortcut for the map-deep-get function for all breakpoints with the key "media"
+//// @group Shortcuts
+/// @param {value} $breakpoint [none] - breakpoint
+/// @param {map} $breakpoints [breakpoints] - map for breakpoints
+@function med($breakpoint, $breakpoints: $breakpoints) {
+  @return mdg($breakpoints, $breakpoint, "media");
+}
+
+/// Shortcut for the rhythm mixin
+//// @group Shortcuts
+/// @param {value} $value [none] - value
+@function rh($value) {
+  @return rhythm($value);
+}

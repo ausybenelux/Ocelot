@@ -1,0 +1,24 @@
+/// Set to true to use the webkit prefix
+//// @group Prefixers
+//// @type Boolean
+$prefix-for-webkit:    true;
+
+/// Set to true to use the mozilla prefix
+//// @group Prefixers
+//// @type Boolean
+$prefix-for-mozilla:   true;
+
+/// Set to true to use the microsoft prefix
+//// @group Prefixers
+//// @type Boolean
+$prefix-for-microsoft: true;
+
+/// Set to true to use the opera prefix
+//// @group Prefixers
+//// @type Boolean
+$prefix-for-opera:     true;
+
+/// Set to true to use the spec prefix
+//// @group Prefixers
+//// @type Boolean
+$prefix-for-spec:      true;

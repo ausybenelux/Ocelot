@@ -1,0 +1,24 @@
+/// Add link-behavior: underline (or not if inverse = false) on link & the opposite on hover
+//// @group Links
+/// @param {bolean} $inverse [false] - false = only underline on hover, true = underline on link & none on hover
+@mixin link-behavior($inverse: false) {
+  @if $inverse {
+    text-decoration: underline;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  } @else {
+    text-decoration: none;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

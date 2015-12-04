@@ -1,0 +1,153 @@
+/// Set the font, font-size, line-height, color, … in one mixin
+//// @group Typography
+/// @param {string} $font [none] - font-family
+/// @param {value} $size [none] - font-size
+/// @param {value} $lh [none] - line-height
+/// @param {color} $color [none] - color text
+/// @param {string} $weight [normal] - font-weight
+/// @param {string} $style [normal] - font-style
+/// @param {unit} $unit [rem] - unit used for font-size & line-height
+@mixin typo($font, $size, $lh, $color, $weight: normal, $style: normal, $unit: rem) {
+  @include font-size-line-height($size, $lh, $unit);
+  font-family: $font;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+/// Set the font-family-stack. Returns a string with the font-stack.
+//// @group Typography
+/// @param {string} $name ["Arial"] - font-family
+/// @param {string} $kind ["regular"] - font style
+/// @param {value} $stack ["Helvetica, Arial, Sans-Serif"] - fallback fonts
+@function font-family-stack($name: "Arial", $kind: "regular", $stack: "Helvetica, Arial, Sans-Serif") {
+  @return "#{$name}-#{$kind}", $stack;
+}
+
+/// Set the font-size with a px fallback
+//// @group Typography
+/// @param {value} $size [none] - font-size
+/// @param {unit} $unit [rem] - unit used for font-size
+@mixin font-size($size, $unit: rem) {
+  @if $rem-with-px-fallback == true {
+    font-size: $size + px;
+  }
+
+  font-size: $size / $rembase + $unit;
+}
+
+/// Set the line-height with a px fallback
+//// @group Typography
+/// @param {value} $line-height [none] - line-height
+/// @param {unit} $unit [rem] - unit used for line-height
+@mixin line-height($line-height, $unit: rem) {
+  @if $rem-with-px-fallback == true {
+    line-height: $line-height + px;
+  }
+
+  line-height: $line-height / $rembase + $unit;
+}
+
+/// Set the font-size & line-height with a px fallback
+//// @group Typography
+/// @param {value} $size [none] - font-size
+/// @param {value} $line-height [none] - line-height
+/// @param {unit} $unit [rem] - unit used for font-size & line-height
+@mixin font-size-line-height($font-size, $line-height, $unit: rem) {
+  @include font-size($font-size, $unit);
+  @include line-height($line-height, $unit);
+}
+
+/// Set font-smoothing on font
+//// @group Typography
+/// @param {string} $smoothing [antialiased] - set the type of font-smoothing
+/// @param {boolean} $uses-text-shadow [false] - add a text-shadow
+@mixin fontsmoothing ($smooting: antialiased, $uses-text-shadow: false) {
+  -webkit-font-smoothing: $smooting;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: $smooting;
+  -ms-font-smoothing: $smooting;
+  font-smoothing: $smooting;
+
+  @if $uses-text-shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+  }
+}
+
+/// Responsive h1 styling
+//// @group Typography
+/// @param {string} $font [$arial] - font-family
+/// @param {value} $font-size [50] - font-size
+/// @param {color} $text-color [$text-color] - color text
+@mixin h1($font: $arial, $font-size: 50, $text-color: $text-color) {
+  @include typo($font, $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  text-transform: uppercase;
+  @include heading($font-size);
+}
+
+/// Responsive h2 styling
+//// @group Typography
+/// @param {string} $font [$arial] - font-family
+/// @param {value} $font-size [40] - font-size
+/// @param {color} $text-color [$text-color] - color text
+@mixin h2($font: $arial, $font-size: 40, $text-color: $text-color) {
+  @include typo($font, $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size);
+}
+
+/// Responsive h3 styling
+//// @group Typography
+/// @param {string} $font [$arial] - font-family
+/// @param {value} $font-size [28] - font-size
+/// @param {color} $text-color [$text-color] - color text
+@mixin h3($font: $arial, $font-size: 28, $text-color: $text-color) {
+  @include typo($font, $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size);
+}
+
+/// Responsive h4 styling
+//// @group Typography
+/// @param {string} $font [$arial] - font-family
+/// @param {value} $font-size [24] - font-size
+/// @param {color} $text-color [$text-color] - color text
+@mixin h4($font: $arial, $font-size: 24, $text-color: $text-color) {
+  @include typo($font, $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size, mdg($breakpoints, tablet, ratio));
+}
+
+/// Responsive h5 styling
+//// @group Typography
+/// @param {string} $font [$arial] - font-family
+/// @param {value} $font-size [20] - font-size
+/// @param {color} $text-color [$text-color] - color text
+@mixin h5($font: $arial, $font-size: 20, $text-color: $text-color) {
+  @include typo($font, $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size, mdg($breakpoints, tablet, ratio));
+}
+
+/// Responsive h6 styling
+//// @group Typography
+/// @param {string} $font [$arial] - font-family
+/// @param {value} $font-size [18] - font-size
+/// @param {color} $text-color [$text-color] - color text
+@mixin h6($font: $arial, $font-size: 18, $text-color: $text-color) {
+  @include typo($font, $font-size, strip-units(modular-scale(1, $font-size)), $text-color);
+  @include heading($font-size, mdg($breakpoints, tablet, ratio));
+}
+
+/// General responsive heading styling
+//// @group Typography
+/// @param {value} $font-size [none] - font-size
+/// @param {function} $mobileratio [mdg($breakpoints, mobile, ratio)] - mobile ratio used to increase font-size per breakpoint
+@mixin heading($font-size, $mobileratio: mdg($breakpoints, mobile, ratio)) {
+  margin: 0 0 #{modular-scale(-2, $font-size)}px 0;
+  @include font-size-line-height($font-size * $mobileratio, strip-units(modular-scale(1, $font-size * $mobileratio)));
+
+  @include media(med(tablet)) {
+    @include font-size-line-height($font-size * mdg($breakpoints, tablet, ratio), strip-units(modular-scale(1, $font-size * mdg($breakpoints, tablet, ratio))));
+  }
+
+  @include media(med(desktop)) {
+    @include font-size-line-height($font-size, strip-units(modular-scale(1, $font-size)));
+  }
+}

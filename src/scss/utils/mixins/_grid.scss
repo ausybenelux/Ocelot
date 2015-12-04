@@ -1,0 +1,26 @@
+/// Add grid layout to direct children of parent & option to add outer-container to parent
+//// @group Grid
+/// @param {value} $i [none] - number of columns
+/// @param {boolean} $container [true] - add an outer-container or not
+@mixin grid($i, $container: true) {
+  @if $container {
+    @include outer-container();
+  }
+
+  > * {
+    @include span-columns($grid-columns / $i);
+    @include omega(#{$i}n);
+
+    &:nth-child(#{$i}n+1) {
+      clear: both;
+    }
+  }
+}
+
+/// Add outer-container mixin to your container with left & right padding
+//// @group Grid
+/// @param {value} $padding [rh(1)] - padding left & right
+@mixin padded-container($padding: rh(1)) {
+  @include outer-container();
+  padding: 0 $padding;
+}

@@ -27,6 +27,8 @@
         "$",
         "Modernizr",
         "_",
-        "bowser"
+        "bowser",
+        "module",
+        "require"
     ]
 }

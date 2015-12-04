@@ -1,0 +1,41 @@
+$positions: (
+  "top-left": "0 null null 0",
+  "top": "0 null null null",
+  "top-right": "0 0 null null",
+  "left": "null null null 0",
+  "center": "50% null null 50%",
+  "right": "null 0 null null",
+  "bottom-left": "null null 0 0",
+  "bottom": "null null 0 null",
+  "bottom-right": "null 0 0 null"
+);
+
+.abs {
+  position: absolute;
+
+  @each $position, $value in $positions {
+    &.#{$position} {
+      @include position(absolute, $value);
+    }
+  }
+}
+
+.rel {
+  position: relative;
+
+  @each $position, $value in $positions {
+    &.#{$position} {
+      @include position(relative, $value);
+    }
+  }
+}
+
+.fix {
+  position: fixed;
+
+  @each $position, $value in $positions {
+    &.#{$position} {
+      @include position(fixed, $value);
+    }
+  }
+}
