@@ -1,0 +1,16 @@
+// ====================================================================================================== //
+// PRINT-STYLES.SCSS //
+// Uses the imports file and imports the print styles
+// ====================================================================================================== //
+
+@charset "UTF-8";
+
+//imports
+@import "bourbon";
+@import "utils/variables/*";
+@import "utils/mixins/*";
+@import "utils/functions/*";
+@import "neat";
+
+// Print styles
+@import "print/print";

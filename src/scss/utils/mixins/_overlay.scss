@@ -1,0 +1,15 @@
+/// Create a transparent & colored overlay
+//// @group Overlays
+/// @param {color} $color [none] - color overlay
+@mixin overlay($color) {
+  @include square(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba($color, .8);
+
+  &.out {
+    background-color: rgba($color, 0);
+  }
+}

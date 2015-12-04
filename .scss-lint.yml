@@ -10,7 +10,7 @@ linters:
     enabled: true
 
   ColorKeyword:
-    enabled: true
+    enabled: false
 
   Comment:
     enabled: true
@@ -22,8 +22,6 @@ linters:
     enabled: true
 
   DuplicateProperty:
-    exclude:
-      - '**mixin.scss'
     enabled: true
 
   ElsePlacement:
@@ -159,13 +157,13 @@ linters:
     enabled: true
 
   VendorPrefixes:
-    exclude:
-      - '**mixin.scss'
     enabled: true
     identifier_list: base
     include: []
 
   ZeroUnit:
+    exclude:
+      - '**convert.scss'
     enabled: true
 
   Compass::*:

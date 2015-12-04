@@ -29,12 +29,39 @@ function ocelot_html_head_alter(&$head_elements) {
   );
 }
 
+function ocelot_preprocess_html(&$variables) {
+  $variables['favicons'] = '';
+
+  $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
+  if (file_exists($theme_path . '/templates/misc/favicons.tpl.php')) {
+    $variables['favicons'] .= "<!-- Favicons -->";
+    $favicon_url_prefix = url($theme_path, array("absolute" => true));
+
+    ob_start();
+    include_once($theme_path . '/templates/misc/favicons.tpl.php');
+    $favicons = ob_get_clean();
+
+    $new_favicons = str_replace('./', $favicon_url_prefix . '/', $favicons);
+    $variables['favicons'] .= $new_favicons;
+
+    $variables['favicons'] .= "<!-- /Favicons -->";
+  }
+  else {
+   $variables['favicons'] .= "<!-- Favicons file missing, run 'gulp favicons' to auto generate it -->";
+  }
+}
+
+
 /**
  * Implements hook_preprocess_page().
  */
 function ocelot_preprocess_page(&$variables) {
   // Add Ocelot base library.
   drupal_add_library('ocelot', 'ocelot_base');
+  // Add the path to the theme to Drupal.settings
+  $json_data = file_get_contents(drupal_get_path('theme', 'ocelot') . '/ocelot.breakpoints.json');
+  drupal_add_js('jQuery.extend(Drupal.settings, ' . $json_data .  ');', 'inline');
+
 }
 
 /**
@@ -55,18 +82,18 @@ function ocelot_library() {
   $libraries['modernizr'] = array(
     'title' => 'Modernizr',
     'website' => 'http://modernizr.com/',
-    'version' => '2.7.1',
+    'version' => 'v3.0.0-alpha.4',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/modernizr$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/dist/js/vendor/modernizr$min_extension" => array(),
     ),
   );
 
   $libraries['underscore'] = array(
     'title' => 'Underscore',
     'website' => 'http://underscorejs.org/',
-    'version' => '1.5.2',
+    'version' => '1.8.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/underscore$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/bower_components/underscore/underscore-min.js" => array(),
     ),
   );
 
@@ -75,7 +102,7 @@ function ocelot_library() {
     'website' => 'https://github.com/scottjehl/Respond',
     'version' => '1.4.2',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/vendor/respond$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/bower_components/respond/respond$min_extension" => array(),
     ),
   );
 
@@ -84,8 +111,9 @@ function ocelot_library() {
     'website' => 'https://github.com/Crosscheck/Ocelot',
     'version' => '0.1.3',
     'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/assets/js/base$min_extension" => array(),
+      drupal_get_path('theme', 'ocelot') . "/dist/js/app$min_extension" => array(),
     ),
+
     'dependencies' => array(
       array('system', 'jquery'),
       array('ocelot', 'modernizr'),

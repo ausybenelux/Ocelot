@@ -1,0 +1,13 @@
+/// Returns a transparent black color
+//// @group Colors
+/// @param {value} $opacity [.8] - opacity value
+@function black($opacity: .8) {
+  @return rgba(0, 0, 0, $opacity);
+}
+
+/// Returns a transparent white color
+//// @group Colors
+/// @param {value} $opacity [.8] - opacity value
+@function white($opacity: .8) {
+  @return rgba(255, 255, 255, $opacity);
+}

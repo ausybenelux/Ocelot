@@ -1,20 +1,83 @@
 {
   "autoprefixer": [
-    "last 10 version",
-    "ie > 8",
-    "chrome > 8",
-    "firefox > 20",
-    "safari > 5",
-    "opera > 22"
+    "last 3 version",
+    "> 2%"
   ],
-  "path" : {
-    "bower": "components/",
+
+  "path": {
+    "bower": "bower_components/",
     "fontAwesome": "font-awesome/scss",
-    "scss": "assets/scss/**/*.scss",
-    "css": "./assets/css",
-    "js": "./assets/js/*.js"
+    "scss": "src/scss/**/*.scss",
+    "css": "./dist/css",
+    "js": "./dist/js"
   },
+
   "sass": {
     "style": "expanded"
+  },
+
+  "favicons": {
+    "files": {
+      "src": "./dist/img/logo/favicon.png",
+      "dest": "./dist/img/favicons/",
+      "html": "./templates/misc/favicons.tpl.php",
+      "iconsPath": "./dist/img/favicons/",
+      "androidManifest": null,
+      "browserConfig": null,
+      "firefoxManifest": null,
+      "yandexManifest": null
+    },
+    "icons": {
+      "android": true,
+      "appleIcon": true,
+      "appleStartup": true,
+      "coast": true,
+      "favicons": true,
+      "firefox": true,
+      "opengraph": true,
+      "windows": true,
+      "yandex": true
+    },
+    "settings": {
+      "appName": "Ocelot",
+      "appDescription": "This is the app description",
+      "developer": null,
+      "developerURL": null,
+      "version": 1.0,
+      "background": null,
+      "index": null,
+      "url": null,
+      "silhouette": false,
+      "logging": true
+    },
+    "favicon_generation": null
+  },
+
+  "modernizr":{
+    "cache" : true,
+    "devFile" : false,
+    "dest" : false,
+    "options" : [
+        "setClasses",
+        "addTest",
+        "html5printshiv",
+        "testProp",
+        "fnBind"
+    ],
+    "uglify" : true,
+    "tests" : [
+      "touchevents"
+    ],
+    "excludeTests": [],
+    "crawl" : true,
+    "useBuffers" : false,
+    "files" : {
+        "src": [
+            "*[^(g|G)runt(file)?].{js,css,scss}",
+            "**[^node_modules]/**/*.{js,css,scss}",
+            "!lib/**/*"
+        ]
+    },
+    "customTests" : []
   }
 }

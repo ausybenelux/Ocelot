@@ -1,0 +1,9 @@
+/// Timings variables
+//// @group Timings
+//// @type Value
+$timings: (
+  superfast: 250ms,
+  fast: 400ms,
+  normal: 700ms,
+  slow: 1000ms
+);

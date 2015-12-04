@@ -6,25 +6,21 @@ base theme = omega
 ; Stylesheets
 ; ========================================
 
-stylesheets[all][] = assets/css/drupal/system/system.menus.theme.css
-stylesheets[all][] = assets/css/drupal/system/system.messages.theme.css
-stylesheets[all][] = assets/css/drupal/system/system.theme.css
+stylesheets[all][] = dist/css/drupal/system/system.menus.theme.css
+stylesheets[all][] = dist/css/drupal/system/system.messages.theme.css
+stylesheets[all][] = dist/css/drupal/system/system.theme.css
 
-stylesheets[all][] = assets/css/base-styles.css
-stylesheets[all][] = assets/css/helper-styles.css
-stylesheets[all][] = assets/css/component-styles.css
-stylesheets[all][] = assets/css/layout-styles.css
-stylesheets[all][] = assets/css/print-styles.css
-
+stylesheets[all][] = dist/css/base-styles.css
+stylesheets[all][] = dist/css/helper-styles.css
+stylesheets[all][] = dist/css/component-styles.css
+stylesheets[all][] = dist/css/layout-styles.css
+stylesheets[all][] = dist/css/print-styles.css
 
 ; ========================================
 ; Scripts
 ; ========================================
 
-scripts[] = assets/js/vendor/modernizr.min.js
-scripts[] = assets/js/vendor/underscore.min.js
-scripts[] = assets/js/base.js
-
+scripts[] = dist/js/vendor/modernizr.min.js
 
 ; ========================================
 ; Regions

@@ -1,0 +1,85 @@
+@for $i from 1 through $grid-columns {
+  .w#{$i} {
+    @include span-columns($i);
+  }
+}
+
+$grids: (1, 2, 3, 4, 5, 6);
+@each $i in $grids {
+  .grid-#{$i} {
+    &.mobile {
+      @include media(med(mobile)) {
+        @include grid($i);
+      }
+    }
+
+    &.tablet {
+      @include media(med(tablet)) {
+        @include grid($i);
+      }
+    }
+
+    &.desktop {
+      @include media(med(desktop)) {
+        @include grid($i);
+      }
+    }
+  }
+}
+
+.latest {
+  @include omega(auto);
+}
+
+.container {
+  @include outer-container();
+  padding: 0 rh(.4);
+}
+
+.tablet-container {
+  @include media(med(tablet)) {
+    @include outer-container();
+    padding: 0 rh(1);
+  }
+}
+
+.desktop-container {
+  @include media(med(desktop)) {
+    @include outer-container();
+    padding: 0 rh(1);
+  }
+}
+
+.max-container {
+  @include clearfix;
+
+  @include media(med(max)) {
+    @include outer-container();
+    padding: 0 rh(1);
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .center-col-#{$i} {
+    &.mobile {
+      @include media(med(mobile)) {
+        @include span-columns($i);
+        @include shift(($grid-columns - $i) / 2);
+      }
+    }
+
+    &.tablet {
+      @include media(med(tablet)) {
+        @include span-columns($i);
+        @include shift(($grid-columns - $i) / 2);
+      }
+    }
+
+    &.desktop {
+      @include media(med(desktop)) {
+        @include span-columns($i);
+        @include shift(($grid-columns - $i) / 2);
+      }
+    }
+  }
+}

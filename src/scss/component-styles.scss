@@ -1,0 +1,16 @@
+// ====================================================================================================== //
+// COMPONENTS-STYLES.SCSS //
+// Uses the imports file and imports component files with globbing technique
+// ====================================================================================================== //
+
+@charset "UTF-8";
+
+// Imports
+@import "bourbon";
+@import "utils/variables/*";
+@import "utils/mixins/*";
+@import "utils/functions/*";
+@import "neat";
+
+// Components styles
+// @import "components/example";

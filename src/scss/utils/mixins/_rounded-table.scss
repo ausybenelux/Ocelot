@@ -1,0 +1,12 @@
+/// Create a table with rounded corners on header top left and top right corners
+//// @group Tables
+/// @param {value} $r [none] - border-radius top-left & top-right corner
+@mixin rounded-table($r) {
+  thead tr:first-child :first-child {
+    border-top-left-radius: $r;
+  }
+
+  thead tr:first-child :last-child {
+    border-top-right-radius: $r;
+  }
+}

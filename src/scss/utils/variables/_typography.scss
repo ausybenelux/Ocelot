@@ -1,0 +1,31 @@
+/// Rembase variable
+//// @group Typography
+//// @type Value
+$rembase: 16;
+
+/// Base font size in px
+//// @group Typography
+//// @type Value
+$base-font-size: 15px;
+
+/// Base line height in px
+//// @group Typography
+//// @type Value
+$base-line-height: 25px;
+
+/// Font stack: Arial
+//// @group Font Stacks
+//// @type String
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+/// Rhythm unit variable
+//// @group Typography
+//// @type String
+$rhythm-unit: "rem";
+
+/// Set to true to add a px fallback when using rems
+//// @group Typography
+//// @type Boolean
+$rem-with-px-fallback: true;
+
+$round-to-nearest-half-line: true;

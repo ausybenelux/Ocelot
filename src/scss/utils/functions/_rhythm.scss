@@ -1,0 +1,12 @@
+/// Rhythm function to calculate a percentage of the (base-)font-size
+//// @group Rhythm
+/// @param {value} $lines [1] - value
+/// @param {value} $font-size [$base-font-size] - font-size
+/// @param {value} $offset [0] - value
+@function rhythm($lines: 1, $font-size: $base-font-size, $offset: 0) {
+  $rhythm: convert-length($lines * $base-line-height - $offset, $rhythm-unit, $font-size);
+  @if unit($rhythm) == px {
+    $rhythm: floor($rhythm);
+  }
+  @return $rhythm;
+}

@@ -1,0 +1,11 @@
+/// Make an item unselectable
+//// @group Utils
+@mixin unselectable {
+  @include prefixer(user-select, none, webkit moz spec o);
+}
+
+/// Fix for flickering carousels
+//// @group Utils
+@mixin no-flick {
+  @include translate3d(0, 0, 0);
+}
