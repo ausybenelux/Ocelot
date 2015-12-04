@@ -1,7 +1,7 @@
 Drupal ONE Agency Ocelot theme
 ===================================
 
-![Ocelocat](https://raw.githubusercontent.com/Crosscheck/Ocelot/master/assets/img/sprite/logo.png)
+![Ocelocat](https://raw.githubusercontent.com/Crosscheck/Ocelot/master/dist/img/sprite/logo.png)
 
 * [Requirements](https://github.com/Crosscheck/Ocelot/wiki/1.-Requirements)
 * [Installation](https://github.com/Crosscheck/Ocelot/wiki/2.-Installation)
