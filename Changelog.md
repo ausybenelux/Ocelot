@@ -101,94 +101,10 @@ v.0.2.1 / 2015-12-04
   * issue #122: Added auto favicon generation via the RealFaviconGenerator.net API (npm + gulp)
   * Issue #126: Include the package.
   * Issue #126: Move breakpoints to a separate file, to be included in css and js
-  * issue #104: Updated Modernizr librarie to newest version (3.0.0-alpha.4) & Added Touch event support
+  * issue #104: Updated Modernizr library to newest version (3.0.0-alpha.4) & Added Touch event support
   * issue #156: Added contextCheck helper function & example code
   * issue #156: Removed example code - document, window load functions
   * Issue #121: Add SASSDOC and some examples in the code
-
-v.0.2.0.nd / 2015-10-02
-=======================
-
-  * merge: master in nodrupal
-  * Merge pull request #168 from Crosscheck/issue #129
-  * issue #129: Compiled css
-  * Merge pull request #166 from Crosscheck/issue #137
-  * Merge pull request #165 from Crosscheck/issue #138
-  * issue #129: Converted timing variables to sass map
-  * closes #138
-  * closes #137
-  * issue #137: added links to docs of current tasks
-  * issue #137: added browser sync and hooked it up with the sass task
-  * issue #138: grouped default task to all commands prefixed with help and suffixed with watch
-  * Merge pull request #158 from Crosscheck/issue #146
-  * Issue #146: resolved conflict
-  * Merge pull request #159 from Crosscheck/issue #143
-  * Merge pull request #161 from Crosscheck/issue #132
-  * issue #132: Added SCSS-Lint package
-  * Merge pull request #160 from Crosscheck/issue #136
-  * issue #136: Added JSHint package
-  * Issue #146: positioning compile errors
-  * Issue #143: colors compile errors
-  * Issue #143: colors
-  * Issue #143: removed messages classes
-  * issue #146: position classes
-  * issue #146: stronger corner mixin
-  * Merge pull request #154 from Crosscheck/issue #44
-  * Merge pull request #145 from Crosscheck/issue #63
-  * Issue #63: Add full extension
-  * Merge branch 'issue #63' of github.com:Crosscheck/Ocelot into issue #63
-  * issue #63: 😏 Include hook_library() and theme-settings.php
-  * Issue #44: Add gulp sass task, including bourbon, bourbon neat and font-awesome support.
-  * Merge pull request #153 from Crosscheck/issue #152
-  * Issue #152: Add basic bower.json file. This is required for Gulp to load our dependencies such as bourbon, …
-  * Merge pull request #151 from Crosscheck/issue #148
-  * Merge pull request #150 from Crosscheck/issue #147
-  * Update package.json
-  * issue #148: Improve package.json docs
-  * issue #147: Add basic Gulpfile
-  * Merge pull request #141 from Crosscheck/issue #134
-  * Merge pull request #142 from Crosscheck/issue #135
-  * Issue #135: Remove Gruntfile and all the packages
-  * Issue #134: Remove all Ruby related files
-  * issue #63: 😏 Include hook_library() and theme-settings.php
-  * master: changelog
-
-v.0.2.0.om / 2015-10-02
-=======================
-
-  * merge: master in omega
-  * omega: merge master in omgea
-  * Merge pull request #114 from Crosscheck/issue #110
-  * issue #110: added good paths for drupal css
-  * Merge branch 'master' into omega
-  * omega: merge master in omega
-  * Merge branch 'master' into omega
-  * omega: merge master into omega
-  * Merge branch 'master' into omega
-  * Merge branch 'omega' of github.com:Crosscheck/Ocelot into omega
-  * Error on mixin
-  * Merge branch 'omega' of github.com:Crosscheck/drupal-theme-boilerplate into omega
-  * Merge pull request #64 from Crosscheck/issue #60
-  * Merge branch 'master' into omega
-  * issue #60 - Added a region.tpl.php template file
-  * Merge branch 'master' into omega
-  * Merge branch 'master' into omega
-  * Merge pull request #52 from sqndr/patch-2
-  * Add omega as base theme
-  * omega: no linting on drupal scss files
-  * Merge branch 'master' into omega
-  * omega: master merge
-  * Merge branch 'omega' of github.com:Crosscheck/drupal-theme-boilerplate into omega
-  * master: readme change merge
-  * Merge pull request #31 from rob-bar/omega
-  * omega: merge master
-  * Merge pull request #13 from rob-bar/omega
-  * Merge branch 'master' into omega
-  * Merge branch 'master' into omega
-  * Merge branch 'master' into omega
-  * merged
-  * Merge pull request #11 from rob-bar/omega
-  * closes Crosscheck/drupal-theme-boilerplate#6
 
 v.0.2.0 / 2015-10-02
 ====================
@@ -198,8 +114,6 @@ v.0.2.0 / 2015-10-02
   * Merge pull request #166 from Crosscheck/issue #137
   * Merge pull request #165 from Crosscheck/issue #138
   * issue #129: Converted timing variables to sass map
-  * closes #138
-  * closes #137
   * issue #137: added links to docs of current tasks
   * issue #137: added browser sync and hooked it up with the sass task
   * issue #138: grouped default task to all commands prefixed with help and suffixed with watch
@@ -226,7 +140,7 @@ v.0.2.0 / 2015-10-02
   * Issue #152: Add basic bower.json file. This is required for Gulp to load our dependencies such as bourbon, …
   * Merge pull request #151 from Crosscheck/issue #148
   * Merge pull request #150 from Crosscheck/issue #147
-  * Update package.json
+  * master: Update package.json
   * issue #148: Improve package.json docs
   * issue #147: Add basic Gulpfile
   * Merge pull request #141 from Crosscheck/issue #134

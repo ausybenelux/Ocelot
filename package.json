@@ -2,7 +2,7 @@
   "name": "Ocelot",
   "description": "Ocelot is a Drupal theming starter kit that has some sensible defaults. See the Wiki for more information.",
   "author": "One Agency",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "private": "true",
   "homepage": "https://github.com/Crosscheck/Ocelot",
   "bugs": {
