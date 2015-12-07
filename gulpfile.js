@@ -171,11 +171,10 @@ gulp.task("watch", "Watches your SASS files", function() {
 // -----------------------------------------------------------------------------
 
 gulp.task("sassdoc", "Create the documentation for your project", function() {
-  var options = {
-    dest: "sassdoc"
-  };
-  return gulp.src("assets/scss/utils/**/*.scss")
-    .pipe(sassdoc(options));
+  return gulp.src("src/scss/utils/**/*.scss")
+    .pipe(sassdoc({
+      dest: "sassdoc"
+    }));
 });
 
 
