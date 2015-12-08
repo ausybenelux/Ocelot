@@ -171,7 +171,7 @@ gulp.task("watch", "Watches your SASS files", function() {
 // -----------------------------------------------------------------------------
 
 gulp.task("sassdoc", "Create the documentation for your project", function() {
-  return gulp.src("src/scss/utils/**/*.scss")
+  return gulp.src(config.path.scss)
     .pipe(sassdoc({
       dest: "sassdoc"
     }));
