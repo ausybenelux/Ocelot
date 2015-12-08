@@ -7,7 +7,7 @@
   "path": {
     "bower": "bower_components/",
     "fontAwesome": "font-awesome/scss",
-    "scss": "src/scss/**/*.scss",
+    "scss": "src/scss",
     "css": "./dist/css",
     "js": "./dist/js"
   },
