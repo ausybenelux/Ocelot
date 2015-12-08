@@ -99,7 +99,7 @@ gulp.task("favicons", "Generates cross-device favicons from assets/img/logo/favi
 // -----------------------------------------------------------------------------
 
 gulp.task("sass", "Compiles your SCSS files to CSS", function () {
-  return gulp.src(config.path.scss)
+  return gulp.src(config.path.scss + "/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass({
@@ -131,7 +131,7 @@ gulp.task("sass", "Compiles your SCSS files to CSS", function () {
 // -----------------------------------------------------------------------------
 
 gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
-  gulp.src(config.path.scss)
+  gulp.src(config.path.scss + "/**/*.scss")
     .pipe(scsslint());
 });
 
@@ -163,7 +163,7 @@ gulp.task("browser-sync", "Set up a server with BrowserSync and test across devi
 // -----------------------------------------------------------------------------
 
 gulp.task("watch", "Watches your SASS files", function() {
-  gulp.watch(config.path.scss, ["sass"]);
+  gulp.watch(config.path.scss + "/**/*.scss", ["sass"]);
 });
 
 // -----------------------------------------------------------------------------
@@ -171,7 +171,7 @@ gulp.task("watch", "Watches your SASS files", function() {
 // -----------------------------------------------------------------------------
 
 gulp.task("sassdoc", "Create the documentation for your project", function() {
-  return gulp.src(config.path.scss)
+  return gulp.src(config.path.scss + "/utils/**/*.scss")
     .pipe(sassdoc({
       dest: "sassdoc"
     }));
