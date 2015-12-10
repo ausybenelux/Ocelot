@@ -6,6 +6,18 @@
   @return map-get($map, $key);
 }
 
+
+/// Shortcut for the map-get($colors, $color) mixin
+//// @group Shortcuts
+/// @param {color} $color [none] - color
+@function color($color) {
+  @if map-has-key($colors, $color) {
+    @return mg($colors, $color);
+  } @else {
+    @error "ERROR: The color is not available.";
+  }
+}
+
 /// Shortcut for the map-deep-get function
 //// @group Shortcuts
 /// @param {variable} $map [none] - map

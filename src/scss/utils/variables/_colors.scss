@@ -12,4 +12,4 @@ $colors: (
 /// base text-color
 //// @group Colors
 /// @type Color
-$text-color: map-get($colors, "gray");
+$text-color: color(gray);
