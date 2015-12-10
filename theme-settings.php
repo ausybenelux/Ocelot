@@ -9,8 +9,7 @@ function ocelot_form_system_theme_settings_alter(&$form, $form_state) {
   $form['libraries'] = array(
     '#type' => 'fieldset',
     '#title' => t('Libraries'),
-    '#description' => t('An overview of all the libraries defined inside this
-    theme.'),
+    '#description' => t('An overview of all the libraries defined inside this theme.'),
   );
   $form['libraries']['list'] = array(
     '#type' => 'item',
