@@ -54,3 +54,4 @@ settings[toggle_favicon] = 0
 settings[favicon_path] = ""
 settings[favicon_upload] = ""
 settings[default_favicon] = 0
+settings[omega_livereload] = 0
