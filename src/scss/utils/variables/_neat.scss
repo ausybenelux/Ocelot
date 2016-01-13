@@ -1,5 +1,5 @@
 // BREAKPOINTS
-@import "../../../../ocelot.breakpoints.json";
+@import "../../../../breakpoints.json";
 @import "neat-helpers";
 
 @each $key, $val in $breakpoints {
