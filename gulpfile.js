@@ -34,7 +34,7 @@ var jshint = require("gulp-jshint");
 var uglify = require('gulp-uglify');
 
 // Load Ocelot configuration file
-var config = require("./ocelot.config.json");
+var config = require("./config.json");
 
 // Favicons
 var favicons = require('favicons');
@@ -131,7 +131,7 @@ gulp.task("sass", "Compiles your SCSS files to CSS", function () {
 // -----------------------------------------------------------------------------
 
 gulp.task("scss-lint", "Scans your SCSS files for errors", function() {
-  gulp.src(config.path.scss)
+  gulp.src([config.path.scss, "!src/scss/drupal/**/*.scss"])
     .pipe(scsslint());
 });
 
@@ -175,6 +175,7 @@ gulp.task("sassdoc", "Create the documentation for your project", function() {
   var options = {
     dest: "sassdoc"
   };
+
   return gulp.src("assets/scss/utils/**/*.scss")
     .pipe(sassdoc(options));
 });

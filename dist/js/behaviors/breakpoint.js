@@ -6,8 +6,8 @@ module.exports = {
       return;
     }
 
-    var breakpointMobile = Drupal.settings.breakpoints.mobile;
-    console.log("Mobile breakpoint: " + breakpointMobile);
+    var breakpoints = Drupal.settings.breakpoints;
+    console.log(breakpoints);
   }
 };
 
