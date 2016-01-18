@@ -5,11 +5,7 @@ core        = 7.x
 ; Stylesheets
 ; ========================================
 
-stylesheets[all][] = dist/css/base-styles.css
-stylesheets[all][] = dist/css/helper-styles.css
-stylesheets[all][] = dist/css/component-styles.css
-stylesheets[all][] = dist/css/layout-styles.css
-stylesheets[all][] = dist/css/print-styles.css
+; STYLESHEETS HERE
 
 ; ========================================
 ; Scripts
