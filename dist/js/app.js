@@ -1,10 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-var site = {'breakpoint': require('./behaviours/breakpoint.js'),'demo': require('./behaviours/demo.js')};
+window.$ = jQuery;
+
+var site = {'breakpoint': require('./behaviors/breakpoint.js'),'demo': require('./behaviors/demo.js')};
 _.extend(Drupal.behaviors, site);
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/base.js","/")
-},{"./behaviours/breakpoint.js":2,"./behaviours/demo.js":3,"buffer":5,"oMfpAn":8}],2:[function(require,module,exports){
+},{"./behaviors/breakpoint.js":2,"./behaviors/demo.js":3,"buffer":5,"oMfpAn":8}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var helper = require("../modules/helper");
 
@@ -20,7 +22,7 @@ module.exports = {
 };
 
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/behaviours/breakpoint.js","/behaviours")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/behaviors/breakpoint.js","/behaviors")
 },{"../modules/helper":4,"buffer":5,"oMfpAn":8}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var helper = require("../modules/helper");
@@ -35,7 +37,7 @@ module.exports = {
   }
 };
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/behaviours/demo.js","/behaviours")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/behaviors/demo.js","/behaviors")
 },{"../modules/helper":4,"buffer":5,"oMfpAn":8}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var helper = {
