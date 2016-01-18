@@ -33,8 +33,8 @@ var browserify = require('gulp-browserify');
 var jshint = require("gulp-jshint");
 var uglify = require('gulp-uglify');
 
-// Load Ocelot configuration file
-var config = require("./ocelot.config.json");
+// Load configuration file
+var config = require("./config.json");
 
 // Favicons
 var favicons = require('favicons');
@@ -162,8 +162,9 @@ gulp.task("browser-sync", "Set up a server with BrowserSync and test across devi
 // WATCH
 // -----------------------------------------------------------------------------
 
-gulp.task("watch", "Watches your SASS files", function() {
+gulp.task("watch", "Watches your files", function() {
   gulp.watch(config.path.scss, ["sass"]);
+  gulp.watch([config.path.js + "/behaviors/*.js", config.path.js + "/modules/*.js", config.path.js + "/base.js"], ["browserify"]);
 });
 
 // -----------------------------------------------------------------------------
