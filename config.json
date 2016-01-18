@@ -1,8 +1,4 @@
 {
-  "autoprefixer": [
-    "last 3 version",
-    "> 2%"
-  ],
 
   "path": {
     "bower": "bower_components/",
@@ -10,10 +6,6 @@
     "scss": "src/scss/**/*.scss",
     "css": "./dist/css",
     "js": "./dist/js"
-  },
-
-  "sass": {
-    "style": "expanded"
   },
 
   "favicons": {
