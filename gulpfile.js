@@ -33,8 +33,8 @@ var browserify = require('gulp-browserify');
 var jshint = require("gulp-jshint");
 var uglify = require('gulp-uglify');
 
-// Load Ocelot configuration file
-var config = require("./ocelot.config.json");
+// Load configuration file
+var config = require("./config.json");
 
 // Favicons
 var favicons = require('favicons');
