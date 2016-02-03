@@ -97,15 +97,6 @@ function ocelot_library() {
     ),
   );
 
-  $libraries['respond'] = array(
-    'title' => 'Respond',
-    'website' => 'https://github.com/scottjehl/Respond',
-    'version' => '1.4.2',
-    'js' => array(
-      drupal_get_path('theme', 'ocelot') . "/bower_components/respond/respond$min_extension" => array(),
-    ),
-  );
-
   $libraries['ocelot_base'] = array(
     'title' => 'Ocelot Base',
     'website' => 'https://github.com/Crosscheck/Ocelot',
